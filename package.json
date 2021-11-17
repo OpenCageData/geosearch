@@ -1,0 +1,31 @@
+{
+  "name": "@opencage/geosearch-monorepo",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "build:clean": "lerna run build:clean --no-private",
+    "dotenv": "lerna run dotenv -- $@",
+    "build": "lerna run build --no-private",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "start": "yarn run watch",
+    "watch": "lerna run watch --parallel",
+    "test": "lerna run test --no-private"
+  },
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-security": "^1.4.0",
+    "lerna": "^4.0.0",
+    "prettier": "^2.4.1",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.3",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
+  }
+}
