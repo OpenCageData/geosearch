@@ -14,18 +14,18 @@
 
 All you need to get started is:
 
-- A container to inject the geosearch into
-- An [OpenCage geosearch](https://opencagedata.com/geosearch) API Key
+- A container to inject the geosearch into,
+- An [OpenCage geosearch](https://opencagedata.com/geosearch) API Key.
 
 This library comes as a plugin on [Algolia's Autocomplete](https://github.com/algolia/autocomplete), then, that creates an input and provides the interactivity and accessibility attributes.
 
-By configuring just the two required parameters (`container` and `key`), you can have an interactive geosearach experience for places all around the world.
+By configuring just the two required parameters (`container` and `key`), you will have an interactive geosearch experience for places all around the world.
 
 ![header](/resources/screenshot-results-berlin.png)
 
 ## Usage
 
-For convinience, this library is published as differnt [packages](#Packages). For a simple usage we bundle it with the [Algolia's Autocomplete](https://github.com/algolia/autocomplete).
+For convenience, this repository is published as multiple [packages](#Packages). For a simple usage, we bundle it with the [Algolia's Autocomplete](https://github.com/algolia/autocomplete).
 To get started, with a simple HTML page, you need a container to anchor the geosearch into:
 
 ```html
@@ -34,10 +34,10 @@ To get started, with a simple HTML page, you need a container to anchor the geos
 
 Then, insert your search experience into it by calling the `algoliaAutocomplete` function, providing :
 
-- the container, it can be a CSS selector.
-- and the key.
+- The container (a CSS selector),
+- The OpenCage Geosearch API key.
 
-Make sure to provide a container (e.g., a div), not an input. Autocomplete generates a fully accessible search box for you.
+Make sure to provide a container (e.g., a div), not an input. The Geosearch generates a fully accessible search box.
 
 ```html
 <script type="text/javascript">
@@ -52,7 +52,7 @@ Make sure to provide a container (e.g., a div), not an input. Autocomplete gener
 </script>
 ```
 
-and to run it, just add the following resources to the header of the page:
+and to run it, just add the following resources to the header of the HTML page:
 
 ```html
 <link
@@ -69,7 +69,7 @@ and to run it, just add the following resources to the header of the page:
 
 ## Issues
 
-Find a bug or want to request a new feature? Please let me know by submitting [an issue](https://github.com/OpenCageData/geosearch/issues).
+Find a bug or want to request a new feature? Please let us know by submitting [an issue](https://github.com/OpenCageData/geosearch/issues).
 
 ## License
 
