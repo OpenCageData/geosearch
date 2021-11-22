@@ -12,16 +12,21 @@
 
 </div>
 
-All you need to get started is:
+To get started you need:
 
-- A container to inject the geosearch into,
-- An [OpenCage geosearch](https://opencagedata.com/geosearch) API Key.
+- A container to inject the autosuggest into
+- An [OpenCage geosearch](https://opencagedata.com/geosearch) key (available when you become a geosearch customer)
+- To specify the domain for the `access-control-allow-origin` HTTP header (commonly known as a CORS header) in your [OpenCage account dashboard](https://opencagedata.com/dashboard)
 
 This library comes as a plugin on [Algolia's Autocomplete](https://github.com/algolia/autocomplete), then, that creates an input and provides the interactivity and accessibility attributes.
 
-By configuring just the two required parameters (`container` and `key`), you will have an interactive geosearch experience for places all around the world.
+By configuring the two required parameters (`container` and `key`), and configuring the CORS header in your OpenCage dashboard you can have an interactive geosearch experience for places (countries, states/provinces, cities/towns/villages, suburbs/neighbourhoods, major POIS) around the world.
+
+## Example
 
 ![header](/resources/screenshot-results-berlin.png)
+
+See a live demo [on the OpenCage site](https://opencagedata.com/geosearch).
 
 ## Usage
 
@@ -62,6 +67,14 @@ and to run it, just add the following resources to the header of the HTML page:
 <script src="https://cdn.jsdelivr.net/npm/@opencage/geosearch-bundle"></script>
 ```
 
+### Optional configuration
+
+TODO: define list of optional params
+
+### Tweaking the look and feel
+
+TODO: explain how to skin the look and feel
+
 ## Packages
 
 - core
@@ -71,8 +84,22 @@ and to run it, just add the following resources to the header of the HTML page:
 
 Find a bug or want to request a new feature? Please let us know by submitting [an issue](https://github.com/OpenCageData/geosearch/issues).
 
+## Please Note
+
+Geosearch is an entirely different service than geocoding. OpenCage also operates a [forward and reverse geocoding API](https://opencagedata.com/api), please don't confuse the geosearch service with the geocoding API. 
+
+Learn more about [the difference between geosearch and geocoding](https://opencagedata.com/guides/the-difference-between-geocoding-and-geosearch). 
+
 ## License
 
 Licensed under the MIT License
 
 A copy of the license is available in the repository's [LICENSE](LICENSE) file.
+
+### Who is OpenCage GmbH?
+
+<a href="https://opencagedata.com"><img src="opencage_logo_300_150.png"></a>
+
+We run the [OpenCage Geocoding API](https://opencagedata.com/api). Learn more [about us](https://opencagedata.com/about). 
+
+We also run [Geomob](https://thegeomob.com), a series of regular meetups for location based service creators, where we do our best to highlight geoinnovation. If you like geo stuff, you will probably enjoy [the Geomob podcast](https://thegeomob.com/podcast/).
