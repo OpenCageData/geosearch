@@ -17,12 +17,15 @@ All you need to get started is:
 - A container to inject the geosearch into
 - An [OpenCage geosearch](https://opencagedata.com/geosearch) API Key
 
-By configuring just those two required parameters (`container` and `key`) you can have an interactive geosearach experience for places all around the world]. The library, based on [Algolia's Autocomplete](https://github.com/algolia/autocomplete), creates an input and provides the interactivity and accessibility attributes.
+This library comes as a plugin on [Algolia's Autocomplete](https://github.com/algolia/autocomplete), then, that creates an input and provides the interactivity and accessibility attributes.
+
+By configuring just the two required parameters (`container` and `key`), you can have an interactive geosearach experience for places all around the world.
 
 ![header](/resources/screenshot-results-berlin.png)
 
 ## Usage
 
+For convinience, this library is published as differnt [packages](#Packages). For a simple usage we bundle it with the [Algolia's Autocomplete](https://github.com/algolia/autocomplete).
 To get started, with a simple HTML page, you need a container to anchor the geosearch into:
 
 ```html
@@ -58,6 +61,11 @@ and to run it, just add the following resources to the header of the page:
 />
 <script src="https://cdn.jsdelivr.net/npm/@opencage/geosearch-bundle"></script>
 ```
+
+## Packages
+
+- core
+- bundle
 
 ## Issues
 
