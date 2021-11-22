@@ -19,6 +19,7 @@ module.exports = {
     {
       files: ['*.test.js', '*.spec.js', '*_test.js'],
       rules: {
+        'import/no-extraneous-dependencies': 'off',
         'no-unused-expressions': 'off',
       },
     },

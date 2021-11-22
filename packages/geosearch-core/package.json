@@ -19,11 +19,13 @@
     "url": "git+https://github.com/OpenCageData/geosearch-sdk.git"
   },
   "scripts": {
-    "build:clean": "rm -rf dist",
     "build": "webpack --mode production",
+    "build:clean": "rm -rf dist",
     "dotenv": "../../scripts/dotenv.sh $@",
-    "watch": "webpack watch --mode development",
-    "test": "mocha --recursive"
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "mocha --recursive",
+    "watch": "webpack watch --mode development"
   },
   "bugs": {
     "url": "https://github.com/OpenCageData/geosearch-sdk/issues"

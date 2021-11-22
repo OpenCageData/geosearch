@@ -1,17 +1,22 @@
 {
   "name": "@opencage/geosearch-monorepo",
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "examples/*"
+  ],
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "clean": "lerna clean",
-    "build:clean": "lerna run build:clean --no-private",
-    "dotenv": "lerna run dotenv -- $@",
     "build": "lerna run build --no-private",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
+    "build:clean": "lerna run build:clean --no-private",
+    "clean": "lerna clean",
+    "dotenv": "lerna run dotenv -- $@",
+    "lint": "lerna run lint",
+    "lint:fix": "lerna run lint:fix",
+    "playground:start": "yarn workspace @opencage/geosearch-react-example start",
     "start": "yarn run watch",
-    "watch": "lerna run watch --parallel",
-    "test": "lerna run test --no-private"
+    "test": "lerna run test --no-private",
+    "watch": "lerna run watch --parallel"
   },
   "devDependencies": {
     "eslint": "^8.2.0",

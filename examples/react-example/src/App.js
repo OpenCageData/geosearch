@@ -1,10 +1,10 @@
-import logo from './logo.svg';
-
-import { GeoSearch } from './components/GeoSearch';
+import React from 'react';
 import { OpenCageGeoSearchPlugin } from '@opencage/geosearch-core';
 
-import '@algolia/autocomplete-theme-classic';
+import logo from './logo.svg';
+import { GeoSearch } from './components/GeoSearch';
 
+import '@algolia/autocomplete-theme-classic';
 import './App.css';
 
 const options = {

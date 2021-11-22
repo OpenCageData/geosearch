@@ -1,9 +1,10 @@
-import { autocomplete } from '@algolia/autocomplete-js';
 import React, { createElement, Fragment, useEffect, useRef } from 'react';
+import { autocomplete } from '@algolia/autocomplete-js';
 import { render } from 'react-dom';
 
 import '@algolia/autocomplete-theme-classic';
 
+// eslint-disable-next-line import/prefer-default-export
 export const GeoSearch = (props) => {
   const containerRef = useRef(null);
 
