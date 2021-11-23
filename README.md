@@ -39,8 +39,8 @@ To get started, with a simple HTML page, you need a container to anchor the geos
 
 Then, insert your search experience into it by calling the `algoliaAutocomplete` function, providing :
 
-- The container (a CSS selector),
-- The OpenCage Geosearch API key.
+- The container (a CSS selector)
+- The OpenCage Geosearch API `key`
 
 Make sure to provide a container (e.g., a div), not an input. The Geosearch generates a fully accessible search box.
 
@@ -69,7 +69,7 @@ and to run it, just add the following resources to the header of the HTML page:
 
 ### Optional configuration
 
-The following optional parameters may also be set
+In addition to the mandatory `key` parameter, the following optional parameters may also be set
 
   * `bounds` - restricts the possible results to a defined bounding box.
 
