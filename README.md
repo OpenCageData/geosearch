@@ -69,7 +69,44 @@ and to run it, just add the following resources to the header of the HTML page:
 
 ### Optional configuration
 
-TODO: define list of optional params
+The following optional parameters may also be set
+
+  * `bounds` - restricts the possible results to a defined bounding box.
+
+  The value of the bounds parameter should be specified as two coordinate points forming the south-west and north-east corners of a bounding box (min longitude, min latitude, max longitude, max latitude).
+
+  Example usage:
+    `bounds: '-0.563160,51.280430,0.278970,51.683979'`
+
+  Values that are not valid coordinates are ignored. We have built [a small, map-based tool to easily see bounds values](https://opencagedata.com/bounds-finder). 
+ 
+  * `countrycode` - restricts results to the specified country/territory.
+
+  The country code is a two letter code as defined by the ISO 3166-1 Alpha 2 standard. E.g. `gb` for the United Kingdom, `fr` for France, `us` for United States.
+
+  Example usage:
+    `countrycode: 'de'`
+
+  Non-two letter country codes are ignored. 
+  
+  * `language` - language to display results in.
+
+  A two letter language code (such as `es` for Spanish or `de` for German), or `native` in which case we will attempt to return the response in the local language.
+  Currently supported languages are: `de`, `en`, `es`, `fr`.
+
+  Example usage:
+    `language: 'de'`
+
+  If no language is explicitly specified, we default to English `en`. 
+  
+  We hope to add more languages in the future. Please get in touch if lack of a certain language is preventing you from becoming a customer. 
+
+  * `limit` - maximum number of results the autosuggest should display.
+  
+  Default is 5. Maximum allowable value is 10.
+
+  Example usage:
+    `limit: 3`
 
 ### Tweaking the look and feel
 
