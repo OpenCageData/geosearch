@@ -50,7 +50,7 @@ Make sure to provide a container (e.g., a div), not an input. The Geosearch gene
     container: '#place',
     plugins: [
       opencage.OpenCageGeoSearchPlugin({
-        key: 'YOUR-API-KEY',
+        key: 'YOUR-GEOSEARCH-KEY',
       }),
     ],
   });
