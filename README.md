@@ -170,7 +170,7 @@ A copy of the license is available in the repository's [LICENSE](LICENSE) file.
 
 ## Who is OpenCage GmbH?
 
-<a href="https://opencagedata.com"><img src="opencage_logo_300_150.png"></a>
+[![OpenCage Logo](/resources/opencage_logo_300_150.png)](https://opencagedata.com)
 
 We run the [OpenCage Geocoding API](https://opencagedata.com/api). Learn more [about us](https://opencagedata.com/about).
 
