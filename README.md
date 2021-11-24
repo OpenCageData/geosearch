@@ -69,53 +69,88 @@ and to run it, just add the following resources to the header of the HTML page:
 
 ### Optional configuration
 
+#### 1. Options
+
 In addition to the mandatory `key` parameter, the following optional parameters may also be set
 
-  * `bounds` - restricts the possible results to a defined bounding box.
+- `bounds` - restricts the possible results to a defined bounding box.
 
-  The value of the bounds parameter should be specified as two coordinate points forming the south-west and north-east corners of a bounding box (min longitude, min latitude, max longitude, max latitude).
+The value of the bounds parameter should be specified as two coordinate points forming the south-west and north-east corners of a bounding box (min longitude, min latitude, max longitude, max latitude).
 
-  Example usage:
-    `bounds: '-0.563160,51.280430,0.278970,51.683979'`
+Example usage:
+`bounds: '-0.563160,51.280430,0.278970,51.683979'`
 
-  Values that are not valid coordinates are ignored. We have built [a small, map-based tool to easily see bounds values](https://opencagedata.com/bounds-finder). 
- 
-  * `countrycode` - restricts results to the specified country/territory.
+Values that are not valid coordinates are ignored. We have built [a small, map-based tool to easily see bounds values](https://opencagedata.com/bounds-finder).
 
-  The country code is a two letter code as defined by the ISO 3166-1 Alpha 2 standard. E.g. `gb` for the United Kingdom, `fr` for France, `us` for United States.
+- `countrycode` - restricts results to the specified country/territory.
 
-  Example usage:
-    `countrycode: 'de'`
+The country code is a two letter code as defined by the ISO 3166-1 Alpha 2 standard. E.g. `gb` for the United Kingdom, `fr` for France, `us` for United States.
 
-  Non-two letter country codes are ignored. 
-  
-  * `language` - language to display results in.
+Example usage:
+`countrycode: 'de'`
 
-  A two letter language code (such as `es` for Spanish or `de` for German), or `native` in which case we will attempt to return the response in the local language.
-  Currently supported languages are: `de`, `en`, `es`, `fr`.
+Non-two letter country codes are ignored.
 
-  Example usage:
-    `language: 'de'`
+- `language` - language to display results in.
 
-  If no language is explicitly specified, we default to English `en`. 
-  
-  We hope to add more languages in the future. Please get in touch if lack of a certain language is preventing you from becoming a customer. 
+A two letter language code (such as `es` for Spanish or `de` for German), or `native` in which case we will attempt to return the response in the local language.
+Currently supported languages are: `de`, `en`, `es`, `fr`.
 
-  * `limit` - maximum number of results the autosuggest should display.
-  
-  Default is 5. Maximum allowable value is 10.
+Example usage:
+`language: 'de'`
 
-  Example usage:
-    `limit: 3`
+If no language is explicitly specified, we default to English `en`.
 
-### Tweaking the look and feel
+We hope to add more languages in the future. Please get in touch if lack of a certain language is preventing you from becoming a customer.
+
+- `limit` - maximum number of results the autosuggest should display.
+
+Default is 5. Maximum allowable value is 10.
+
+Example usage:
+`limit: 3`
+
+### 2. Events
+
+- `onActive` - callback function called whenever a result is active.
+
+By default, this is an empty function.
+
+Function parameter type:
+
+```js
+(params: { state: AutocompleteState, ...setters, event: Event, item: TItem, itemInputValue: string, itemUrl: string, source: AutocompleteSource }) => void
+```
+
+- `onSelect` - callback function called whenever a result is selected.
+
+By default, this is an empty function.
+
+Function parameter type:
+
+```js
+(params: { state: AutocompleteState, ...setters, event: Event, item: TItem, itemInputValue: string, itemUrl: string, source: AutocompleteSource }) => void`| defaults to`({ setIsOpen }) => setIsOpen(false)
+```
+
+- `onSubmit` - callback function called when submitting the form.
+
+By default, this is an empty function.
+
+Function parameter type:
+
+```js
+(params: { state: AutocompleteState, event: Event, ...setters }) => void
+```
+
+## Tweaking the look and feel
 
 TODO: explain how to skin the look and feel
 
 ## Packages
 
-- core
-- bundle
+### `@opencage/geosearch-core`
+
+### `@opencage/geosearch-bundle`
 
 ## Issues
 
@@ -123,9 +158,9 @@ Find a bug or want to request a new feature? Please let us know by submitting [a
 
 ## Please Note
 
-Geosearch is an entirely different service than geocoding. OpenCage also operates a [forward and reverse geocoding API](https://opencagedata.com/api), please don't confuse the geosearch service with the geocoding API. 
+Geosearch is an entirely different service than geocoding. OpenCage also operates a [forward and reverse geocoding API](https://opencagedata.com/api), please don't confuse the geosearch service with the geocoding API.
 
-Learn more about [the difference between geosearch and geocoding](https://opencagedata.com/guides/the-difference-between-geocoding-and-geosearch). 
+Learn more about [the difference between geosearch and geocoding](https://opencagedata.com/guides/the-difference-between-geocoding-and-geosearch).
 
 ## License
 
@@ -133,10 +168,10 @@ Licensed under the MIT License
 
 A copy of the license is available in the repository's [LICENSE](LICENSE) file.
 
-### Who is OpenCage GmbH?
+## Who is OpenCage GmbH?
 
 <a href="https://opencagedata.com"><img src="opencage_logo_300_150.png"></a>
 
-We run the [OpenCage Geocoding API](https://opencagedata.com/api). Learn more [about us](https://opencagedata.com/about). 
+We run the [OpenCage Geocoding API](https://opencagedata.com/api). Learn more [about us](https://opencagedata.com/about).
 
 We also run [Geomob](https://thegeomob.com), a series of regular meetups for location based service creators, where we do our best to highlight geoinnovation. If you like geo stuff, you will probably enjoy [the Geomob podcast](https://thegeomob.com/podcast/).
