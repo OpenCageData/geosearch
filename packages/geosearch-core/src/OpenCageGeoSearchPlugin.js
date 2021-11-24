@@ -35,7 +35,18 @@ const OpenCageGeoSearchPlugin = (options = {}, events = {}) => {
   const onActive = events.onActive || fn;
   const onSubmit = events.onSubmit || fn;
 
-  const handleResult = ({ results }) => {
+  const uniqByKeepFirst = (a, key) => {
+    const seen = new Set();
+    return a.filter((item) => {
+      const k = key(item);
+      return seen.has(k) ? false : seen.add(k);
+    });
+  };
+
+  const handleResult = ({ results: returnedResults }) => {
+    // filter, to dedupe , results on the attribute `formatted`
+    const results = uniqByKeepFirst(returnedResults, (it) => it.formatted);
+
     return [
       {
         sourceId: 'opencage',
@@ -105,16 +116,12 @@ const OpenCageGeoSearchPlugin = (options = {}, events = {}) => {
 
   return {
     async getSources({ query }) {
+      // TODO: API key missing
+      // if (!window.fetch) return []; // TODO: polyfill?
       if (query === '') {
         selectedItem = null;
       }
-      // if (query !== selectedItem?.formatted) {
-      //   selectedItem = null;
-      // }
-
       if (selectedItem) return handleResult({ results: [selectedItem] });
-      // TODO: API key missing
-      // if (!window.fetch) return []; // TODO: polyfill?
       if (!isString(query)) return [];
       if (!query || query.length < 2) return [];
       const url = buildURL(
