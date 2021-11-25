@@ -148,9 +148,17 @@ TODO: explain how to skin the look and feel
 
 ## Packages
 
+### `@opencage/geosearch-bundle`
+
+_For those who just want a simple HTML / JS integration_
+
+This package bumdles the [Algolia Autocomplete](https://github.com/algolia/autocomplete) and our GeoSearch plugin.
+
 ### `@opencage/geosearch-core`
 
-### `@opencage/geosearch-bundle`
+_For whom is using a javascript dependency manager_
+
+This is the core package: the GeoSearch plugin to use with [Algolia Autocomplete](https://github.com/algolia/autocomplete).
 
 ## Issues
 
