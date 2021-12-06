@@ -119,7 +119,15 @@ By default, this is an empty function.
 Function parameter type:
 
 ```js
-(params: { state: AutocompleteState, ...setters, event: Event, item: TItem, itemInputValue: string, itemUrl: string, source: AutocompleteSource }) => void
+(params: 
+  { state: AutocompleteState, 
+  ...setters, 
+  event: Event, 
+  item: TItem, 
+  itemInputValue: string, 
+  itemUrl: string, 
+  source: AutocompleteSource }
+  ) => void
 ```
 
 - `onSelect` - callback function called whenever a result is selected.
@@ -129,7 +137,15 @@ By default, this is an empty function.
 Function parameter type:
 
 ```js
-(params: { state: AutocompleteState, ...setters, event: Event, item: TItem, itemInputValue: string, itemUrl: string, source: AutocompleteSource }) => void`| defaults to`({ setIsOpen }) => setIsOpen(false)
+(params: 
+  { state: AutocompleteState, 
+  ...setters, 
+  event: Event, 
+  item: TItem, 
+  itemInputValue: string, 
+  itemUrl: string, 
+  source: AutocompleteSource }
+  ) => void`| defaults to`({ setIsOpen }) => setIsOpen(false)
 ```
 
 - `onSubmit` - callback function called when submitting the form.
@@ -139,12 +155,16 @@ By default, this is an empty function.
 Function parameter type:
 
 ```js
-(params: { state: AutocompleteState, event: Event, ...setters }) => void
+(params: 
+  { state: AutocompleteState, 
+  event: Event, 
+  ...setters }
+  ) => void
 ```
 
 ## Tweaking the look and feel
 
-TODO: explain how to skin the look and feel
+Check Algolia's Autocomplete [CSS styles](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-theme-classic/#css-variables)
 
 ## Packages
 
