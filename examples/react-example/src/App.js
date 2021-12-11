@@ -4,7 +4,7 @@ import { OpenCageGeoSearchPlugin } from '@opencage/geosearch-core';
 import logo from './logo.svg';
 import { GeoSearch } from './components/GeoSearch';
 
-import '@algolia/autocomplete-theme-classic';
+// import '@algolia/autocomplete-theme-classic';
 import './App.css';
 
 const options = {
