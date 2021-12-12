@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <!-- ... -->
+    <style>
+        #map {
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-200">
+    <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script type="text/javascript" src="https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js?v1.3.0"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@opencage/geosearch-bundle"></script> -->
+    <script type="text/javascript" src="./dist/js/opencage-geosearch-core.js"></script>
+
+    <!-- ... -->
+    <div class="container mx-auto pt-8 z-9999">
+
+        <div class="flex flex-col md:flex-row space-x-4 ">
+            <div class="flex-row space-y-4 ">
+                <div class="w-full max-w-3xl">
+                    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                        <div class="flex flex-wrap -mx-3 mb-6">
+                            <div class="w-full px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                    for="grid-place">
+                                    OpenCage GeoSearch API Key
+                                </label>
+                                <input
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="grid-api-key" type="text" placeholder="Your API Key">
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-3 mb-6">
+                            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                    for="grid-countrycode">
+                                    countrycode
+                                </label>
+                                <input
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="grid-countrycode" type="text" placeholder="gb">
+                            </div>
+                            <div class="w-full md:w-1/2 px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                    for="grid-language">
+                                    language
+                                </label>
+                                <input
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="grid-language" type="text" placeholder="fr">
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-3 mb-6">
+                            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                    for="grid-lmit">
+                                    limit
+                                </label>
+                                <input
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="grid-limit" type="text" placeholder="5">
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-3 mb-6">
+                            <div class="w-full px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                    for="grid-bounds">
+                                    bounds
+                                </label>
+                                <input
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="grid-bounds" type="text" placeholder="-0.563160,51.280430,0.278970,51.683979">
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-3 mb-6">
+                            <div class="w-full px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                    for="grid-place">
+                                    Place (countries, states, regions, cities, towns, suburbs, major POIs)
+                                </label>
+                                <div id="grid-place"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="w-full max-w-3xl">
+                    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                        <div class="flex flex-wrap -mx-3 mb-24">
+                            <div class="w-full px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                    for="item-selected">
+                                    Item Selected
+                                </label>
+                                <input
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="item-selected" type="text" placeholder="none" disabled>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-3 mb-">
+                            <div class="w-full px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                    for="item-active">
+                                    Active Item
+                                </label>
+                                <input
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="item-active" type="text" placeholder="none" disabled>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="w-full max-w-3xl">
+                <div class="h-full w-fill shadow-md rounded" id="wrapper">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-center text-gray-500 text-xs pt-6">
+            &copy;2021 Opencage GmbH.
+        </p>
+
+    </div>
+
+
+    <script>
+        var layer = new L.StamenTileLayer("toner");
+        var map = new L.Map("map", {
+            center: new L.LatLng(51.505, -0.13),
+            zoom: 11
+        });
+        map.addLayer(layer);
+
+        const { autocomplete } = window['@algolia/autocomplete-js'];
+
+        const options = {
+            key: window.OPENCAGE_GEOSEARCH_KEY,
+            // limit: 3,
+            // bounds: ''
+            // language: 'fr'
+            // countrycode: 'de'
+        };
+
+        var marker;
+
+        const handleSelect = ({ item }) => {
+            console.log(item);
+            const latlng = [item.geometry.lat, item.geometry.lng]
+            marker = L.marker(latlng).addTo(map);
+            marker.bindPopup(item.formatted)
+            map.flyTo(latlng, 13)
+            const input = document.getElementById('item-selected');
+            input.value = item.formatted;
+        }
+
+        const handleActive = ({ item }) => {
+            console.log(item);
+            const input = document.getElementById('item-active');
+            input.value = item.formatted;
+        }
+
+        const events = {
+            onSelect: handleSelect,
+            onActive: handleActive
+        }
+
+        autocomplete({
+            container: '#grid-place',
+            placeholder: "London",
+            plugins: [opencage.OpenCageGeoSearchPlugin(options, events)]
+        });
+
+
+    </script>
+
+</body>
+
+</html>
