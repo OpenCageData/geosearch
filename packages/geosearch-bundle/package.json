@@ -7,7 +7,16 @@
     "url": "https://www.opencagedata.com"
   },
   "homepage": "https://github.com/OpenCageData/geosearch-sdk#readme",
-  "keywords": [],
+  "keywords": [
+    "opencgae",
+    "geosearch",
+    "geographic",
+    "searches",
+    "autocomplete",
+    "autosuggest",
+    "type-ahead",
+    "predictions"
+  ],
   "license": "MIT",
   "source": "src/index.js",
   "main": "dist/js/opencage-geosearch-bundle.js",

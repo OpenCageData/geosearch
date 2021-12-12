@@ -119,13 +119,13 @@ By default, this is an empty function.
 Function parameter type:
 
 ```js
-(params: 
-  { state: AutocompleteState, 
-  ...setters, 
-  event: Event, 
-  item: TItem, 
-  itemInputValue: string, 
-  itemUrl: string, 
+(params:
+  { state: AutocompleteState,
+  ...setters,
+  event: Event,
+  item: TItem,
+  itemInputValue: string,
+  itemUrl: string,
   source: AutocompleteSource }
   ) => void
 ```
@@ -137,13 +137,13 @@ By default, this is an empty function.
 Function parameter type:
 
 ```js
-(params: 
-  { state: AutocompleteState, 
-  ...setters, 
-  event: Event, 
-  item: TItem, 
-  itemInputValue: string, 
-  itemUrl: string, 
+(params:
+  { state: AutocompleteState,
+  ...setters,
+  event: Event,
+  item: TItem,
+  itemInputValue: string,
+  itemUrl: string,
   source: AutocompleteSource }
   ) => void`| defaults to`({ setIsOpen }) => setIsOpen(false)
 ```
@@ -155,9 +155,9 @@ By default, this is an empty function.
 Function parameter type:
 
 ```js
-(params: 
-  { state: AutocompleteState, 
-  event: Event, 
+(params:
+  { state: AutocompleteState,
+  event: Event,
   ...setters }
   ) => void
 ```
