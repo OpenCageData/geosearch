@@ -12,7 +12,7 @@
     <!-- ... -->
     <style>
         #map {
-            height: 756px;
+            height: 804px;
         }
     </style>
 </head>
@@ -62,7 +62,7 @@
                                 </label>
                                 <input
                                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="grid-language" type="text" placeholder="fr">
+                                    id="grid-language" type="text" placeholder="fr" onblur="handleLanguageBlur()">
                             </div>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-6">
@@ -73,7 +73,7 @@
                                 </label>
                                 <input
                                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="grid-limit" type="text" placeholder="5">
+                                    id="grid-limit" type="text" placeholder="5" onblur="handleLimitBlur()">
                             </div>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-6">
@@ -84,7 +84,8 @@
                                 </label>
                                 <input
                                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="grid-bounds" type="text" placeholder="-0.563160,51.280430,0.278970,51.683979">
+                                    id="grid-bounds" type="text" placeholder="-0.563160,51.280430,0.278970,51.683979"
+                                    onblur="handleBoundsBlur()">
                             </div>
                         </div>
                         <div class="flex flex-wrap -mx-3 mb-6">
@@ -94,6 +95,15 @@
                                     Place (countries, regions, cities, major POIs, ...)
                                 </label>
                                 <div id="autocomplete"></div>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-3 mb-6">
+                            <div class="w-full px-3">
+                                <button
+                                    class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+                                    id="submit-button" type="submit">
+                                    Submit
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -111,7 +121,7 @@
                                     id="item-selected" type="text" placeholder="none" disabled>
                             </div>
                         </div>
-                        <div class="flex flex-wrap -mx-3 mb-">
+                        <div class="flex flex-wrap -mx-3 mb-24">
                             <div class="w-full px-3">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                                     for="item-active">
@@ -120,6 +130,17 @@
                                 <input
                                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                     id="item-active" type="text" placeholder="none" disabled>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-3 mb-">
+                            <div class="w-full px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                    for="item-submitted">
+                                    Submitted Value
+                                </label>
+                                <input
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="item-submitted" type="text" placeholder="none" disabled>
                             </div>
                         </div>
                     </form>
@@ -147,6 +168,8 @@
         });
         map.addLayer(layer);
 
+        var marker;
+
         const { autocomplete } = window['@algolia/autocomplete-js'];
 
         const options = {
@@ -157,10 +180,9 @@
             countrycode: '',
         };
 
-        var marker;
 
         const handleSelect = ({ item }) => {
-            console.log(item);
+            console.log('Selected Item is', item);
             const latlng = [item.geometry.lat, item.geometry.lng]
             marker = L.marker(latlng).addTo(map);
             marker.bindPopup(item.formatted)
@@ -170,17 +192,24 @@
         };
 
         const handleActive = ({ item }) => {
-            console.log(item);
+            console.log('Active Item is ', item);
             const input = document.getElementById('item-active');
             input.value = item.formatted;
+        };
+
+        const handleSubmit = (params) => {
+            console.log(params);
         };
 
         const events = {
             onSelect: handleSelect,
             onActive: handleActive,
+            onSubmit: handleSubmit,
         };
 
         function resetContainer() {
+            if (!options.key) return;
+
             const container = document.getElementById('autocomplete');
             container.replaceChildren();
 
@@ -192,7 +221,7 @@
         }
 
         function handleAPIKeyBlur() {
-            console.log('API KEY on Blur');
+            console.log('--API KEY on Blur');
             const element = document.getElementById('grid-api-key');
             const value = element.value;
             console.log('Setting API Key with', value);
@@ -201,7 +230,7 @@
         }
 
         function handleCountryCodeBlur() {
-            console.log('Country Code on Blur');
+            console.log('--CountryCode on Blur');
             const element = document.getElementById('grid-countrycode');
             const value = element.value;
             console.log('Setting CountryCode with', value);
@@ -209,6 +238,44 @@
             resetContainer();
         }
 
+        function handleLanguageBlur() {
+            console.log('--Language on Blur');
+            const element = document.getElementById('grid-language');
+            const value = element.value;
+            console.log('Setting Language with', value);
+            options.language = value;
+            resetContainer();
+        }
+
+        function handleLimitBlur() {
+            console.log('--Limit on Blur');
+            const element = document.getElementById('grid-limit');
+            const value = element.value;
+            console.log('Setting Limit with', value);
+            options.limit = value;
+            resetContainer();
+        }
+
+        function handleBoundsBlur() {
+            console.log('--Bounds on Blur');
+            const element = document.getElementById('grid-bounds');
+            const value = element.value;
+            console.log('Setting Bounds with', value);
+            options.bounds = value;
+            resetContainer();
+        }
+
+        document.getElementById('submit-button').addEventListener('click', function (event) {
+            event.preventDefault();
+            console.log('--Form submitted');
+            const element = document.getElementById('autocomplete-1-input');
+            const value = element.value;
+            console.log('Submitted value is', value);
+
+            const input = document.getElementById('item-submitted');
+            input.value = value;
+
+        });
     </script>
 
 </body>
