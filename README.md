@@ -110,6 +110,13 @@ Default is 5. Maximum allowable value is 10.
 Example usage:
 `limit: 3`
 
+- `debounce` - sets the time (in ms) to pass without any typing before doing a request to the API.
+
+Default is 300.
+
+Example usage:
+`debounce: 250`
+
 ### 2. Events
 
 - `onActive` - callback function called whenever a result is active.

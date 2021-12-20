@@ -4,7 +4,7 @@ const { debouncePromise } = require('./helpers/debounce');
 const { uniqByKeepFirst } = require('./helpers/arrayUtils');
 const { buildURL } = require('./URLBuilder');
 
-const OpenCageGeoSearchPlugin = (options = {}, events = {}) => {
+const OpenCageGeoSearchPlugin = (options = { debounce: 300 }, events = {}) => {
   const fn = () => {};
   let selectedItem = null;
 
@@ -16,7 +16,7 @@ const OpenCageGeoSearchPlugin = (options = {}, events = {}) => {
   const onActive = events.onActive || fn;
   const onSubmit = events.onSubmit || fn;
 
-  const debouncedFetch = debouncePromise(fetch, 300);
+  const debouncedFetch = debouncePromise(fetch, options.debounce);
 
   const handleResult = ({ results: returnedResults }) => {
     // filter, to dedupe , results on the attribute `formatted`
