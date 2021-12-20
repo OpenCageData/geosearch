@@ -1,5 +1,6 @@
 const { isString } = require('./helpers/stringUtils');
 const { checkResponseStatus } = require('./helpers/fetchUtils');
+const { debouncePromise } = require('./helpers/debounce');
 
 const buildURL = (url, options) => {
   let result = url;
@@ -42,6 +43,8 @@ const OpenCageGeoSearchPlugin = (options = {}, events = {}) => {
       return seen.has(k) ? false : seen.add(k);
     });
   };
+
+  const debouncedFetch = debouncePromise(fetch, 300);
 
   const handleResult = ({ results: returnedResults }) => {
     // filter, to dedupe , results on the attribute `formatted`
@@ -131,7 +134,7 @@ const OpenCageGeoSearchPlugin = (options = {}, events = {}) => {
       const headers = {
         'OpenCage-Geosearch-Key': options.key,
       };
-      return fetch(url, { headers, mode: 'cors' })
+      return debouncedFetch(url, { headers, mode: 'cors' })
         .then(checkResponseStatus)
         .then((response) => {
           if (response.ok) return response.json();
