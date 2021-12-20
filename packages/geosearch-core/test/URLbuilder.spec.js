@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { buildURL } = require('../src/OpenCageGeoSearchPlugin');
+const { buildURL } = require('../src/URLBuilder');
 
 describe('geosearch-core:buildURL', () => {
   const DEFAULT_URL = 'https://api.opencagedata.com/geosearch?query=weimar';

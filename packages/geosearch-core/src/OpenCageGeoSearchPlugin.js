@@ -1,28 +1,8 @@
 const { isString } = require('./helpers/stringUtils');
 const { checkResponseStatus } = require('./helpers/fetchUtils');
 const { debouncePromise } = require('./helpers/debounce');
-
-const buildURL = (url, options) => {
-  let result = url;
-  if (!options) return result;
-  // if (options.key) {
-  //   result = `${result}&key=${options.key}`;
-  // }
-  if (options.limit) {
-    result = `${result}&limit=${options.limit}`;
-  }
-  if (options.countrycode) {
-    result = `${result}&countrycode=${options.countrycode}`;
-  }
-  if (options.language) {
-    result = `${result}&language=${options.language}`;
-  }
-  if (options.bounds) {
-    result = `${result}&bounds=${options.bounds}`;
-  }
-
-  return result;
-};
+const { uniqByKeepFirst } = require('./helpers/arrayUtils');
+const { buildURL } = require('./URLBuilder');
 
 const OpenCageGeoSearchPlugin = (options = {}, events = {}) => {
   const fn = () => {};
@@ -35,14 +15,6 @@ const OpenCageGeoSearchPlugin = (options = {}, events = {}) => {
 
   const onActive = events.onActive || fn;
   const onSubmit = events.onSubmit || fn;
-
-  const uniqByKeepFirst = (a, key) => {
-    const seen = new Set();
-    return a.filter((item) => {
-      const k = key(item);
-      return seen.has(k) ? false : seen.add(k);
-    });
-  };
 
   const debouncedFetch = debouncePromise(fetch, 300);
 
