@@ -68,7 +68,7 @@ yarn watch
 
 ## Playground
 
-The playground is the [React example](<(./examples/react-example)>) which allow to check the built [core](<(./packages/geosearch-core)>) package.
+The playground is the [React example](./examples/react-example) which allow to check the built [core](./packages/geosearch-core) package.
 
 Start the playground with the commmand
 
