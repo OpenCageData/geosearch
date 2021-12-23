@@ -180,6 +180,10 @@ _For whom is using a javascript dependency manager_
 
 This is the core package: the GeoSearch plugin to use with [Algolia Autocomplete](https://github.com/algolia/autocomplete).
 
+## Build and develop
+
+Please refer to the following developer [notes](BUILD.md)
+
 ## Issues
 
 Find a bug or want to request a new feature? Please let us know by submitting [an issue](https://github.com/OpenCageData/geosearch/issues).

@@ -15,6 +15,7 @@
     "lint:fix": "lerna run lint:fix",
     "playground:start": "yarn workspace @opencage/geosearch-react-example start",
     "start": "yarn run watch",
+    "symlinks": "./scripts/symlinks.sh",
     "test": "lerna run test --no-private",
     "watch": "lerna run watch --parallel"
   },
