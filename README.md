@@ -117,6 +117,13 @@ Default is 300.
 Example usage:
 `debounce: 250`
 
+- `noResults` - sets the label to display when the API returns no results (it is i18n).
+
+Default is `No results.`.
+
+Example usage:
+`noResults: 'Pas de résultat.'`
+
 ### 2. Events
 
 - `onActive` - callback function called whenever a result is active.
