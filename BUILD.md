@@ -110,6 +110,14 @@ yarn lint
 yarn test
 ```
 
+## coverage
+
+```bash
+yarn test:coverage
+```
+
+the open your browser with `open ./packages/geosearch-core/coverage/index.html`
+
 ## Clean build packages
 
 run the command
