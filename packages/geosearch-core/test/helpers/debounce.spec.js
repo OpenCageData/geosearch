@@ -4,7 +4,7 @@ const sinon = require('sinon');
 const { debouncePromise } = require('../../src/helpers/debounce');
 
 describe('geosearch-core:debounce', () => {
-  it('debounce', (done) => {
+  it('should call the function after 500ms', (done) => {
     const fn = sinon.spy();
     const debounced = debouncePromise(fn, 500);
     debounced();
@@ -13,5 +13,17 @@ describe('geosearch-core:debounce', () => {
       expect(fn.calledOnce).to.be.true;
       done();
     }, 600);
+  });
+
+  it('should clear the timeout before running the function', (done) => {
+    const fn = sinon.spy();
+    const debounced = debouncePromise(fn, 200);
+    debounced();
+    expect(fn.calledOnce).to.be.false;
+    setTimeout(() => {
+      debounced();
+      expect(fn.calledOnce).to.be.false;
+      done();
+    }, 100);
   });
 });
