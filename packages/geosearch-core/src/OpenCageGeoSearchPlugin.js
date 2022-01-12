@@ -4,7 +4,10 @@ const { debouncePromise } = require('./helpers/debounce');
 const { uniqByKeepFirst } = require('./helpers/arrayUtils');
 const { buildURL } = require('./URLBuilder');
 
-const OpenCageGeoSearchPlugin = (options = {}, events = {}) => {
+const OpenCageGeoSearchPlugin = (
+  options = { debounce: 300, noResults: 'No results.' },
+  events = {}
+) => {
   const fn = () => {};
   let selectedItem = null;
 
@@ -16,7 +19,7 @@ const OpenCageGeoSearchPlugin = (options = {}, events = {}) => {
   const onActive = events.onActive || fn;
   const onSubmit = events.onSubmit || fn;
 
-  const debouncedFetch = debouncePromise(fetch, 300);
+  const debouncedFetch = debouncePromise(fetch, options.debounce);
 
   const handleResult = ({ results: returnedResults }) => {
     // filter, to dedupe , results on the attribute `formatted`
@@ -35,7 +38,6 @@ const OpenCageGeoSearchPlugin = (options = {}, events = {}) => {
         // ---- getItemUrl
         //  type: (params: { item: Item, state: AutocompleteState }) => string | undefined
         // getItemUrl() {
-        // TODO?
         // }
         //
         // ---- getItemInputValue
@@ -57,8 +59,7 @@ const OpenCageGeoSearchPlugin = (options = {}, events = {}) => {
             return `${item.formatted}`;
           },
           noResults() {
-            // FIXME: will need to suppport other languages
-            return 'No results.';
+            return options.noResults;
           },
           footer({ createElement }) {
             // type: (params: { state: AutocompleteState<TItem>, source: AutocompleteSource<TItem>, items: TItem[], createElement: Pragma, Fragment: PragmaFrag }) => VNode | string
@@ -66,19 +67,19 @@ const OpenCageGeoSearchPlugin = (options = {}, events = {}) => {
               dangerouslySetInnerHTML: {
                 __html: `
                 <div style="display:flex;flex-direction:column;align-items:flex-end;">
-                <div
-                  style="display:flex;align-items:center;justify-content:center;font-family: sans-serif;font-size:0.7em;color:#009966;">
-                  <span><a href="https://opencagedata.com/geosearch" target="_blank" rel="noreferrer"><img
-                        src="https://assets.opencagedata.com/opencage-20x21.png" height="21" width="20" border="0" alt="OpenCage"
-                        style="display:inline;" /></a></span>
-                  <span>&nbsp;&nbsp;Made by <a href="https://opencagedata.com/geosearch" target="_blank" rel="noreferrer"
-                      style="text-decoration:none;color:#009966;">OpenCage</a>.</span>
-                  <span>&nbsp;&copy;&nbsp;<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer"
-                      style="text-decoration:none;color:#009966;">OpenStreetMap</a>,</span>
-                  <span>&nbsp;<a href="https://opencagedata.com/credits" target="_blank" rel="noreferrer"
-                      style="text-decoration:none;color:#009966;">others</a>.</span>
+                  <div
+                    style="display:flex;align-items:center;justify-content:center;font-family: sans-serif;font-size:0.7em;color:#009966;">
+                    <span><a href="https://opencagedata.com/geosearch" target="_blank" rel="noreferrer"><img
+                          src="https://assets.opencagedata.com/opencage-20x21.png" height="21" width="20" border="0" alt="OpenCage"
+                          style="display:inline;" /></a></span>
+                    <span>&nbsp;&nbsp;Made by <a href="https://opencagedata.com/geosearch" target="_blank" rel="noreferrer"
+                        style="text-decoration:none;color:#009966;">OpenCage</a>.</span>
+                    <span>&nbsp;&copy;&nbsp;<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer"
+                        style="text-decoration:none;color:#009966;">OpenStreetMap</a>,</span>
+                    <span>&nbsp;<a href="https://opencagedata.com/credits" target="_blank" rel="noreferrer"
+                        style="text-decoration:none;color:#009966;">others</a>.</span>
+                  </div>
                 </div>
-              </div>
               `,
               },
             });
@@ -132,4 +133,4 @@ const OpenCageGeoSearchPlugin = (options = {}, events = {}) => {
   };
 };
 
-module.exports = { OpenCageGeoSearchPlugin, buildURL };
+module.exports = { OpenCageGeoSearchPlugin };

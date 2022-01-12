@@ -34,13 +34,16 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "mocha --recursive",
+    "test:coverage": "nyc  --reporter=html --reporter=text mocha --recursive",
     "watch": "webpack watch --mode development"
   },
   "bugs": {
     "url": "https://github.com/OpenCageData/geosearch-sdk/issues"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "nyc": "^15.1.0",
+    "sinon": "^12.0.1"
+  },
   "peerDependencies": {
     "@algolia/autocomplete-js": "^1.*",
     "@algolia/autocomplete-theme-classic": "^1.*"

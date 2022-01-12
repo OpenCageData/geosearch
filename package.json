@@ -17,6 +17,7 @@
     "start": "yarn run watch",
     "symlinks": "./scripts/symlinks.sh",
     "test": "lerna run test --no-private",
+    "test:coverage": "lerna run test:coverage --no-private",
     "watch": "lerna run watch --parallel"
   },
   "devDependencies": {
