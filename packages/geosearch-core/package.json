@@ -40,10 +40,7 @@
   "bugs": {
     "url": "https://github.com/OpenCageData/geosearch-sdk/issues"
   },
-  "devDependencies": {
-    "nyc": "^15.1.0",
-    "sinon": "^12.0.1"
-  },
+  "devDependencies": {},
   "peerDependencies": {
     "@algolia/autocomplete-js": "^1.*",
     "@algolia/autocomplete-theme-classic": "^1.*"
