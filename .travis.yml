@@ -4,3 +4,7 @@ node_js:
 install:
   - yarn install
   - yarn bootstrap
+script:
+  - yarn lint
+  - yarn test:covergae
+  - yarn build
