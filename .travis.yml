@@ -6,5 +6,5 @@ install:
   - yarn bootstrap
 script:
   - yarn lint
-  - yarn test:covergae
+  - yarn test:coverage
   - yarn build
