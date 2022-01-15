@@ -23,7 +23,7 @@ const OpenCageGeoSearchPlugin = (
 
   return {
     async getSources({ query }) {
-      // TODO: API key missing
+      // TODO: API key missing?
       // if (!window.fetch) return []; // TODO: polyfill?
       if (query === '') {
         selectedItem = null;

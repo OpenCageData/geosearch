@@ -27,6 +27,7 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-security": "^1.4.0",
+    "isomorphic-unfetch": "^3.1.0",
     "lerna": "^4.0.0",
     "nyc": "^15.1.0",
     "prettier": "^2.5.1",
