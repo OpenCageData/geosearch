@@ -1,4 +1,4 @@
-# Opencage Geosearch developer documentation
+# Opencage Geosearch javascript client library developer documentation
 
 As ususal, please clone the repo first.
 
