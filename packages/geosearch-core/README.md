@@ -1,6 +1,6 @@
 # @opencage/geosearch-core
 
-The `geosearch-core` package is an Algolia [autocomplete](https://github.com/algolia/autocomplete) plugin to search for places around the world.
+The `geosearch-core` package is an Algolia [autocomplete](https://github.com/algolia/autocomplete) plugin used by [OpenCage Geosearch](https://opencagedata.com/geosearch) to search for places around the world.
 
 ## Installation
 

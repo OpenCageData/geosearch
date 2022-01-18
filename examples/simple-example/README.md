@@ -1,6 +1,8 @@
 # Simple HTML and Vanilla JS integration
 
-Just include the CSS
+A very basic example for implementing [OpenCage Geosearch](https://opencagedata.com/geosearch) autocomplete widget using basic HTML and javascript
+
+1. include the CSS in the page
 
 ```html
 <header>
@@ -11,7 +13,7 @@ Just include the CSS
 </header>
 ```
 
-Add the search container, and the SDK adjusting the path
+2. Add the search container, and the SDK adjusting the path
 
 ```html
 <body>
@@ -20,12 +22,14 @@ Add the search container, and the SDK adjusting the path
 </body>
 ```
 
-Then use you OpenCage Geosearch Key with the autocomplete:
+Then set your OpenCage Geosearch Key (available to customers in their account dashboard), and any of the [various optional geosearch parameters](https://github.com/OpenCageData/geosearch#optional-configuration) with the autocomplete:
 
 ```html
 <script>
   const options = {
     key: 'YOUR-GEOSEARCH-KEY',
+    // language: 'fr',
+    // noResults: 'Pas de résultat.'
   };
 
   opencage.algoliaAutocomplete({
@@ -34,3 +38,7 @@ Then use you OpenCage Geosearch Key with the autocomplete:
   });
 </script>
 ```
+
+3. Finally, you will need to serve the page on the domain that matches the CORS header domain you specified for geosearch in [the geosearch tab of your OpenCage account dashboard](https://opencagedata.com/dashboard#geosearch). For testing you can serve the page from localhost.
+
+Have questions? Please [get in touch](https://opencagedata.com/contact).
