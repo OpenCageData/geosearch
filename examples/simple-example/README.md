@@ -25,7 +25,7 @@ Then use you OpenCage Geosearch Key with the autocomplete:
 ```html
 <script>
   const options = {
-    key: 'YOUR-API-KEY',
+    key: 'YOUR-GEOSEARCH-KEY',
   };
 
   opencage.algoliaAutocomplete({
