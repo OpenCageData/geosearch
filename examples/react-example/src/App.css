@@ -1,0 +1,33 @@
+.App {
+  box-sizing: border-box;
+}
+
+.App-logo {
+  animation: App-logo-spin 10s linear;
+  height: 20vmin;
+}
+
+.App-header {
+  text-align: center;
+  background-color: #009966;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #e3f5ed;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

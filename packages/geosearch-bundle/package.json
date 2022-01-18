@@ -1,0 +1,47 @@
+{
+  "name": "@opencage/geosearch-bundle",
+  "version": "0.0.0",
+  "description": "OpenCage GeoSearch bundled with Algolia autocomplete",
+  "author": {
+    "name": "OpenCage GmbH",
+    "url": "https://www.opencagedata.com"
+  },
+  "homepage": "https://github.com/OpenCageData/geosearch-sdk#readme",
+  "keywords": [
+    "opencgae",
+    "geosearch",
+    "geographic",
+    "searches",
+    "autocomplete",
+    "autosuggest",
+    "type-ahead",
+    "predictions"
+  ],
+  "license": "MIT",
+  "source": "src/index.js",
+  "main": "dist/js/opencage-geosearch-bundle.js",
+  "files": [
+    "dist/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenCageData/geosearch-sdk.git"
+  },
+  "scripts": {
+    "build:clean": "rm -rf dist",
+    "build:js": "webpack --mode production",
+    "build:css": "./scripts/copycss.sh",
+    "build": "yarn build:js && yarn build:css",
+    "watch": "webpack watch --mode development",
+    "test": "echo \"Warning: run tests from root\" && exit 0"
+  },
+  "bugs": {
+    "url": "https://github.com/OpenCageData/geosearch-sdk/issues"
+  },
+  "dependencies": {
+    "@algolia/autocomplete-js": "^1.5.1",
+    "@algolia/autocomplete-theme-classic": "^1.5.1",
+    "@opencage/geosearch-core": "^0.0.0"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - 16
+install:
+  - yarn install
+  - yarn bootstrap
+script:
+  - yarn lint
+  - yarn test:coverage
+  - yarn build

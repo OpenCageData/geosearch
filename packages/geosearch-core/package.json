@@ -1,0 +1,48 @@
+{
+  "name": "@opencage/geosearch-core",
+  "version": "0.0.0",
+  "description": "Core client for OpenCage GeoSearch",
+  "author": {
+    "name": "OpenCage GmbH",
+    "url": "https://www.opencagedata.com"
+  },
+  "homepage": "https://github.com/OpenCageData/geosearch-sdk#readme",
+  "keywords": [
+    "opencgae",
+    "geosearch",
+    "geographic",
+    "searches",
+    "autocomplete",
+    "autosuggest",
+    "type-ahead",
+    "predictions"
+  ],
+  "license": "MIT",
+  "source": "src/index.js",
+  "main": "dist/js/opencage-geosearch-core.js",
+  "files": [
+    "dist/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenCageData/geosearch-sdk.git"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "build:clean": "rm -rf dist",
+    "dotenv": "../../scripts/dotenv.sh $@",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "mocha --recursive",
+    "test:coverage": "nyc  --reporter=html --reporter=text mocha --recursive",
+    "watch": "webpack watch --mode development"
+  },
+  "bugs": {
+    "url": "https://github.com/OpenCageData/geosearch-sdk/issues"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "@algolia/autocomplete-js": "^1.*",
+    "@algolia/autocomplete-theme-classic": "^1.*"
+  }
+}
