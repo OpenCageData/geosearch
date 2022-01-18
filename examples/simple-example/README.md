@@ -27,7 +27,7 @@ Then set your OpenCage Geosearch Key (available to customers in their account da
 ```html
 <script>
   const options = {
-    key: 'YOUR-API-KEY',
+    key: 'YOUR-GEOSEARCH-KEY',
     // language: 'fr',
     // noResults: 'Pas de résultat.'
   };

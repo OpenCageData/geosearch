@@ -1,8 +1,8 @@
-# Opencage Geosearch developer documentation
+# Opencage Geosearch javascript client library developer documentation
 
 As ususal, please clone the repo first.
 
-We use [lerna](https://lerna.js.org/) in addition with [yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces/)
+We use [lerna](https://lerna.js.org/) in addition to [yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces/)
 
 The prerequisites are :
 
@@ -36,7 +36,7 @@ yarn bootstrap
 Create `.env` file containing your personal Key
 
 ```bash
-yarn dotenv <YOUR-KEY>
+yarn dotenv <YOUR-GEOSEARCH-KEY>
 ```
 
 this will create a .env file in :
@@ -44,13 +44,13 @@ this will create a .env file in :
 - [packages/geosearch-core](./packages/geosearch-core)
 - [examples/react-example](./examples/react-example)
 
-Create the symbolink links
+Create the symbolic links
 
 ```bash
 yarn symlinks
 ```
 
-This will create symbolink links, so the examples can use the local built version the packages.
+This will create symbolic links, so the examples can use the local built version of the packages.
 
 ## Build and watch
 
