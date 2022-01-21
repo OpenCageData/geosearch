@@ -131,3 +131,12 @@ yarn build:clean
 ```
 yarn clean
 ```
+
+## Publish to npmjs.com
+
+```
+npm login
+yarn build
+lerna publish --no-private
+
+```
