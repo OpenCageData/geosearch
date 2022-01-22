@@ -1,6 +1,6 @@
 {
   "name": "@opencage/geosearch-core",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Core client for OpenCage GeoSearch",
   "author": {
     "name": "OpenCage GmbH",
@@ -43,7 +43,6 @@
   "bugs": {
     "url": "https://github.com/OpenCageData/geosearch-sdk/issues"
   },
-  "devDependencies": {},
   "peerDependencies": {
     "@algolia/autocomplete-js": "^1.*",
     "@algolia/autocomplete-theme-classic": "^1.*"
