@@ -18,15 +18,18 @@
     "predictions"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenCageData/geosearch-sdk.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "source": "src/index.js",
   "main": "dist/js/opencage-geosearch-core.js",
   "files": [
     "dist/"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OpenCageData/geosearch-sdk.git"
-  },
   "scripts": {
     "build": "webpack --mode production",
     "build:clean": "rm -rf dist",
