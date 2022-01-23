@@ -1,0 +1,4 @@
+flags:
+  geosearch-core:
+    paths:
+      - packages/geosearch-core/src
