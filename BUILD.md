@@ -128,15 +128,23 @@ yarn build:clean
 
 ## Remove node_modules folders
 
-```
+```bash
 yarn clean
 ```
 
 ## Publish to npmjs.com
 
-```
+```bash
 npm login
 yarn build
 lerna publish --no-private
 
+```
+
+## Audit
+
+Sometimes `yarn audit` fails. An alternative is
+
+```bash
+yarn audit --groups "dependencies"
 ```
