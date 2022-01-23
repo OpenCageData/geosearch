@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - 16
+before_install:
+  - npm install -g codecov
 install:
   - yarn install
   - yarn bootstrap
@@ -8,3 +10,7 @@ script:
   - yarn lint
   - yarn test:coverage
   - yarn build
+  - codecov
+env:
+  global:
+    secure: oOdsYfTmfrGrMszqGy7HHh/+OklSP897FLukZHsvS3eqcWDbyEnjtZF1UBga1E4/61rPfB7VE4FkYAXi/IDbGppbhLy1hGA1abNohCymknydp6wIXzci67IP3x4xmWBCTnztsORebZY81W141atq2jxRls+FeTMKzyBnoDr6/zlC2w2fYBl1hFist0+m5AXCHEGgTjJzPAQ/bKoJQKlI6hh5bc6E/7wrqOgwOfOv9oTh0jxaAP2FVp/93u6od8WAQ6B2bcQL/DWji9XlXaHfyhxQEFXA6Fan4UKZlbmV/TZgywtF+xXSYJnES6nPeI3IGJcQjnfJr6JqoYjUmi8g4DpZBXOG5qDZtRmSOJZ37Xv264Mz2kqPMtkUK5AibwFz7VpsvesE/p7jLJokGESJwzNYTvx9DKvWDvtARFoGHnuMrTrNw/+9mgj/U3d0THzJWvDc4UHWSkPyLMXEKugJqW7m6hrJfpgUU9k8wFXT5D0+bVKE3ANqw3+nNYKZbVT5ce8ajGMIFrWjtXu/zO43nXUjSWJIpUgJU74ssNTx4/IaIlEaFrF7llZ8wFzVJ0O00C6QVFPIMSQ90NodVSLta6ZIQ3M6K36JCxrf/uFbWhs0J07wBgDW5U6CKca+Ix+mv4OOk9M7gPx2d1R3R7gtLGBilcKBxE/zyi+D95Vpz7I=
