@@ -37,7 +37,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "mocha --recursive",
-    "test:coverage": "nyc  --reporter=html --reporter=text mocha --recursive",
+    "test:coverage": "nyc --reporter=lcovonly --reporter=html --reporter=text mocha --recursive",
     "watch": "webpack watch --mode development"
   },
   "bugs": {
