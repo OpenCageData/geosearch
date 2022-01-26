@@ -32,13 +32,23 @@ describe('geosearch-core:OpenCageGeoSearchPlugin', () => {
     const plugin = OpenCageGeoSearchPlugin.OpenCageGeoSearchPlugin();
     const result = await plugin.getSources({ query: 'a' });
     expect(result).to.be.an('array');
-    expect(result.length).to.equal(0);
+    expect(result.length).to.equal(1);
+    const items = result[0].getItems();
+    expect(items[0].formatted).to.equal('. . .');
   });
   it(`should return an empty result with a query to short`, async () => {
     const plugin = OpenCageGeoSearchPlugin.OpenCageGeoSearchPlugin();
     const result = await plugin.getSources({ query: 'aa' });
     expect(result).to.be.an('array');
-    expect(result.length).to.equal(0);
+    expect(result.length).to.equal(1);
+    expect(result[0].sourceId).to.equal('opencage');
+    expect(result[0].getItems).to.be.a('function');
+    const items = result[0].getItems();
+    expect(items).to.be.an('array');
+    expect(items.length).to.equal(1);
+    expect(items[0]).to.be.an('object');
+    expect(items[0].formatted).to.be.a('string');
+    expect(items[0].formatted).to.equal('. . .');
   });
   it(`should return an empty result with a non string query`, async () => {
     const plugin = OpenCageGeoSearchPlugin.OpenCageGeoSearchPlugin();
