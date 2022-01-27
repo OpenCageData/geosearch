@@ -25,24 +25,34 @@ const OpenCageGeoSearchPlugin = (
 
   return {
     async getSources({ query }) {
+      console.log({ query });
       // TODO: API key missing?
-      // if (!window.fetch) return []; // TODO: polyfill?
+      // if (!window.fetch) {
+      //   console.warn('Please Contact the developer of this website!');
+      // }
       if (query === '') {
         selectedItem = null;
+        return [];
+      }
+      if (!isString(query)) {
+        console.debug('Not a string');
+        selectedItem = null;
+        return [];
+      }
+      if (query.length < 3) {
+        console.debug('Query is too short');
+        selectedItem = null;
+        return handleResult(AWAIT_USER_INPUT, {
+          noResults: options.noResults,
+          onActive,
+          onSelect,
+        });
       }
       if (selectedItem)
         return handleResult(
           { results: [selectedItem] },
           { noResults: options.noResults, onActive, onSelect }
         );
-      if (!isString(query)) return [];
-      if (!query) return [];
-      if (query.length < 3)
-        return handleResult(AWAIT_USER_INPUT, {
-          noResults: options.noResults,
-          onActive,
-          onSelect,
-        });
       const url = buildURL(
         `https://api.opencagedata.com/geosearch?q=${query}`,
         options

@@ -85,7 +85,7 @@ So far two others examples are provided
 It uses the bundle version of the package for an effortless integration in your website.
 
 ```bash
-serve examples/simple-example
+serve -S examples/simple-example
 ```
 
 ### Advanced example
@@ -93,7 +93,7 @@ serve examples/simple-example
 it uses the core version of the package and demonstrates the different options on the geosearch
 
 ```bash
-serve examples/advanced-example
+serve -S examples/advanced-example
 ```
 
 ## linter
