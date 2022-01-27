@@ -3,13 +3,13 @@ const { checkResponseStatus } = require('./helpers/fetchUtils');
 const { debouncePromise } = require('./helpers/debounce');
 const { handleResult } = require('./handleResult');
 const { buildURL } = require('./URLBuilder');
+const { AWAIT_USER_INPUT } = require('./constants');
 
 const OpenCageGeoSearchPlugin = (
   options = { debounce: 300, noResults: 'No results.' },
   events = {}
 ) => {
   const fn = () => {};
-  const AWAIT_USER_INPUT = { results: [{ formatted: '. . .' }] };
 
   let selectedItem = null;
 
