@@ -8,6 +8,7 @@
 
 [![Build Status](https://app.travis-ci.com/OpenCageData/geosearch.svg?token=8YN5QSo2Lnt3LymLoxZZ&branch=develop)](https://app.travis-ci.com/OpenCageData/geosearch)
 [![Version](https://img.shields.io/npm/v/@opencage/geosearch-core.svg?style=flat-square)](https://www.npmjs.com/package/@opencage/geosearch-core)
+[![codecov](https://codecov.io/gh/OpenCageData/geosearch/branch/master/graph/badge.svg?token=VAZ0RZCGL3)](https://codecov.io/gh/OpenCageData/geosearch)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
 
 </div>
