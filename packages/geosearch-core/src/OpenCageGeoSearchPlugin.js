@@ -3,12 +3,14 @@ const { checkResponseStatus } = require('./helpers/fetchUtils');
 const { debouncePromise } = require('./helpers/debounce');
 const { handleResult } = require('./handleResult');
 const { buildURL } = require('./URLBuilder');
+const { AWAIT_USER_INPUT } = require('./constants');
 
 const OpenCageGeoSearchPlugin = (
   options = { debounce: 300, noResults: 'No results.' },
   events = {}
 ) => {
   const fn = () => {};
+
   let selectedItem = null;
 
   const onSelect = (params) => {
@@ -34,7 +36,13 @@ const OpenCageGeoSearchPlugin = (
           { noResults: options.noResults, onActive, onSelect }
         );
       if (!isString(query)) return [];
-      if (!query || query.length < 2) return [];
+      if (!query) return [];
+      if (query.length < 3)
+        return handleResult(AWAIT_USER_INPUT, {
+          noResults: options.noResults,
+          onActive,
+          onSelect,
+        });
       const url = buildURL(
         `https://api.opencagedata.com/geosearch?q=${query}`,
         options

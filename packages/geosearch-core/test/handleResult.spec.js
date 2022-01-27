@@ -1,5 +1,6 @@
 const { expect } = require('chai');
 const { handleResult } = require('../src/handleResult');
+const { SOURCE_ID } = require('../src/constants');
 
 describe('geosearch-core:handleResult', () => {
   it('expects `handleResult` to be a function', () => {
@@ -37,7 +38,7 @@ describe('geosearch-core:handleResult', () => {
     expect(result).to.have.lengthOf(1);
     const one = result[0];
     expect(one).to.be.an('object');
-    expect(one.sourceId).to.equal('opencage');
+    expect(one.sourceId).to.equal(SOURCE_ID);
     expect(one.getItems).to.be.a('function');
     expect(one.getItems()).to.deep.equal(aa.results);
     expect(one.getItemInputValue).to.be.a('function');
@@ -81,7 +82,7 @@ describe('geosearch-core:handleResult', () => {
     expect(result).to.have.lengthOf(1);
     const one = result[0];
     expect(one).to.be.an('object');
-    expect(one.sourceId).to.equal('opencage');
+    expect(one.sourceId).to.equal(SOURCE_ID);
     expect(one.getItems()).to.deep.equal(aa.results);
   });
   it('expects `handleResult(aa)` to match template expectations', () => {

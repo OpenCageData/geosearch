@@ -5,6 +5,7 @@ const fetchMock = require('fetch-mock');
 require('isomorphic-unfetch');
 
 const OpenCageGeoSearchPlugin = require('../src/OpenCageGeoSearchPlugin');
+const { SOURCE_ID, AWAIT_LABEL } = require('../src/constants');
 
 const { payload } = require('./fixtures/greno-payload');
 
@@ -32,13 +33,23 @@ describe('geosearch-core:OpenCageGeoSearchPlugin', () => {
     const plugin = OpenCageGeoSearchPlugin.OpenCageGeoSearchPlugin();
     const result = await plugin.getSources({ query: 'a' });
     expect(result).to.be.an('array');
-    expect(result.length).to.equal(0);
+    expect(result.length).to.equal(1);
+    const items = result[0].getItems();
+    expect(items[0].formatted).to.equal(AWAIT_LABEL);
   });
   it(`should return an empty result with a query to short`, async () => {
     const plugin = OpenCageGeoSearchPlugin.OpenCageGeoSearchPlugin();
     const result = await plugin.getSources({ query: 'aa' });
     expect(result).to.be.an('array');
-    expect(result.length).to.equal(0);
+    expect(result.length).to.equal(1);
+    expect(result[0].sourceId).to.equal(SOURCE_ID);
+    expect(result[0].getItems).to.be.a('function');
+    const items = result[0].getItems();
+    expect(items).to.be.an('array');
+    expect(items.length).to.equal(1);
+    expect(items[0]).to.be.an('object');
+    expect(items[0].formatted).to.be.a('string');
+    expect(items[0].formatted).to.equal(AWAIT_LABEL);
   });
   it(`should return an empty result with a non string query`, async () => {
     const plugin = OpenCageGeoSearchPlugin.OpenCageGeoSearchPlugin();
@@ -76,7 +87,7 @@ describe('geosearch-core:OpenCageGeoSearchPlugin', () => {
       console.log('the plugin output for autocomplete', result);
       expect(result).to.be.an('array');
       expect(result.length).to.equal(1);
-      expect(result[0].sourceId).to.equal('opencage');
+      expect(result[0].sourceId).to.equal(SOURCE_ID);
       expect(result[0].getItems).to.be.a('function');
       expect(result[0].getItemInputValue).to.be.a('function');
       expect(result[0].onSelect).to.be.a('function');

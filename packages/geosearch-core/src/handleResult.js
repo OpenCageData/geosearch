@@ -1,5 +1,6 @@
 const { uniqByKeepFirst } = require('./helpers/arrayUtils');
 const { htmlFooter } = require('./Footer');
+const { SOURCE_ID } = require('./constants');
 
 const fn = () => {};
 
@@ -12,7 +13,7 @@ const handleResult = (
 
   return [
     {
-      sourceId: 'opencage',
+      sourceId: SOURCE_ID,
       //
       // ---- getItems
       //  type: (params: { query: string, state: AutocompleteState, ...setters }) => Item[] | Promise<Item[]>
