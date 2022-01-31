@@ -27,7 +27,7 @@ By configuring the two required parameters (`container` and `key`), and configur
 
 ![header](/resources/screenshot-results-berlin.png)
 
-See a live demo [on the OpenCage site](https://opencagedata.com/geosearch).
+See various live demos [on codepen](https://codepen.io/collection/oEMyOj).
 
 ## Usage
 
