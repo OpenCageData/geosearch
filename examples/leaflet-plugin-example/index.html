@@ -86,7 +86,8 @@
 
         const options = {
             key: window.OPENCAGE_GEOSEARCH_KEY,
-            position: 'topright'
+            limit: 3,
+            position: 'topright',
         };
 
         var geosearchControl = L.control.opencageGeosearch(options).addTo(map);

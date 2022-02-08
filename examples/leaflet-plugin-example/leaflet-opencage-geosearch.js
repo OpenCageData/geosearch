@@ -13,8 +13,6 @@
     window.L.YourPlugin = factory(L);
   }
 })(function (L) {
-  const fn = () => {};
-
   L.Control.OpencageGeosearch = L.Control.extend({
     options: {
       key: '',
@@ -24,19 +22,26 @@
       limit: '',
     },
 
-    events: {
-      onSelect: fn,
-      onActive: fn,
-      onSubmit: fn,
-    },
     onAdd: function (map) {
       var className = 'leaflet-control-opencage-geosearch';
       var geosearch = L.DomUtil.create('div', className);
 
+      const handleSelect = ({ item }) => {
+        console.log('Selected Item is', item);
+        const latlng = [item.geometry.lat, item.geometry.lng];
+        marker = L.marker(latlng).addTo(map);
+        marker.bindPopup(item.formatted);
+        map.setView(latlng, 13);
+      };
+
       opencage.algoliaAutocomplete({
         container: geosearch,
         placeholder: 'Search for places',
-        plugins: [opencage.OpenCageGeoSearchPlugin(this.options, this.events)],
+        plugins: [
+          opencage.OpenCageGeoSearchPlugin(this.options, {
+            onSelect: handleSelect,
+          }),
+        ],
       });
 
       return geosearch;
