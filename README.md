@@ -197,6 +197,12 @@ _For whom is using a javascript dependency manager_
 
 This is the core package: the GeoSearch plugin to use with [Algolia Autocomplete](https://github.com/algolia/autocomplete).
 
+## Browser support / Polyfills
+
+This project is written with the latest technologies in mind. Thereby it is required to include a polyfill when you wish to support older browsers:
+
+- [unfetch](https://www.npmjs.com/package/unfetch), for fetch requests.
+
 ## Build and develop
 
 Please refer to the following developer [notes](BUILD.md)
