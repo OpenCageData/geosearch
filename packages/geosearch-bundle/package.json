@@ -6,7 +6,10 @@
     "name": "OpenCage GmbH",
     "url": "https://www.opencagedata.com"
   },
-  "homepage": "https://github.com/OpenCageData/geosearch-sdk#readme",
+  "homepage": "https://github.com/OpenCageData/geosearch#readme",
+  "bugs": {
+    "url": "https://github.com/OpenCageData/geosearch/issues"
+  },
   "keywords": [
     "opencgae",
     "geosearch",
@@ -20,7 +23,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OpenCageData/geosearch-sdk.git"
+    "url": "git+https://github.com/OpenCageData/geosearch.git"
   },
   "publishConfig": {
     "access": "public"
@@ -37,9 +40,6 @@
     "build": "yarn build:js && yarn build:css",
     "watch": "webpack watch --mode development",
     "test": "echo \"Warning: run tests from root\" && exit 0"
-  },
-  "bugs": {
-    "url": "https://github.com/OpenCageData/geosearch-sdk/issues"
   },
   "dependencies": {
     "@algolia/autocomplete-js": "^1.5.1",
