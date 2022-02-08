@@ -31,7 +31,7 @@
   --aa-base-z-index: 9999;
   /* Font */
   --aa-font-size: calc(var(--aa-base-unit) * 1px);
-  --aa-font-family: inherit;
+  --aa-font-family: sans-serif;
   --aa-font-weight-medium: 500;
   --aa-font-weight-semibold: 600;
   --aa-font-weight-bold: 700;
@@ -146,6 +146,7 @@ body.dark {
 .aa-Autocomplete,
 .aa-DetachedFormContainer {
   /* Search box */
+  width: 250px;
 }
 .aa-Form {
   align-items: center;
@@ -351,7 +352,7 @@ body.dark {
 /* 4. Panel */
 /* ---------------- */
 .aa-Panel {
-  z-index: 1000;
+  z-index: var(--aa-base-z-index);
   background-color: white;
   background-color: rgba(
     var(--aa-background-color-rgb),
