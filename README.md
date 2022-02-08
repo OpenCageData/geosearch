@@ -27,7 +27,7 @@ By configuring the two required parameters (`container` and `key`), and configur
 
 ![header](/resources/screenshot-results-berlin.png)
 
-See various live demos [on codepen](https://codepen.io/collection/oEMyOj).
+See a configurable, [live demo on the OpenCage site](https://opencagedata.com/geosearch/demo), or play with the html/css/js [on codepen](https://codepen.io/collection/oEMyOj).
 
 ## Usage
 
@@ -44,6 +44,8 @@ Then, insert your search experience into it by calling the `algoliaAutocomplete`
 - The OpenCage Geosearch API `key`
 
 Make sure to provide a container (e.g., a div), not an input. The Geosearch generates a fully accessible search box.
+
+Please note: a geosearch key is unrelated to the keys for the OpenCage geocoding API. Geosearch keys are of the form `oc_gs_...` and will need to be configured for a specific domain in your OpenCage account dashboard.
 
 ```html
 <script type="text/javascript">
