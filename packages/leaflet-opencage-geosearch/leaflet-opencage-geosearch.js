@@ -1,3 +1,6 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-undef */
+/* eslint-disable global-require */
 (function (factory, window) {
   // define an AMD module that relies on 'leaflet'
   if (typeof define === 'function' && define.amd) {
@@ -10,10 +13,10 @@
 
   // attach your plugin to the global 'L' variable
   if (typeof window !== 'undefined' && window.L) {
-    window.L.YourPlugin = factory(L);
+    window.L.OpencageGeosearch = factory(L);
   }
 })(function (L) {
-  L.Control.OpencageGeosearch = L.Control.extend({
+  const OpencageGeosearch = L.Control.extend({
     options: {
       key: '',
       bounds: '',
@@ -22,12 +25,16 @@
       limit: '',
     },
 
-    onAdd: function (map) {
-      var className = 'leaflet-control-opencage-geosearch';
-      var geosearch = L.DomUtil.create('div', className);
+    onAdd(map) {
+      const className = 'leaflet-control-opencage-geosearch';
+      const geosearch = L.DomUtil.create('div', className);
 
-      const handleSelect = ({ item }) => {
-        console.log('Selected Item is', item);
+      const handleSelect = (params) => {
+        if (typeof this.options.onSelect === 'function') {
+          this.options.onSelect(params);
+          return;
+        }
+        const { item } = params;
         const latlng = [item.geometry.lat, item.geometry.lng];
         marker = L.marker(latlng).addTo(map);
         marker.bindPopup(item.formatted);
@@ -40,6 +47,8 @@
         plugins: [
           opencage.OpenCageGeoSearchPlugin(this.options, {
             onSelect: handleSelect,
+            onActive: this.options.onActive,
+            onSubmit: this.options.onSubmit,
           }),
         ],
       });
@@ -47,13 +56,13 @@
       return geosearch;
     },
 
-    onRemove: function (map) {
+    onRemove(/* map */) {
       // Nothing to do here
     },
   });
 
   L.control.opencageGeosearch = function (opts) {
-    return new L.Control.OpencageGeosearch(opts);
+    return new OpencageGeosearch(opts);
   };
 
   return L.control.opencageGeosearch;

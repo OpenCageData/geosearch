@@ -23,7 +23,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@opencage/geosearch-bundle"></script>
 
-    <script src="leaflet-opencage-geosearch.js"></script>
+    <script src="dist/leaflet-opencage-geosearch.js"></script>
 
     <script src="config.js"></script>
 
@@ -86,7 +86,9 @@
 
         const options = {
             key: window.OPENCAGE_GEOSEARCH_KEY,
-            limit: 3,
+            // limit: 3,
+            // noResults: 'Pas de résultat.',
+            onActive: () => { console.log('Happy') },
             position: 'topright',
         };
 

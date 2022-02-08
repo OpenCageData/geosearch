@@ -1,27 +1,15 @@
 module.exports = {
   env: {
-    mocha: true,
     browser: true,
     es6: true,
+    node: true,
   },
   extends: ['airbnb-base', 'plugin:prettier/recommended'],
-  plugins: ['security'],
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 2021,
   },
+  // temp rules
   rules: {
-    camelcase: 'off', // my_var is fine, no need for myVar
-    'no-multiple-empty-lines': 'off',
-    'no-console': 'off',
-    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+    'func-names': 0,
   },
-  overrides: [
-    {
-      files: ['*.test.js', '*.spec.js', '*_test.js'],
-      rules: {
-        'import/no-extraneous-dependencies': 'off',
-        'no-unused-expressions': 'off',
-      },
-    },
-  ],
 };

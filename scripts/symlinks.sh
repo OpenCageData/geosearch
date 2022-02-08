@@ -10,4 +10,4 @@ ln -s ../../packages/geosearch-bundle/dist
 
 cd ../leaflet-plugin-example
 
-ln -s ../../packages/leaflet-opencage-geosearch/dist
+ln -s ../../packages/leaflet-opencage-geosearch dist

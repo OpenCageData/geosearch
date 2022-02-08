@@ -2191,6 +2191,11 @@
   dependencies:
     "@octokit/openapi-types" "^11.2.0"
 
+"@opencage/geosearch-core@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@opencage/geosearch-core/-/geosearch-core-0.0.2.tgz#0e21370ac1fabd8ba89756d7e9401fd4569056d2"
+  integrity sha512-enOB2pJV4S7kT07c7c62fu5ejNQtrhpEllkp8jtR4qMyo2sGNcn8wG/eHLmvGNwh977xoWG8pXeNGx5ML5GYeA==
+
 "@pmmmwh/react-refresh-webpack-plugin@^0.5.3":
   version "0.5.4"
   resolved "https://registry.yarnpkg.com/@pmmmwh/react-refresh-webpack-plugin/-/react-refresh-webpack-plugin-0.5.4.tgz#df0d0d855fc527db48aac93c218a0bf4ada41f99"
@@ -7514,6 +7519,11 @@ language-tags@^1.0.5:
   integrity sha1-0yHbxNowuovzAk4ED6XBRmH5GTo=
   dependencies:
     language-subtag-registry "~0.3.2"
+
+leaflet@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.7.1.tgz#10d684916edfe1bf41d688a3b97127c0322a2a19"
+  integrity sha512-/xwPEBidtg69Q3HlqPdU3DnrXQOvQU/CCHA1tcDQVzOwm91YMYaILjNp7L4Eaw5Z4sOYdbBz6koWyibppd8Zqw==
 
 lerna@^4.0.0:
   version "4.0.0"
