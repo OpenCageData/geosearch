@@ -185,17 +185,21 @@ Check Algolia's Autocomplete [CSS styles](https://www.algolia.com/doc/ui-librari
 
 ## Packages
 
-### `@opencage/geosearch-bundle`
+### [`@opencage/geosearch-bundle`](./packages/geosearch-bundle/)
 
 _For those who just want a simple HTML / JS integration_
 
 This package bumdles the [Algolia Autocomplete](https://github.com/algolia/autocomplete) and our GeoSearch plugin.
 
-### `@opencage/geosearch-core`
+### [`@opencage/geosearch-core`](./packages/geosearch-core/)
 
 _For whom is using a javascript dependency manager_
 
 This is the core package: the GeoSearch plugin to use with [Algolia Autocomplete](https://github.com/algolia/autocomplete).
+
+### [`@opencage/leaflet-opencage-geosearch`](./packages/leaflet-opencage-geosearch/)
+
+This is a plugin for the well-known map API [leaflet](https://leafletjs.com/)
 
 ## Browser support / Polyfills
 
@@ -205,7 +209,7 @@ This project is written with the latest technologies in mind. Thereby it is requ
 
 ## Build and develop
 
-Please refer to the following developer [notes](BUILD.md)
+Please refer to the following developer's [notes](BUILD.md)
 
 ## Issues
 

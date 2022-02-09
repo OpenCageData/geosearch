@@ -2,7 +2,7 @@
 
 <p>A Leaflet plugin that lets you quickly add a search box and help your users find locations on the map</p>
 
-Check out a demo page in [/leaflet-plugin-example](../../examples/leaflet-plugin-example/). Or take a look at the [live demo](TODO).
+Check out a demo page in [/leaflet-plugin-example](https://github.com/OpenCageData/geosearch/tree/master/examples/leaflet-plugin-example). Or take a look at the [live demo](https://codepen.io/opencage/pen/podemjq).
 
 ## Leaflet version
 
@@ -16,7 +16,7 @@ This plugin at the moment uses the [Opencage geoseach SDK bundle]() with alogoli
 
 This plugin will be compatible with the same browsers / device than the leaflet library is.
 
-## instructions for including the plugin
+## Usage
 
 Load the plugin's CSS and JavaScript files:
 
@@ -30,7 +30,7 @@ Load the plugin's CSS and JavaScript files:
 <script src="https://cdn.jsdelivr.net/npm/@opencage/leaflet-opencage-geosearch"></script>
 ```
 
-## simple usage code example
+and insert this new control to your leaflet map
 
 ```js
 const options = {

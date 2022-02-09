@@ -135,8 +135,11 @@ yarn clean
 ## Publish to npmjs.com
 
 ```bash
+# LOGIN on npmjs
 npm login
+# DO NOT FORGET TO BUILD FIRST
 yarn build
+# Let's publish
 lerna publish --no-private
 
 ```
