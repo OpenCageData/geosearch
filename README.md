@@ -31,7 +31,7 @@ See a configurable, [live demo on the OpenCage site](https://opencagedata.com/ge
 
 ## Usage
 
-For convenience, this repository is published as multiple [packages](#Packages). For a simple usage, we bundle it with the [Algolia's Autocomplete](https://github.com/algolia/autocomplete).
+For convenience, this repository is published as multiple [packages](#packages). For a simple usage, we bundle it with the [Algolia's Autocomplete](https://github.com/algolia/autocomplete).
 To get started, with a simple HTML page, you need a container to anchor the geosearch into:
 
 ```html

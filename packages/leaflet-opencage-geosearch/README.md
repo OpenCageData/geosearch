@@ -10,7 +10,7 @@ Tested with latest version 1.7.1
 
 ## Other external dependencies
 
-This plugin at the moment uses the [Opencage geoseach SDK bundle]() with alogolia's autocomplete. Check the [instructions](#instructions for including the plugin)
+This plugin at the moment uses the [Opencage geoseach SDK bundle]() with alogolia's autocomplete. Check the [instructions](#usage).
 
 ## Browser / device compatibility
 
