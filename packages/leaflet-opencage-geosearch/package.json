@@ -1,6 +1,6 @@
 {
   "name": "@opencage/leaflet-opencage-geosearch",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "description": "A Leaflet geosearch control that uses OpenCage Data's geosearch API.",
   "author": {
     "name": "OpenCage GmbH",
@@ -37,7 +37,6 @@
     "lint:fix": "eslint --fix .",
     "test": "echo \"Warning: run tests from root\" && exit 0"
   },
-  "dependencies": {},
   "peerDependencies": {
     "leaflet": "^1.7.1"
   },
