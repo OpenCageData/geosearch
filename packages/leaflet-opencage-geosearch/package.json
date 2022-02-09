@@ -1,0 +1,47 @@
+{
+  "name": "@opencage/leaflet-opencage-geosearch",
+  "version": "0.0.0",
+  "description": "A Leaflet geosearch control that uses OpenCage Data's geosearch API.",
+  "author": {
+    "name": "OpenCage GmbH",
+    "url": "https://www.opencagedata.com"
+  },
+  "homepage": "https://github.com/OpenCageData/geosearch#readme",
+  "bugs": {
+    "url": "https://github.com/OpenCageData/geosearch/issues"
+  },
+  "keywords": [
+    "opencage",
+    "geosearch",
+    "leaflet",
+    "plugin",
+    "geographic",
+    "searches",
+    "autocomplete",
+    "autosuggest",
+    "type-ahead",
+    "predictions"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenCageData/geosearch.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "source": "leaflet-opencage-geosearch.js",
+  "main": "leaflet-opencage-geosearch.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "test": "echo \"Warning: run tests from root\" && exit 0"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "leaflet": "^1.7.1"
+  },
+  "devDependencies": {
+    "leaflet": "^1.7.1"
+  }
+}
