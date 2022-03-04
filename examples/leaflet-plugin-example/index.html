@@ -74,11 +74,11 @@
             }
         });
 
-        L.control.watermark = function (opts) {
+        L.Control.watermark = function (opts) {
             return new L.Control.Watermark(opts);
         };
 
-        var watermarkControl = L.control.watermark({ position: 'bottomleft' }).addTo(map);
+        var watermarkControl = L.Control.watermark({ position: 'bottomleft' }).addTo(map);
 
         const options = {
             key: window.OPENCAGE_GEOSEARCH_KEY,
@@ -88,7 +88,7 @@
             position: 'topright',
         };
 
-        var geosearchControl = L.control.opencageGeosearch(options).addTo(map);
+        var geosearchControl = L.Control.openCageGeosearch(options).addTo(map);
 
     </script>
 
