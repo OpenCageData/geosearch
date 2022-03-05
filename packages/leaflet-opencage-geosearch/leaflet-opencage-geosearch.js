@@ -13,10 +13,10 @@
 
   // attach your plugin to the global 'L' variable
   if (typeof window !== 'undefined' && window.L) {
-    window.L.OpencageGeosearch = factory(L);
+    window.L.OpenCageGeosearch = factory(L);
   }
 })(function (L) {
-  const OpencageGeosearch = L.Control.extend({
+  const OpenCageGeosearchControl = L.Control.extend({
     options: {
       key: '',
       bounds: '',
@@ -61,9 +61,9 @@
     },
   });
 
-  L.control.opencageGeosearch = function (opts) {
-    return new OpencageGeosearch(opts);
+  L.Control.openCageGeosearch = function (opts) {
+    return new OpenCageGeosearchControl(opts);
   };
 
-  return L.control.opencageGeosearch;
+  return L.Control.openCageGeosearch;
 }, window);
