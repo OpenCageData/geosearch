@@ -40,7 +40,7 @@ const options = {
   position: 'topright',
 };
 
-var geosearchControl = L.control.opencageGeosearch(options).addTo(map);
+var geosearchControl = L.Control.openCageGeosearch(options).addTo(map);
 ```
 
 ## API reference
