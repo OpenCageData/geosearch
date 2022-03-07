@@ -55,7 +55,7 @@
             zoom: 3
         });
 
-        var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>'
         }).addTo(map);
 
@@ -85,7 +85,8 @@
             // limit: 3,
             // noResults: 'Pas de résultat.',
             // onActive: () => { console.log('Happy') },
-            position: 'topright',
+            // leafletjs options:
+            position: 'topright', // Possible values are 'topleft', 'topright', 'bottomleft' or 'bottomright'
         };
 
         var geosearchControl = L.Control.openCageGeosearch(options).addTo(map);

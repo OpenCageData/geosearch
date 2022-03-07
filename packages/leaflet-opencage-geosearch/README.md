@@ -30,17 +30,31 @@ Load the plugin's CSS and JavaScript files:
 <script src="https://cdn.jsdelivr.net/npm/@opencage/leaflet-opencage-geosearch"></script>
 ```
 
-and insert this new control to your leaflet map
+and insert this new control to your leaflet map:
 
 ```js
 const options = {
   key: 'YOUR_OPENCAGE_GEOSEARCH_KEY',
   // limit: 3,
   // noResults: 'Pas de résultat.',
-  position: 'topright',
+  // leafletjs options:
+  position: 'topright', // Possible values are 'topleft', 'topright', 'bottomleft' or 'bottomright'
 };
 
 var geosearchControl = L.Control.openCageGeosearch(options).addTo(map);
+```
+
+**NB:**
+You can specify a specific version of the plugin and geosearch bundle using
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@opencage/leaflet-opencage-geosearch@0.0.5/leaflet-opencage-geosearch.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/@opencage/geosearch-bundle@0.0.2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@opencage/leaflet-opencage-geosearch@0.0.6"></script>
 ```
 
 ## API reference
@@ -57,7 +71,8 @@ const options = {
   onActive: () => {
     console.log('Happy Geosearch');
   },
-  position: 'topright',
+  // leafletjs options:
+  position: 'topright', // Possible values are 'topleft', 'topright', 'bottomleft' or 'bottomright'
 };
 ```
 
