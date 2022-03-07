@@ -38,13 +38,13 @@
   /* Icons */
   --aa-icon-size: 20px;
   --aa-icon-stroke-width: 1.6;
-  --aa-icon-color-rgb: 119, 119, 163;
+  --aa-icon-color-rgb: 26, 136, 101;
   --aa-icon-color-alpha: 1;
   --aa-action-icon-size: 20px;
   /* Text colors */
   --aa-text-color-rgb: 38, 38, 39;
   --aa-text-color-alpha: 1;
-  --aa-primary-color-rgb: 62, 52, 211;
+  --aa-primary-color-rgb: 26, 136, 101;
   --aa-primary-color-alpha: 0.2;
   --aa-muted-color-rgb: 128, 126, 163;
   --aa-muted-color-alpha: 0.6;
@@ -58,9 +58,9 @@
   --aa-background-color-alpha: 1;
   --aa-input-background-color-rgb: 255, 255, 255;
   --aa-input-background-color-alpha: 1;
-  --aa-selected-color-rgb: 179, 173, 214;
-  --aa-selected-color-alpha: 0.205;
-  --aa-description-highlight-background-color-rgb: 245, 223, 77;
+  --aa-selected-color-rgb: 227, 245, 237;
+  --aa-selected-color-alpha: 1;
+  --aa-description-highlight-background-color-rgb: 227, 245, 237;
   --aa-description-highlight-background-color-alpha: 0.5;
   /* Detached mode */
   --aa-detached-media-query: (max-width: 680px);
@@ -134,7 +134,7 @@ body.dark {
   font-size: 16px;
   font-size: var(--aa-font-size);
   font-weight: normal;
-  line-height: 1em;
+  line-height: 1.2em;
   margin: 0;
   padding: 0;
   text-align: left;
@@ -1189,4 +1189,20 @@ body.dark {
   .aa-TouchOnly {
     display: none;
   }
+}
+
+
+
+
+.leaflet-control-opencage-geosearch .aa-Autocomplete {
+  width: 500px;
+}
+
+.leaflet-control-opencage-geosearch .aa-Form {
+  box-shadow: none;
+}
+
+.leaflet-control-opencage-geosearch .aa-Form:focus-within {
+  border-color: #1A8865;
+  box-shadow: none;
 }
