@@ -78,7 +78,7 @@ yarn playground:start
 
 ## Others examples
 
-So far two others examples are provided
+So far others examples are provided:
 
 ### simple example
 
@@ -94,6 +94,14 @@ it uses the core version of the package and demonstrates the different options o
 
 ```bash
 serve -S examples/advanced-example
+```
+
+### Leaflet's plugin example
+
+it uses the bundle version along with the dedicated [Leaflet](https://leafletjs.com/)'s plugin
+
+```bash
+serve examples/leaflet-plugin-example
 ```
 
 ## linter

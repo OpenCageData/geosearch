@@ -35,8 +35,11 @@ and insert this new control to your leaflet map:
 ```js
 const options = {
   key: 'YOUR_OPENCAGE_GEOSEARCH_KEY',
+  // you will need to become a customer to get a geosearch key
+  //
   // limit: 3,
   // noResults: 'Pas de résultat.',
+  //
   // leafletjs options:
   position: 'topright', // Possible values are 'topleft', 'topright', 'bottomleft' or 'bottomright'
 };
@@ -68,9 +71,12 @@ You can specify a specific version of the plugin and geosearch bundle using
 ```js
 const options = {
   key: window.OPENCAGE_GEOSEARCH_KEY,
+  // you will need to become a customer to get a geosearch key
+  //
   onActive: () => {
     console.log('Happy Geosearch');
   },
+  //
   // leafletjs options:
   position: 'topright', // Possible values are 'topleft', 'topright', 'bottomleft' or 'bottomright'
 };
