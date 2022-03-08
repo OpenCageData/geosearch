@@ -46,5 +46,11 @@
   "peerDependencies": {
     "@algolia/autocomplete-js": "^1.*",
     "@algolia/autocomplete-theme-classic": "^1.*"
+  },
+  "dependencies": {
+    "chai": "^4.3.4",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
   }
 }
