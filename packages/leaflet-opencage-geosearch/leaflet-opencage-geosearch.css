@@ -1191,9 +1191,6 @@ body.dark {
   }
 }
 
-
-
-
 .leaflet-control-opencage-geosearch .aa-Autocomplete {
   width: 500px;
 }
@@ -1203,6 +1200,6 @@ body.dark {
 }
 
 .leaflet-control-opencage-geosearch .aa-Form:focus-within {
-  border-color: #1A8865;
+  border-color: #1a8865;
   box-shadow: none;
 }

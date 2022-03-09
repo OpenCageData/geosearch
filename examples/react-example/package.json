@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@algolia/autocomplete-js": "^1.5.1",
-    "@algolia/autocomplete-theme-classic": "^1.5.1",
-    "@opencage/geosearch-core": "^0.0.2",
+    "@algolia/autocomplete-js": "^1.5.3",
+    "@algolia/autocomplete-theme-classic": "^1.5.3",
+    "@opencage/geosearch-core": "^0.0.6",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "dotenv": "../../scripts/dotenv-react.sh $@",
@@ -24,15 +24,10 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jest": "^25.7.0",
+    "eslint-plugin-jest": "^26.1.1",
     "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "prettier": "^2.5.1"
+    "eslint-plugin-react-hooks": "^4.3.0"
   },
   "browserslist": {
     "production": [
