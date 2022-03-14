@@ -101,7 +101,7 @@ serve -S examples/advanced-example
 it uses the bundle version along with the dedicated [Leaflet](https://leafletjs.com/)'s plugin
 
 ```bash
-serve examples/leaflet-plugin-example
+serve -S examples/leaflet-plugin-example
 ```
 
 ## linter
