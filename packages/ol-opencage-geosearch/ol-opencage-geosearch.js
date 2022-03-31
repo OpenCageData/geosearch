@@ -19,7 +19,7 @@ class OpenCageGeosearchControl extends ol.control.Control {
       container: this.element,
       plugins: [
         opencage.OpenCageGeoSearchPlugin(this.options, {
-          onSelect: this.handleSelect,
+          onSelect: this.handleSelect.bind(this),
           onActive: this.options.onActive,
           onSubmit: this.options.onSubmit,
         }),
@@ -62,10 +62,10 @@ class OpenCageGeosearchControl extends ol.control.Control {
     const coordinates = ol.proj.transform(
       [item.geometry.lng, item.geometry.lat],
       'EPSG:4326',
-      this.map.getView().getProjection()
+      this.getMap().getView().getProjection()
     );
 
-    this.map.getView().setCenter(coordinates);
-    this.map.getView().setZoom(13);
+    this.getMap().getView().setCenter(coordinates);
+    this.getMap().getView().setZoom(13);
   }
 }
