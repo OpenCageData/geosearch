@@ -3,47 +3,53 @@
 
 <head>
 
-    <title>Geosearch control - OpenLayers</title>
+  <title>Geosearch control - OpenLayers</title>
 
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/css/ol.css" type="text/css">
-    <link rel="stylesheet" href="dist/ol-opencage-geosearch.css" />
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/css/ol.css"
+    type="text/css">
+  <link rel="stylesheet" href="dist/ol-opencage-geosearch.css" />
 
-    <style>
-      #map { height: 600px; }
-    </style>
+  <style>
+    #map {
+      height: 600px;
+    }
+  </style>
 
-    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@opencage/geosearch-bundle"></script>
-    <script src="dist/ol-opencage-geosearch.js"></script>
-    <script src="config.js"></script>
-  </head>
-  <body>
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.14.1/build/ol.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@opencage/geosearch-bundle"></script>
+  <script src="dist/ol-opencage-geosearch.js"></script>
+  <script src="config.js"></script>
+</head>
 
-    <div id="map"></div>
+<body>
 
-    <script type="text/javascript">
-      var map = new ol.Map({
-        target: 'map',
-        layers: [
-          new ol.layer.Tile({
-            source: new ol.source.OSM()
-          })
-        ],
-        view: new ol.View({
-          center: ol.proj.fromLonLat([0, 40]),
-          zoom: 0
+  <div id="map"></div>
+
+  <script type="text/javascript">
+    var map = new ol.Map({
+      target: 'map',
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
         })
-      });
+      ],
+      view: new ol.View({
+        center: ol.proj.fromLonLat([0, 40]),
+        zoom: 0
+      })
+    });
 
 
-      // Add the created DOM element within the map
-      var controlGeocoder = new OpenCageGeosearchControl({
-        key: window.OPENCAGE_GEOSEARCH_KEY,
-        // language: 'fr',
-        position: 'topright',
-      });
-      map.addControl(controlGeocoder);
-    </script>
-  </body>
+    // Add the created DOM element within the map
+    var controlGeocoder = new OpenCageGeosearchControl({
+      key: window.OPENCAGE_GEOSEARCH_KEY,
+      // language: 'fr',
+      // onSelect: (params) => { console.log('hello from onSelect', params) },
+      position: 'topright',
+    });
+    map.addControl(controlGeocoder);
+  </script>
+</body>
+
 </html>
