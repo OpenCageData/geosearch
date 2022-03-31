@@ -104,6 +104,14 @@ it uses the bundle version along with the dedicated [Leaflet](https://leafletjs.
 serve -S examples/leaflet-plugin-example
 ```
 
+### OpenLayers's library example
+
+it uses the bundle version along with the dedicated [OpenLayers](https://openlayers.org/)'s plugin
+
+```bash
+serve -S examples/openlayers-plugin-example
+```
+
 ## linter
 
 We use the airbnb config with eslint
