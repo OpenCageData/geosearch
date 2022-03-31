@@ -109,7 +109,7 @@ serve -S examples/leaflet-plugin-example
 it uses the bundle version along with the dedicated [OpenLayers](https://openlayers.org/)'s plugin
 
 ```bash
-serve -S examples/openlayers-plugin-example
+serve -S examples/openlayers-library-example
 ```
 
 ## linter
