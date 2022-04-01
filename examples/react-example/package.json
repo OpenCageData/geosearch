@@ -5,7 +5,7 @@
   "dependencies": {
     "@algolia/autocomplete-js": "^1.5.3",
     "@algolia/autocomplete-theme-classic": "^1.5.3",
-    "@opencage/geosearch-core": "^0.0.6",
+    "@opencage/geosearch-core": "^0.0.9",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^14.0.4",
