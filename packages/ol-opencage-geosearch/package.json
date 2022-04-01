@@ -1,6 +1,6 @@
 {
   "name": "@opencage/ol-opencage-geosearch",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "An OpenLayers geosearch control that uses OpenCage's geosearch API.",
   "author": {
     "name": "OpenCage GmbH",
