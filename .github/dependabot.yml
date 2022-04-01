@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+  - package-ecosystem: "npm"
+    directory: "/packages/geosearch-bundle"
+  - package-ecosystem: "npm"
+    directory: "/packages/geosearch-core"
+  - package-ecosystem: "npm"
+    directory: "/packages/leaflet-opencage-geosearch"
+  - package-ecosystem: "npm"
+    directory: "/packages/ol-opencage-geosearch"
+  - package-ecosystem: "npm"
+    directory: "/examples/react-example"
