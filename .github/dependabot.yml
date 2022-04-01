@@ -2,13 +2,25 @@ version: 2
 updates:
   - package-ecosystem: "npm"
     directory: "/"
+    schedule:
+      interval: "daily"
   - package-ecosystem: "npm"
     directory: "/packages/geosearch-bundle"
+    schedule:
+      interval: "daily"
   - package-ecosystem: "npm"
     directory: "/packages/geosearch-core"
+    schedule:
+      interval: "daily"
   - package-ecosystem: "npm"
     directory: "/packages/leaflet-opencage-geosearch"
+    schedule:
+      interval: "daily"
   - package-ecosystem: "npm"
     directory: "/packages/ol-opencage-geosearch"
+    schedule:
+      interval: "daily"
   - package-ecosystem: "npm"
     directory: "/examples/react-example"
+    schedule:
+      interval: "daily"
