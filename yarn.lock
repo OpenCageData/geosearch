@@ -32,9 +32,9 @@
   integrity sha512-hl9dJ418xTe9/g689a3cAVivT9OnOwEcV2MYjv/WvpbXKXSgYDEszO8+dlesE1VwoMeBGWD+O9/e28Lulh2b7g==
 
 "@algolia/autocomplete-theme-classic@^1.5.1", "@algolia/autocomplete-theme-classic@^1.5.3":
-  version "1.5.3"
-  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-theme-classic/-/autocomplete-theme-classic-1.5.3.tgz#49eb69ebd886bbb8ed51368671622c60d639dbf0"
-  integrity sha512-nqDcsDl3QR79/dl5aU6f97+B4fE4hzTngv7yolnplOrKKa5KnWJ7e/SrWPQWIgbJ/5JTrbxWVXopB+7erDZm+g==
+  version "1.5.6"
+  resolved "https://registry.yarnpkg.com/@algolia/autocomplete-theme-classic/-/autocomplete-theme-classic-1.5.6.tgz#d5b7d0648853ded79fb060cb9891c3799481dcba"
+  integrity sha512-Klvwhhh1m53fAs8GjVEBFhUxfaTlwEkzfWx25G0PTHx5Qw2EKIZLpPsgqVjIbZ5DK/iKPuj9ycn+WQGXC4PHnQ==
 
 "@ampproject/remapping@^2.1.0":
   version "2.1.2"
