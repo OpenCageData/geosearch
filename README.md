@@ -199,7 +199,14 @@ This is the core package: the GeoSearch plugin to use with [Algolia Autocomplete
 
 ### [`@opencage/leaflet-opencage-geosearch`](./packages/leaflet-opencage-geosearch/)
 
-This is a plugin for the well-known map API [leaflet](https://leafletjs.com/)
+This is a plugin for the well-known map API [leaflet](https://leafletjs.com/).
+See our [integration tutorial](https://opencagedata.com/tutorials/leaflet-location-search).
+
+### [`@opencage/ol-opencage-geosearch`](./packages/ol-opencage-geosearch/)
+
+This is a plugin for the well-known map API [OpenLayers](https://openlayers.org).
+See our [integration tutorial](https://opencagedata.com/tutorials/openlayers-location-search).
+
 
 ## Browser support / Polyfills
 
