@@ -6,7 +6,7 @@ Check out a demo page in [/leaflet-plugin-example](https://github.com/OpenCageDa
 
 ## Leaflet version
 
-Tested with latest version 1.7.1
+Tested with latest version 1.7.1, and 1.8.0
 
 ## Other external dependencies
 

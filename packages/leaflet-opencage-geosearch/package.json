@@ -38,9 +38,9 @@
     "test": "echo \"Warning: run tests from root\" && exit 0"
   },
   "peerDependencies": {
-    "leaflet": "^1.7.1"
+    "leaflet": "^1.*"
   },
   "devDependencies": {
-    "leaflet": "^1.7.1"
+    "leaflet": "^1.8.0"
   }
 }
