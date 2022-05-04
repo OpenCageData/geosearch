@@ -13,10 +13,7 @@ export const GeoSearch = (props) => {
 
     const search = autocomplete({
       container: containerRef.current,
-      renderer: { createElement, Fragment },
-      render({ children }, root) {
-        render(children, root);
-      },
+      renderer: { createElement, Fragment, render },
       ...props,
     });
 
