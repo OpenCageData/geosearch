@@ -1,6 +1,6 @@
 {
   "name": "@opencage/geosearch-bundle",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "OpenCage GeoSearch bundled with Algolia autocomplete",
   "author": {
     "name": "OpenCage GmbH",
@@ -46,6 +46,6 @@
   "dependencies": {
     "@algolia/autocomplete-js": "^1.6.3",
     "@algolia/autocomplete-theme-classic": "^1.6.3",
-    "@opencage/geosearch-core": "^0.0.12"
+    "@opencage/geosearch-core": "^0.0.13"
   }
 }

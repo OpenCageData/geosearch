@@ -1,6 +1,6 @@
 {
   "name": "@opencage/leaflet-opencage-geosearch",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "A Leaflet geosearch control that uses OpenCage's geosearch API.",
   "author": {
     "name": "OpenCage GmbH",
