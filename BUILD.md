@@ -10,7 +10,7 @@ The prerequisites are :
 - [yarn](https://yarnpkg.com/)
 - An [OpenCage geosearch](https://opencagedata.com/geosearch) key
 
-We would recommand to install globally `serve`. To serve the examples
+We would recommend to install globally `serve`. To serve the examples
 
 ```bash
 yarn global add serve
