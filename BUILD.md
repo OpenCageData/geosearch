@@ -10,7 +10,7 @@ The prerequisites are :
 - [yarn](https://yarnpkg.com/)
 - An [OpenCage geosearch](https://opencagedata.com/geosearch) key
 
-We would recommend to install globally `serve`. To serve the examples
+We would recommend installing globally `serve`. To serve the examples
 
 ```bash
 yarn global add serve
@@ -20,7 +20,7 @@ npm i -g serve
 
 ## Getting started
 
-To setup the environnement, once:
+To set up the environment, once:
 
 ```bash
 # install the dependencies
@@ -50,7 +50,7 @@ Create the symbolic links
 yarn symlinks
 ```
 
-This will create symbolic links, so the examples can use the local built version of the packages.
+This will create symbolic links, so the examples can use the locally built version of the packages.
 
 ## Build and watch
 
@@ -68,9 +68,9 @@ yarn watch
 
 ## Playground
 
-The playground is the [React example](./examples/react-example) which allow to check the built [core](./packages/geosearch-core) package.
+The playground is the [React example](./examples/react-example) which allows checking the built [core](./packages/geosearch-core) package.
 
-Start the playground with the commmand
+Start the playground with the command
 
 ```bash
 yarn playground:start
@@ -78,7 +78,7 @@ yarn playground:start
 
 ## Others examples
 
-So far others examples are provided:
+So far other examples are provided:
 
 ### simple example
 
@@ -114,7 +114,7 @@ serve -S examples/openlayers-library-example
 
 ## linter
 
-We use the airbnb config with eslint
+We use the `airnnb` config with `eslint`
 
 ```bash
 yarn lint
