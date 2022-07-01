@@ -35,7 +35,7 @@
     "mocha": "^10.0.0",
     "nyc": "^15.1.0",
     "postcss": "^8.4.8",
-    "postcss-cli": "^9.1.0",
+    "postcss-cli": "^10.0.0",
     "prettier": "^2.5.1",
     "sass": "^1.49.9",
     "sinon": "^14.0.0",
