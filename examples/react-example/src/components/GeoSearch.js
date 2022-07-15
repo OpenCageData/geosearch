@@ -1,10 +1,12 @@
-import React, { createElement, Fragment, useEffect, useRef } from 'react';
 import { autocomplete } from '@algolia/autocomplete-js';
-import { render } from 'react-dom';
+import React, { createElement, Fragment, useEffect, useRef } from 'react';
+import { createRoot } from 'react-dom/client';
 
 // eslint-disable-next-line import/prefer-default-export
 export const GeoSearch = (props) => {
   const containerRef = useRef(null);
+  const panelRootRef = useRef(null);
+  const rootRef = useRef(null);
 
   useEffect(() => {
     if (!containerRef.current) {
@@ -13,9 +15,16 @@ export const GeoSearch = (props) => {
 
     const search = autocomplete({
       container: containerRef.current,
-      renderer: { createElement, Fragment },
+      renderer: { createElement, Fragment, render: () => {} },
       render({ children }, root) {
-        render(children, root);
+        if (!panelRootRef.current || rootRef.current !== root) {
+          rootRef.current = root;
+
+          panelRootRef.current?.unmount();
+          panelRootRef.current = createRoot(root);
+        }
+
+        panelRootRef.current.render(children);
       },
       ...props,
     });
