@@ -6,7 +6,10 @@ Check out a demo page in [/openlayers-library-example](https://github.com/OpenCa
 
 ## OpenLayers version
 
-Tested with latest version 6.14
+Tested with versions:
+
+- 6.14.1
+- 7.1
 
 ## Other external dependencies
 
