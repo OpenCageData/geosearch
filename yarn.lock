@@ -2495,6 +2495,16 @@
   dependencies:
     "@octokit/openapi-types" "^12.10.0"
 
+"@opencage/geosearch-core@^0.0.14":
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/@opencage/geosearch-core/-/geosearch-core-0.0.14.tgz#a0d7697f52be3b960a5876224ca4634f3bad7ee2"
+  integrity sha512-XU8xx8ILYMmPu3I4H0t/oLIF13NVZIEfdCibk2c3m596x4EmLvMmwYLPH6TtOu+bWhZEq9CFtNebLBlDW5yc/Q==
+  dependencies:
+    chai "^4.3.4"
+    webpack "^5.67.0"
+    webpack-cli "^4.9.1"
+    webpack-dev-server "^4.7.3"
+
 "@parcel/watcher@2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@parcel/watcher/-/watcher-2.0.4.tgz#f300fef4cc38008ff4b8c29d92588eced3ce014b"
@@ -10931,10 +10941,10 @@ sass-loader@^12.3.0:
     klona "^2.0.4"
     neo-async "^2.6.2"
 
-sass@^1.49.9:
-  version "1.54.5"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.54.5.tgz#93708f5560784f6ff2eab8542ade021a4a947b3a"
-  integrity sha512-p7DTOzxkUPa/63FU0R3KApkRHwcVZYC0PLnLm5iyZACyp15qSi32x7zVUhRdABAATmkALqgGrjCJAcWvobmhHw==
+sass@^1.54.8:
+  version "1.54.8"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.54.8.tgz#4adef0dd86ea2b1e4074f551eeda4fc5f812a996"
+  integrity sha512-ib4JhLRRgbg6QVy6bsv5uJxnJMTS2soVcCp9Y88Extyy13A8vV0G1fAwujOzmNkFQbR3LvedudAMbtuNRPbQww==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
@@ -12316,7 +12326,7 @@ webpack-dev-middleware@^5.3.1:
     range-parser "^1.2.1"
     schema-utils "^4.0.0"
 
-webpack-dev-server@^4.10.1:
+webpack-dev-server@^4.10.1, webpack-dev-server@^4.7.3:
   version "4.10.1"
   resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-4.10.1.tgz#124ac9ac261e75303d74d95ab6712b4aec3e12ed"
   integrity sha512-FIzMq3jbBarz3ld9l7rbM7m6Rj1lOsgq/DyLGMX/fPEB1UBUPtf5iL/4eNfhx8YYJTRlzfv107UfWSWcBK5Odw==
