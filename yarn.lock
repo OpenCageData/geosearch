@@ -2495,6 +2495,16 @@
   dependencies:
     "@octokit/openapi-types" "^12.10.0"
 
+"@opencage/geosearch-core@^0.0.14":
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/@opencage/geosearch-core/-/geosearch-core-0.0.14.tgz#a0d7697f52be3b960a5876224ca4634f3bad7ee2"
+  integrity sha512-XU8xx8ILYMmPu3I4H0t/oLIF13NVZIEfdCibk2c3m596x4EmLvMmwYLPH6TtOu+bWhZEq9CFtNebLBlDW5yc/Q==
+  dependencies:
+    chai "^4.3.4"
+    webpack "^5.67.0"
+    webpack-cli "^4.9.1"
+    webpack-dev-server "^4.7.3"
+
 "@parcel/watcher@2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@parcel/watcher/-/watcher-2.0.4.tgz#f300fef4cc38008ff4b8c29d92588eced3ce014b"
@@ -12257,10 +12267,10 @@ wcwidth@^1.0.0, wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
-web-vitals@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-3.0.0.tgz#db8a32fd62738a439343309336720ee5685ac71e"
-  integrity sha512-3Gh6rH5aetFYqfkl9V59KCvjj9vp9U2Tkaep9MO+xpAVg+JULmQfi5zEkcPLkE6iU8pNYVwdjHvIU8RFAchYyQ==
+web-vitals@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-3.0.1.tgz#7129668af2d1598ff4a574535a46b1432af337c8"
+  integrity sha512-n8LgBynM5BU4C8ZMiTWPu6zbv31AfPnuNXEjWClvPWD5g8h2WkcecR0EtAiQaiMcj1iG0LADyHndR+MKYu5Zog==
 
 web-worker@^1.2.0:
   version "1.2.0"
@@ -12316,7 +12326,7 @@ webpack-dev-middleware@^5.3.1:
     range-parser "^1.2.1"
     schema-utils "^4.0.0"
 
-webpack-dev-server@^4.10.1:
+webpack-dev-server@^4.10.1, webpack-dev-server@^4.7.3:
   version "4.10.1"
   resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-4.10.1.tgz#124ac9ac261e75303d74d95ab6712b4aec3e12ed"
   integrity sha512-FIzMq3jbBarz3ld9l7rbM7m6Rj1lOsgq/DyLGMX/fPEB1UBUPtf5iL/4eNfhx8YYJTRlzfv107UfWSWcBK5Odw==
