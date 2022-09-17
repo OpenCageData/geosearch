@@ -30,17 +30,30 @@
   "publishConfig": {
     "access": "public"
   },
+  "files": [
+    "dist/",
+    "ol-opencage-geosearch.css",
+    "ol-opencage-geosearch.js"
+  ],
   "source": "ol-opencage-geosearch.js",
-  "main": "ol-opencage-geosearch.js",
+  "main": "dist/ol-opencage-geosearch.cjs.js",
+  "module": "dist/ol-opencage-geosearch.esm.js",
+  "browser": "dist/ol-opencage-geosearch.umd.js",
   "scripts": {
+    "build": "rollup -c",
+    "build:clean": "rm -rf dist",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "echo \"Warning: run tests from root\" && exit 0"
   },
-  "peerDependencies": {
+  "dependencies": {
+    "@opencage/geosearch-core": "^0.0.15",
+    "@algolia/autocomplete-js": "^1.7.1",
     "ol": "^7.1"
   },
   "devDependencies": {
-    "ol": "^7.1"
+    "@rollup/plugin-commonjs": "^22.0.2",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "rollup": "^2.79.0"
   }
 }
