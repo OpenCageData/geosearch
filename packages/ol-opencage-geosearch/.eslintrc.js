@@ -13,8 +13,4 @@ module.exports = {
     'func-names': 0,
     'no-unused-vars': 'off',
   },
-  globals: {
-    ol: true,
-    opencage: true,
-  },
 };

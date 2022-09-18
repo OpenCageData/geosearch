@@ -1,5 +1,6 @@
 // Original source file, works well in an HTML page using old school script import
 // do not use with bundlers
+// eslint-disable-next-line no-undef
 class OpenCageGeosearchControl extends ol.control.Control {
   constructor(options) {
     const pluginOptions = options || {};
@@ -17,9 +18,11 @@ class OpenCageGeosearchControl extends ol.control.Control {
 
     this.setCssPosition(this.options.position);
 
+    // eslint-disable-next-line no-undef
     opencage.algoliaAutocomplete({
       container: this.element,
       plugins: [
+        // eslint-disable-next-line no-undef
         opencage.OpenCageGeoSearchPlugin(this.options, {
           onSelect: this.handleSelect.bind(this),
           onActive: this.options.onActive,
@@ -61,6 +64,7 @@ class OpenCageGeosearchControl extends ol.control.Control {
 
     const { item } = params;
 
+    // eslint-disable-next-line no-undef
     const coordinates = ol.proj.transform(
       [item.geometry.lng, item.geometry.lat],
       'EPSG:4326',

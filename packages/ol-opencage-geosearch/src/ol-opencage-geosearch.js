@@ -1,4 +1,6 @@
 import Control from 'ol/control/Control';
+import { transform } from 'ol/proj';
+
 import { autocomplete } from '@algolia/autocomplete-js';
 // eslint-disable-next-line import/no-unresolved
 import { OpenCageGeoSearchPlugin } from '@opencage/geosearch-core';
@@ -64,7 +66,7 @@ export default class OpenCageGeosearchControl extends Control {
 
     const { item } = params;
 
-    const coordinates = ol.proj.transform(
+    const coordinates = transform(
       [item.geometry.lng, item.geometry.lat],
       'EPSG:4326',
       this.getMap().getView().getProjection()
