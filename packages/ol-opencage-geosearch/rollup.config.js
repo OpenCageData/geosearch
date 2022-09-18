@@ -2,7 +2,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import pkg from './package.json';
 
-const source = 'ol-opencage-geosearch.js';
+const source = 'src/ol-opencage-geosearch.js';
 
 const globals = {
   'ol/control/Control': 'ol.control.Control',
@@ -17,24 +17,24 @@ const external = [
 
 export default [
   // browser-friendly UMD build
-  {
-    input: source,
-    external,
-    output: {
-      globals,
-      name: 'OpenCageGeosearchControl',
-      file: pkg.browser,
-      format: 'umd',
-      sourcemap: true,
-    },
-    plugins: [
-      resolve(),
-      commonjs({
-        exclude: 'src/**',
-        include: 'node_modules/**',
-      }),
-    ],
-  },
+  // {
+  //   input: source,
+  //   external,
+  //   output: {
+  //     globals,
+  //     name: 'OpenCageGeosearchControl',
+  //     file: pkg.browser,
+  //     format: 'umd',
+  //     sourcemap: true,
+  //   },
+  //   plugins: [
+  //     resolve(),
+  //     commonjs({
+  //       exclude: 'src/**',
+  //       include: 'node_modules/**',
+  //     }),
+  //   ],
+  // },
 
   // CommonJS (for Node) and ES module (for bundlers) build.
   // (We could have three entries in the configuration array

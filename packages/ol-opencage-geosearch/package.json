@@ -32,15 +32,15 @@
   },
   "files": [
     "dist/",
-    "ol-opencage-geosearch.css",
-    "ol-opencage-geosearch.js"
+    "ol-opencage-geosearch.css"
   ],
-  "source": "ol-opencage-geosearch.js",
+  "source": "src/ol-opencage-geosearch.js",
   "main": "dist/ol-opencage-geosearch.cjs.js",
   "module": "dist/ol-opencage-geosearch.esm.js",
-  "browser": "dist/ol-opencage-geosearch.umd.js",
   "scripts": {
-    "build": "rollup -c",
+    "build": "yarn build:rollup && yarn build:copy",
+    "build:copy": "mkdir -p dist && cp -f ol-opencage-geosearch.js dist/",
+    "build:rollup": "rollup -c",
     "build:clean": "rm -rf dist",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",

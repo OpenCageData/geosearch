@@ -1,6 +1,9 @@
-// Original source file, works well in an HTML page using old school script import
-// do not use with bundlers
-class OpenCageGeosearchControl extends ol.control.Control {
+import Control from 'ol/control/Control';
+import { autocomplete } from '@algolia/autocomplete-js';
+// eslint-disable-next-line import/no-unresolved
+import { OpenCageGeoSearchPlugin } from '@opencage/geosearch-core';
+
+export default class OpenCageGeosearchControl extends Control {
   constructor(options) {
     const pluginOptions = options || {};
 
@@ -17,10 +20,10 @@ class OpenCageGeosearchControl extends ol.control.Control {
 
     this.setCssPosition(this.options.position);
 
-    opencage.algoliaAutocomplete({
+    autocomplete({
       container: this.element,
       plugins: [
-        opencage.OpenCageGeoSearchPlugin(this.options, {
+        OpenCageGeoSearchPlugin(this.options, {
           onSelect: this.handleSelect.bind(this),
           onActive: this.options.onActive,
           onSubmit: this.options.onSubmit,
