@@ -1,6 +1,6 @@
 {
   "name": "@opencage/geosearch-core",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "Core client for OpenCage GeoSearch",
   "author": {
     "name": "OpenCage GmbH",
