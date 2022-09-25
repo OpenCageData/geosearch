@@ -41,6 +41,6 @@
     "leaflet": "^1.*"
   },
   "devDependencies": {
-    "leaflet": "^1.8.0"
+    "leaflet": "^1.9"
   }
 }
