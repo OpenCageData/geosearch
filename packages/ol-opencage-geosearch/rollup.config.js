@@ -1,14 +1,14 @@
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
+// import resolve from '@rollup/plugin-node-resolve';
+// import commonjs from '@rollup/plugin-commonjs';
 import pkg from './package.json';
 
 const source = 'src/ol-opencage-geosearch.js';
 
-const globals = {
-  'ol/control/Control': 'ol.control.Control',
-  '@algolia/autocomplete-js': 'autocomplete',
-  '@opencage/geosearch-core': 'OpenCageGeoSearchPlugin',
-};
+// const globals = {
+//   'ol/control/Control': 'ol.control.Control',
+//   '@algolia/autocomplete-js': 'autocomplete',
+//   '@opencage/geosearch-core': 'OpenCageGeoSearchPlugin',
+// };
 const external = [
   'ol/control/Control',
   '@algolia/autocomplete-js',
