@@ -42,8 +42,8 @@
     "dotenv": "../../scripts/dotenv.sh $@",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "test": "mocha --recursive",
-    "test:coverage": "nyc --reporter=lcovonly --reporter=html --reporter=text mocha --recursive",
+    "test": "mocha --require @babel/register --recursive",
+    "test:coverage": "nyc --reporter=lcovonly --reporter=html --reporter=text mocha --require @babel/register --recursive",
     "watch": "webpack watch --mode development"
   },
   "dependencies": {
