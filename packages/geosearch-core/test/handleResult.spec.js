@@ -1,6 +1,6 @@
-const { expect } = require('chai');
-const { handleResult } = require('../src/handleResult');
-const { SOURCE_ID } = require('../src/constants');
+import { expect } from 'chai';
+import { handleResult } from '../src/handleResult';
+import { SOURCE_ID } from '../src/constants';
 
 describe('geosearch-core:handleResult', () => {
   it('expects `handleResult` to be a function', () => {

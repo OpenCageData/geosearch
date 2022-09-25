@@ -1,13 +1,13 @@
-const { expect } = require('chai');
-const fetchMock = require('fetch-mock');
+import { expect } from 'chai';
+import fetchMock from 'fetch-mock';
 
 // fetch polyfill
-require('isomorphic-unfetch');
+import 'isomorphic-unfetch';
 
-const OpenCageGeoSearchPlugin = require('../src/OpenCageGeoSearchPlugin');
-const { SOURCE_ID, AWAIT_LABEL } = require('../src/constants');
+import { OpenCageGeoSearchPlugin } from '../src/OpenCageGeoSearchPlugin';
+import { SOURCE_ID, AWAIT_LABEL } from '../src/constants';
 
-const { payload } = require('./fixtures/greno-payload');
+import { payload } from './fixtures/greno-payload';
 
 describe('geosearch-core:OpenCageGeoSearchPlugin', () => {
   it(`should return the plugin`, () => {

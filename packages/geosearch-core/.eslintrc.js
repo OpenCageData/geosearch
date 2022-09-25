@@ -1,13 +1,13 @@
 module.exports = {
   env: {
     mocha: true,
-    browser: true,
+    browser: false,
     es6: true,
   },
   extends: ['airbnb-base', 'plugin:prettier/recommended'],
   plugins: ['security'],
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 2021,
   },
   rules: {
     camelcase: 'off', // my_var is fine, no need for myVar
@@ -17,7 +17,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*.test.js', '*.spec.js', '*_test.js'],
+      files: ['*.test.js', '*.spec.js', '*_test.js', 'rollup.config.js'],
       rules: {
         'import/no-extraneous-dependencies': 'off',
         'no-unused-expressions': 'off',

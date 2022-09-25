@@ -1,5 +1,5 @@
-const { expect } = require('chai');
-const TheModule = require('../src/index');
+import { expect } from 'chai';
+import TheModule from '../src/index';
 
 describe('geosearch-core:index', () => {
   it(`returns the module`, () => {

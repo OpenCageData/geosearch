@@ -1,5 +1,5 @@
-const { expect } = require('chai');
-const { uniqByKeepFirst } = require('../../src/helpers/arrayUtils');
+import { expect } from 'chai';
+import { uniqByKeepFirst } from '../../src/helpers/arrayUtils';
 
 describe('geosearch-core:Array', () => {
   it('keeps only first value with `u`', () => {

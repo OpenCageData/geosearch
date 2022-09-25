@@ -1,4 +1,4 @@
-const payload = {
+export const payload = {
   documentation: 'https://opencagedata.com/geosearch',
   licenses: [
     {
@@ -115,4 +115,4 @@ const payload = {
   total_results: 5,
 };
 
-module.exports = { payload };
+export default { payload };

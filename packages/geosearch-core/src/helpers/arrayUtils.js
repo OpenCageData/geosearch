@@ -1,4 +1,4 @@
-const uniqByKeepFirst = (a, key) => {
+export const uniqByKeepFirst = (a, key) => {
   const seen = new Set();
   return a.filter((item) => {
     const k = key(item);
@@ -6,4 +6,4 @@ const uniqByKeepFirst = (a, key) => {
   });
 };
 
-module.exports = { uniqByKeepFirst };
+export default { uniqByKeepFirst };

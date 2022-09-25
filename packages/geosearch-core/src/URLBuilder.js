@@ -1,4 +1,4 @@
-const buildURL = (url, options) => {
+export const buildURL = (url, options) => {
   let result = url;
   if (!options) return result;
   // if (options.key) {
@@ -20,4 +20,4 @@ const buildURL = (url, options) => {
   return result;
 };
 
-module.exports = { buildURL };
+export default { buildURL };

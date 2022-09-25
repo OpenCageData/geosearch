@@ -1,7 +1,7 @@
-const { expect } = require('chai');
-const sinon = require('sinon');
+import { expect } from 'chai';
+import sinon from 'sinon';
 
-const { debouncePromise } = require('../../src/helpers/debounce');
+import { debouncePromise } from '../../src/helpers/debounce';
 
 describe('geosearch-core:debounce', () => {
   it('should call the function after 500ms', (done) => {

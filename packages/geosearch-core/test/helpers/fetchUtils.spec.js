@@ -1,5 +1,5 @@
-const { expect } = require('chai');
-const { checkResponseStatus } = require('../../src/helpers/fetchUtils');
+import { expect } from 'chai';
+import { checkResponseStatus } from '../../src/helpers/fetchUtils';
 
 describe('geosearch-core:Fetch', () => {
   it(`should return true when the value is an HTTP 200 response`, () => {

@@ -1,4 +1,4 @@
-const htmlFooter = `
+export const htmlFooter = `
 <div style="display:flex;flex-direction:column;align-items:flex-end;">
   <div
     style="display:flex;align-items:center;justify-content:center;font-family: sans-serif;font-size:0.7em;color:#009966;">
@@ -15,4 +15,4 @@ const htmlFooter = `
 </div>
 `;
 
-module.exports = { htmlFooter };
+export default { htmlFooter };

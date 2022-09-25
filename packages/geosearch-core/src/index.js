@@ -1,3 +1,3 @@
-const { OpenCageGeoSearchPlugin } = require('./OpenCageGeoSearchPlugin');
+import { OpenCageGeoSearchPlugin } from './OpenCageGeoSearchPlugin';
 
-module.exports = { OpenCageGeoSearchPlugin };
+export default { OpenCageGeoSearchPlugin };

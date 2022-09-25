@@ -1,5 +1,5 @@
-const { expect } = require('chai');
-const { isString } = require('../../src/helpers/stringUtils');
+import { expect } from 'chai';
+import { isString } from '../../src/helpers/stringUtils';
 
 describe('geosearch-core:Strings', () => {
   it(`should return true when the value is 'a'`, () => {
