@@ -36,7 +36,6 @@
     "dist/"
   ],
   "scripts": {
-    "build:webpack": "webpack --mode production",
     "build": "rollup -c",
     "build:clean": "rm -rf dist",
     "dotenv": "../../scripts/dotenv.sh $@",
@@ -44,7 +43,7 @@
     "lint:fix": "eslint --fix .",
     "test": "mocha --require @babel/register --recursive",
     "test:coverage": "nyc --reporter=lcovonly --reporter=html --reporter=text mocha --require @babel/register --recursive",
-    "watch": "webpack watch --mode development"
+    "watch": "rollup --watch -c"
   },
   "dependencies": {
     "@algolia/autocomplete-js": "^1.*",

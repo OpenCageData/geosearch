@@ -3,11 +3,17 @@ import commonjs from '@rollup/plugin-commonjs';
 import pkg from './package.json';
 
 const source = 'src/index.js';
+// indicate which modules should be treated as external
+const external = [
+  '@algolia/autocomplete-js',
+  '@algolia/autocomplete-theme-classic',
+];
 
 export default [
   // browser-friendly UMD build
   {
     input: source,
+    external,
     output: {
       name: 'opencage',
       file: pkg.browser,
@@ -31,6 +37,7 @@ export default [
   // `file` and `format` for each target)
   {
     input: source,
+    external,
     output: [
       { file: pkg.main, format: 'cjs' },
       { file: pkg.module, format: 'es' },
