@@ -1,0 +1,20 @@
+{
+  "name": "@opencage/nodejs-example",
+  "version": "0.1.0",
+  "private": true,
+  "description": "> TODO: description",
+  "main": "nodejs-example.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OpenCageData/geosearch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OpenCageData/geosearch/issues"
+  },
+  "scripts": {
+    "dotenv": "../../scripts/dotenv.sh $@"
+  },
+  "dependencies": {
+    "@opencage/geosearch-core": "^0.0.17"
+  }
+}
