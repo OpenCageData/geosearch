@@ -1,11 +1,11 @@
-const { isString } = require('./helpers/stringUtils');
-const { checkResponseStatus } = require('./helpers/fetchUtils');
-const { debouncePromise } = require('./helpers/debounce');
-const { handleResult } = require('./handleResult');
-const { buildURL } = require('./URLBuilder');
-const { AWAIT_USER_INPUT } = require('./constants');
+import { isString } from './helpers/stringUtils';
+import { checkResponseStatus } from './helpers/fetchUtils';
+import { debouncePromise } from './helpers/debounce';
+import { handleResult } from './handleResult';
+import { buildURL } from './URLBuilder';
+import { AWAIT_USER_INPUT } from './constants';
 
-const OpenCageGeoSearchPlugin = (
+export const OpenCageGeoSearchPlugin = (
   options = { debounce: 300, noResults: 'No results.' },
   events = {}
 ) => {
@@ -91,4 +91,4 @@ const OpenCageGeoSearchPlugin = (
   };
 };
 
-module.exports = { OpenCageGeoSearchPlugin };
+export default { OpenCageGeoSearchPlugin };

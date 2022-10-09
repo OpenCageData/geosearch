@@ -13,4 +13,12 @@ module.exports = {
     'func-names': 0,
     'no-unused-vars': 'off',
   },
+  overrides: [
+    {
+      files: ['rollup.config.js'],
+      rules: {
+        'import/no-extraneous-dependencies': 'off',
+      },
+    },
+  ],
 };

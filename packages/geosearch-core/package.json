@@ -29,27 +29,25 @@
     "access": "public"
   },
   "source": "src/index.js",
-  "main": "dist/js/opencage-geosearch-core.js",
+  "main": "dist/js/opencage-geosearch-core.cjs.js",
+  "browser": "dist/js/opencage-geosearch-core.js",
+  "module": "dist/js/opencage-geosearch-core.esm.js",
   "files": [
     "dist/"
   ],
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "rollup -c",
     "build:clean": "rm -rf dist",
     "dotenv": "../../scripts/dotenv.sh $@",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "test": "mocha --recursive",
-    "test:coverage": "nyc --reporter=lcovonly --reporter=html --reporter=text mocha --recursive",
-    "watch": "webpack watch --mode development"
+    "test": "mocha --require @babel/register --recursive",
+    "test:coverage": "nyc --reporter=lcovonly --reporter=html --reporter=text mocha --require @babel/register --recursive",
+    "watch": "rollup --watch -c"
   },
+  "dependencies": {},
   "peerDependencies": {
     "@algolia/autocomplete-js": "^1.*",
     "@algolia/autocomplete-theme-classic": "^1.*"
-  },
-  "dependencies": {
-    "chai": "^4.3.4",
-    "webpack": "^5.67.0",
-    "webpack-cli": "^4.9.1"
   }
 }

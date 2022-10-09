@@ -1,22 +1,21 @@
-const { expect } = require('chai');
-const fetchMock = require('fetch-mock');
+/* eslint-disable import/no-named-as-default-member */
+import { expect } from 'chai';
+import fetchMock from 'fetch-mock';
 
 // fetch polyfill
-require('isomorphic-unfetch');
+import 'isomorphic-unfetch';
 
-const OpenCageGeoSearchPlugin = require('../src/OpenCageGeoSearchPlugin');
-const { SOURCE_ID, AWAIT_LABEL } = require('../src/constants');
+import theModule from '../src/OpenCageGeoSearchPlugin';
+import { SOURCE_ID, AWAIT_LABEL } from '../src/constants';
 
-const { payload } = require('./fixtures/greno-payload');
+import { payload } from './fixtures/greno-payload';
 
 describe('geosearch-core:OpenCageGeoSearchPlugin', () => {
   it(`should return the plugin`, () => {
-    expect(OpenCageGeoSearchPlugin).to.be.an('object');
-    expect(OpenCageGeoSearchPlugin.OpenCageGeoSearchPlugin).to.be.a('function');
-    expect(OpenCageGeoSearchPlugin.OpenCageGeoSearchPlugin()).to.be.an(
-      'object'
-    );
-    const plugin = OpenCageGeoSearchPlugin.OpenCageGeoSearchPlugin();
+    expect(theModule).to.be.an('object');
+    expect(theModule.OpenCageGeoSearchPlugin).to.be.a('function');
+    expect(theModule.OpenCageGeoSearchPlugin()).to.be.an('object');
+    const plugin = theModule.OpenCageGeoSearchPlugin();
     expect(plugin.getSources).to.be.a('function');
     expect(plugin.onSubmit).to.be.a('function');
     expect(plugin.onReset).to.be.a('function');
@@ -24,13 +23,13 @@ describe('geosearch-core:OpenCageGeoSearchPlugin', () => {
     expect(plugin.onSubmit()).not.to.throw;
   });
   it(`should return an empty result with an empty query`, async () => {
-    const plugin = OpenCageGeoSearchPlugin.OpenCageGeoSearchPlugin();
+    const plugin = theModule.OpenCageGeoSearchPlugin();
     const result = await plugin.getSources({ query: '' });
     expect(result).to.be.an('array');
     expect(result.length).to.equal(0);
   });
   it(`should return an empty result with a query to really short`, async () => {
-    const plugin = OpenCageGeoSearchPlugin.OpenCageGeoSearchPlugin();
+    const plugin = theModule.OpenCageGeoSearchPlugin();
     const result = await plugin.getSources({ query: 'a' });
     expect(result).to.be.an('array');
     expect(result.length).to.equal(1);
@@ -38,7 +37,7 @@ describe('geosearch-core:OpenCageGeoSearchPlugin', () => {
     expect(items[0].formatted).to.equal(AWAIT_LABEL);
   });
   it(`should return an empty result with a query to short`, async () => {
-    const plugin = OpenCageGeoSearchPlugin.OpenCageGeoSearchPlugin();
+    const plugin = theModule.OpenCageGeoSearchPlugin();
     const result = await plugin.getSources({ query: 'aa' });
     expect(result).to.be.an('array');
     expect(result.length).to.equal(1);
@@ -52,13 +51,13 @@ describe('geosearch-core:OpenCageGeoSearchPlugin', () => {
     expect(items[0].formatted).to.equal(AWAIT_LABEL);
   });
   it(`should return an empty result with a non string query`, async () => {
-    const plugin = OpenCageGeoSearchPlugin.OpenCageGeoSearchPlugin();
+    const plugin = theModule.OpenCageGeoSearchPlugin();
     const result = await plugin.getSources({ query: 123 });
     expect(result).to.be.an('array');
     expect(result.length).to.equal(0);
   });
   it('should return an empty result with a fakekey', async () => {
-    const plugin = OpenCageGeoSearchPlugin.OpenCageGeoSearchPlugin({
+    const plugin = theModule.OpenCageGeoSearchPlugin({
       key: 'fakekey',
     });
     const result = await plugin.getSources({ query: 'lyon' });
@@ -78,7 +77,7 @@ describe('geosearch-core:OpenCageGeoSearchPlugin', () => {
       fetchMock.reset();
     });
     it('should return results with greno', async () => {
-      const plugin = OpenCageGeoSearchPlugin.OpenCageGeoSearchPlugin({
+      const plugin = theModule.OpenCageGeoSearchPlugin({
         key: 'a real key',
       });
       // const res = await fetch(url);

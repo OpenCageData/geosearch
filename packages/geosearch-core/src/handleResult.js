@@ -1,10 +1,10 @@
-const { uniqByKeepFirst } = require('./helpers/arrayUtils');
-const { htmlFooter } = require('./Footer');
-const { SOURCE_ID } = require('./constants');
+import { uniqByKeepFirst } from './helpers/arrayUtils';
+import { htmlFooter } from './Footer';
+import { SOURCE_ID } from './constants';
 
 const fn = () => {};
 
-const handleResult = (
+export const handleResult = (
   { results: returnedResults },
   { onActive = fn, onSelect = fn, noResults = 'No results.' } = {}
 ) => {
@@ -61,4 +61,4 @@ const handleResult = (
   ];
 };
 
-module.exports = { handleResult };
+export default { handleResult };

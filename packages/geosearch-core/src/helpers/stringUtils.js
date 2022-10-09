@@ -1,6 +1,6 @@
-const isString = (value) => {
+export const isString = (value) => {
   const type = typeof value;
   return type === 'string';
 };
 
-module.exports = { isString };
+export default { isString };

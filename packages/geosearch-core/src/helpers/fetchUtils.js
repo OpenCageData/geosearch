@@ -1,4 +1,4 @@
-const checkResponseStatus = (res) => {
+export const checkResponseStatus = (res) => {
   if (res.ok) {
     return res;
   }
@@ -11,4 +11,4 @@ const checkResponseStatus = (res) => {
   throw err;
 };
 
-module.exports = { checkResponseStatus };
+export default { checkResponseStatus };

@@ -1,4 +1,4 @@
-const { autocomplete } = require('@algolia/autocomplete-js');
-const { OpenCageGeoSearchPlugin } = require('@opencage/geosearch-core');
+import { autocomplete } from '@algolia/autocomplete-js';
+import { OpenCageGeoSearchPlugin } from '@opencage/geosearch-core';
 
-module.exports = { OpenCageGeoSearchPlugin, algoliaAutocomplete: autocomplete };
+export default { OpenCageGeoSearchPlugin, algoliaAutocomplete: autocomplete };

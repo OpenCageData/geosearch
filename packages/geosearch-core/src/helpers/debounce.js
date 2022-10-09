@@ -1,4 +1,4 @@
-const debouncePromise = (fn, time) => {
+export const debouncePromise = (fn, time) => {
   let timerId;
 
   return (...args) => {
@@ -12,4 +12,4 @@ const debouncePromise = (fn, time) => {
   };
 };
 
-module.exports = { debouncePromise };
+export default { debouncePromise };

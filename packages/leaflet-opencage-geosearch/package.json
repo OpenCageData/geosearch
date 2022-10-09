@@ -37,7 +37,13 @@
     "lint:fix": "eslint --fix .",
     "test": "echo \"Warning: run tests from root\" && exit 0"
   },
+  "dependencies": {
+    "@algolia/autocomplete-js": "^1.7.1",
+    "@opencage/geosearch-core": "^0.0.17"
+  },
   "peerDependencies": {
+    "@algolia/autocomplete-js": "^1.7.1",
+    "@opencage/geosearch-core": "^0.0.17",
     "leaflet": "^1.*"
   },
   "devDependencies": {
