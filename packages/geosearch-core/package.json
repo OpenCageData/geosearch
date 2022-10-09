@@ -1,6 +1,6 @@
 {
   "name": "@opencage/geosearch-core",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Core client for OpenCage GeoSearch",
   "author": {
     "name": "OpenCage GmbH",
@@ -45,7 +45,6 @@
     "test:coverage": "nyc --reporter=lcovonly --reporter=html --reporter=text mocha --require @babel/register --recursive",
     "watch": "rollup --watch -c"
   },
-  "dependencies": {},
   "peerDependencies": {
     "@algolia/autocomplete-js": "^1.*",
     "@algolia/autocomplete-theme-classic": "^1.*"
