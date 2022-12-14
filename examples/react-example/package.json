@@ -5,7 +5,7 @@
   "dependencies": {
     "@algolia/autocomplete-js": "^1.7.2",
     "@algolia/autocomplete-theme-classic": "^1.7.2",
-    "@opencage/geosearch-core": "^0.0.17",
+    "@opencage/geosearch-core": "^0.0.18",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^14.0.4",
@@ -24,7 +24,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "eslint-plugin-jest": "^27.1.3",
+    "eslint-plugin-jest": "^27.1.6",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.3.0"
