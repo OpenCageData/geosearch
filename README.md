@@ -50,11 +50,26 @@ Please note: a geosearch key is unrelated to the keys for the OpenCage geocoding
 ```html
 <script type="text/javascript">
   opencage.algoliaAutocomplete({
-    container: '#place',
+    container: '#autocomplete',
     plugins: [
-      opencage.OpenCageGeoSearchPlugin({
-        key: 'YOUR-GEOSEARCH-KEY',
-      }),
+      opencage.OpenCageGeoSearchPlugin(
+        {
+          key: 'YOUR-GEOSEARCH-KEY',
+        },
+        // optional event handlers:
+        {
+          onSelect: function handleSelect(params) {
+            console.log('Selected Item is', params.item);
+            const latlng = [params.item.geometry.lat, params.item.geometry.lng];
+            // do something with the coords
+            console.log('Selected result coords', latlng);
+          },
+          onSubmit: function handleSubmit(params) {
+            // Do something with the selected and then submitted value
+            console.log('Submit with', params.state.query);
+          },
+        }
+      ),
     ],
   });
 </script>
@@ -71,6 +86,10 @@ and to run it, just add the following resources to the header of the HTML page:
 ```
 
 ### Optional configuration
+
+```js
+opencage.OpenCageGeoSearchPlugin(options, events);
+```
 
 #### 1. Options
 
@@ -206,7 +225,6 @@ See our [integration tutorial](https://opencagedata.com/tutorials/leaflet-locati
 
 This is a plugin for the well-known map API [OpenLayers](https://openlayers.org).
 See our [integration tutorial](https://opencagedata.com/tutorials/openlayers-location-search).
-
 
 ## Browser support / Polyfills
 
