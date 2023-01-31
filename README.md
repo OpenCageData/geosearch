@@ -50,7 +50,7 @@ Please note: a geosearch key is unrelated to the keys for the OpenCage geocoding
 ```html
 <script type="text/javascript">
   opencage.algoliaAutocomplete({
-    container: '#autocomplete',
+    container: '#place',
     plugins: [
       opencage.OpenCageGeoSearchPlugin(
         {
