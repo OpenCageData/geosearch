@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>GeoSearch Multiple source</title>
+
+    <meta name="description" content="GeoSearch from OpenCageData" />
+    <link rel="stylesheet" href="./dist/css/autocomplete-theme-classic.min.css" />
+    <!-- <link rel="stylesheet" href="./leaflet-opencage-geosearch.css" /> -->
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+    <div id="autocomplete"></div>
+    <script src="./dist/js/opencage-geosearch-bundle.js"></script>
+    <script src="config.js"></script>
+    <script>
+        const options = {
+            key: window.OPENCAGE_GEOSEARCH_KEY,
+        };
+
+        opencage.algoliaAutocomplete({
+            container: '#autocomplete',
+            placeholder: 'Search for places',
+            plugins: [opencage.OpenCageGeoSearchPlugin(options)],
+            getSources() {
+                return [
+                    {
+                        sourceId: 'My Cities',
+                        getItems({ query }) {
+                            const items = [
+                                { label: 'Lyon', url: 'https://en.wikipedia.org/wiki/Lyon' },
+                                { label: 'Toulouse', url: 'https://en.wikipedia.org/wiki/Toulouse' },
+                                { label: 'Paris', url: 'https://en.wikipedia.org/wiki/Paris' },
+                                { label: 'Grenoble', url: 'https://en.wikipedia.org/wiki/Grenoble' },
+                                { label: 'London', url: 'https://en.wikipedia.org/wiki/London' },
+                            ];
+
+                            return items.filter(({ label }) =>
+                                label.toLowerCase().includes(query.toLowerCase())
+                            );
+                        },
+                        getItemUrl({ item }) {
+                            return item.url;
+                        },
+                        templates: {
+                            item({ item }) {
+                                return item.label;
+                            },
+                            noResults() {
+                                return 'No results.';
+                            },
+                            footer(params) {
+                                return params.createElement('div', {
+                                    dangerouslySetInnerHTML: {
+                                        __html: '<div style="display:flex;flex-direction:column;align-items:flex-end;">Where I lived</div>',
+                                    },
+                                })
+                            },
+
+                        },
+                    },
+                ];
+            },
+        });
+
+    </script>
+</body>
+
+</html>
