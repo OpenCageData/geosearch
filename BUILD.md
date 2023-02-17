@@ -96,6 +96,17 @@ it uses the core version of the package and demonstrates the different options o
 serve -S examples/advanced-example
 ```
 
+### Multisources example
+
+Two examples how to use the plugin and other sources in the same autocomplete input.
+
+```bash
+serve -S examples/multiple-sources
+```
+
+1- open http://localhost:3000/ : adding your own data, a set of place in this example
+2- open http://localhost:3000/index2.html: adding a aynch request, a query to wikipedia in this example
+
 ### Leaflet's plugin example
 
 it uses the bundle version along with the dedicated [Leaflet](https://leafletjs.com/)'s plugin

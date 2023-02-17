@@ -45,3 +45,8 @@ cd ../openlayers-library-example
 
 # ln -sf ../../packages/ol-opencage-geosearch dist
 createSymLink "dist" "../../packages/ol-opencage-geosearch"
+
+cd ../multiple-sources
+
+# ln -sf ../../packages/geosearch-bundle/dist dist
+createSymLink "dist" "../../packages/geosearch-bundle/dist"
