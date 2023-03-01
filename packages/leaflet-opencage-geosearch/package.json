@@ -43,7 +43,7 @@
   },
   "peerDependencies": {
     "@algolia/autocomplete-js": "^1.*",
-    "@opencage/geosearch-core": "^0.0.18",
+    "@opencage/geosearch-core": "^0.0.19",
     "leaflet": "^1.*"
   },
   "devDependencies": {
