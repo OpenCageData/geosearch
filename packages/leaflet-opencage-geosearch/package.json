@@ -38,12 +38,12 @@
     "test": "echo \"Warning: run tests from root\" && exit 0"
   },
   "dependencies": {
-    "@algolia/autocomplete-js": "^1.8.1",
+    "@algolia/autocomplete-js": "^1.8.2",
     "@opencage/geosearch-core": "^0.0.18"
   },
   "peerDependencies": {
-    "@algolia/autocomplete-js": "^1.7.1",
-    "@opencage/geosearch-core": "^0.0.17",
+    "@algolia/autocomplete-js": "^1.*",
+    "@opencage/geosearch-core": "^0.0.18",
     "leaflet": "^1.*"
   },
   "devDependencies": {

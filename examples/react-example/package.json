@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@algolia/autocomplete-js": "^1.8.1",
-    "@algolia/autocomplete-theme-classic": "^1.8.1",
+    "@algolia/autocomplete-js": "^1.8.2",
+    "@algolia/autocomplete-theme-classic": "^1.8.2",
     "@opencage/geosearch-core": "^0.0.18",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^14.0.0",

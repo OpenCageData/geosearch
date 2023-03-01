@@ -45,6 +45,10 @@
     "test:coverage": "nyc --reporter=lcovonly --reporter=html --reporter=text mocha --require @babel/register --recursive",
     "watch": "rollup --watch -c"
   },
+  "devDependencies": {
+    "@algolia/autocomplete-js": "^1.8.2",
+    "@algolia/autocomplete-theme-classic": "^1.8.2"
+  },
   "peerDependencies": {
     "@algolia/autocomplete-js": "^1.*",
     "@algolia/autocomplete-theme-classic": "^1.*"
