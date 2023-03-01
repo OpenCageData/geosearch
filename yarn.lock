@@ -2230,6 +2230,11 @@
   dependencies:
     "@octokit/openapi-types" "^16.0.0"
 
+"@opencage/geosearch-core@^0.0.18":
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/@opencage/geosearch-core/-/geosearch-core-0.0.18.tgz#ac3d811cf494ab6b2097cf9eaa3ba2f43baabf8b"
+  integrity sha512-uXt8uZ5zptK8gzJjysSoRmlVHMDP63mLmMd+wZXfXaHLCQdpZrhtWhQdQJReqfrnzXY91uzdc4S/sy6XGf64UQ==
+
 "@parcel/watcher@2.0.4":
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/@parcel/watcher/-/watcher-2.0.4.tgz#f300fef4cc38008ff4b8c29d92588eced3ce014b"
