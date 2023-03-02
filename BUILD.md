@@ -74,7 +74,12 @@ Start the playground with the command
 
 ```bash
 yarn playground:start
+
+# then
+open http://localhost:5173/
 ```
+
+:warning: using http://127.0.0.1:5173/ in your browser won't allow you to access the geosearch service unless you configure CORS for it
 
 ## Others examples
 
