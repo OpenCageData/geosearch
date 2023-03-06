@@ -171,6 +171,34 @@ lerna publish --no-private
 
 ```
 
+after publishing, run
+
+```bash
+yarn
+
+yarn outdated
+```
+
+update the deps for the examples:
+
+```
+Package                  Current Wanted Latest Workspace
+@opencage/geosearch-core 0.0.19  0.0.19 0.0.20 @opencage/nodejs-example
+@opencage/geosearch-core 0.0.19  0.0.19 0.0.20 @opencage/geosearch-react-example
+```
+
+update the yarn lock file with
+
+```bash
+yarn
+```
+
+and finally commit with a post publish message:
+
+```bash
+git commit -am "post publish updates"
+```
+
 ## Audit
 
 Sometimes `yarn audit` fails. An alternative is
