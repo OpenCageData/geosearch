@@ -26,7 +26,6 @@
     "@babel/register": "^7.21.0",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "babel-jest": "^29.4.3",
     "chai": "^4.3.4",
     "cssnano": "^5.1.15",
     "eslint": "8.35.0",
