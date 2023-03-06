@@ -5,4 +5,4 @@ if [ $# -lt 1 ]; then
     exit
 fi
 rm -f .env
-echo "REACT_APP_OPENCAGE_SEARCH_TOKEN=$1" >>.env
+echo "VITE_OPENCAGE_SEARCH_TOKEN=$1" >>.env

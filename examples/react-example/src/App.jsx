@@ -1,13 +1,15 @@
 import React from 'react';
 import { OpenCageGeoSearchPlugin } from '@opencage/geosearch-core';
-
-import logo from './logo.svg';
 import { GeoSearch } from './components/GeoSearch';
-
 import './App.css';
+import logo from './logo.svg';
+
+const { VITE_OPENCAGE_SEARCH_TOKEN: OPENCAGE_SEARCH_TOKEN } = import.meta.env;
+
+// console.log(`OPENCAGE_SEARCH_TOKEN=${OPENCAGE_SEARCH_TOKEN}`);
 
 const options = {
-  key: process.env.REACT_APP_OPENCAGE_SEARCH_TOKEN,
+  key: OPENCAGE_SEARCH_TOKEN,
   // limit: 3,
   // bounds: ''
   // language: 'fr'

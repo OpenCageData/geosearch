@@ -13,7 +13,7 @@
     "dotenv": "lerna run dotenv -- $@",
     "lint": "lerna run lint --no-private",
     "lint:fix": "lerna run lint:fix --no-private",
-    "playground:start": "yarn workspace @opencage/geosearch-react-example start",
+    "playground:start": "yarn workspace @opencage/geosearch-react-example dev",
     "start": "yarn run watch",
     "symlinks": "./scripts/symlinks.sh",
     "test": "lerna run test --no-private",

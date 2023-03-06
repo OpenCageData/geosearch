@@ -1,44 +1,29 @@
 {
   "name": "@opencage/geosearch-react-example",
-  "version": "0.1.0",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dotenv": "../../scripts/dotenv-react.sh $@",
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "@algolia/autocomplete-js": "^1.8.2",
     "@algolia/autocomplete-theme-classic": "^1.8.2",
     "@opencage/geosearch-core": "^0.0.19",
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "^14.0.4",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^3.1.1"
-  },
-  "scripts": {
-    "dotenv": "../../scripts/dotenv-react.sh $@",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "eject": "react-scripts eject"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "eslint-plugin-jest": "^27.2.1",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react": "^3.1.0",
     "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.3.0"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "vite": "^4.1.0"
   }
 }
