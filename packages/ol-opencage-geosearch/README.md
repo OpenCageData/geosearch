@@ -1,6 +1,6 @@
 # `@opencage/ol-opencage-geosearch`
 
-<p>An OpenLayes plugin that lets you quickly add a search box and help your users find locations on the map</p>
+<p>An OpenLayers plugin that lets you quickly add a search box and help your users find locations on the map</p>
 
 Check out a demo page in [/openlayers-library-example](https://github.com/OpenCageData/geosearch/tree/master/examples/openlayers-library-example). Or take a look at the [live demo](https://codepen.io/opencage/full/LYezKGz).
 
@@ -9,7 +9,8 @@ Check out a demo page in [/openlayers-library-example](https://github.com/OpenCa
 Tested with versions:
 
 - 6.14.1
-- 7.1
+- 7.1.0
+- 7.3.0
 
 ## Other external dependencies
 
