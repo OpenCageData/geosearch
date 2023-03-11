@@ -14,7 +14,7 @@
   "dependencies": {
     "@algolia/autocomplete-js": "^1.8.3",
     "@algolia/autocomplete-theme-classic": "^1.8.3",
-    "@opencage/geosearch-core": "^0.0.20",
+    "@opencage/geosearch-core": "^0.0.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
