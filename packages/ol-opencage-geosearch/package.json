@@ -1,6 +1,6 @@
 {
   "name": "@opencage/ol-opencage-geosearch",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "An OpenLayers geosearch control that uses OpenCage's geosearch API.",
   "author": {
     "name": "OpenCage GmbH",
@@ -48,7 +48,7 @@
   },
   "dependencies": {
     "@algolia/autocomplete-js": "^1.8.3",
-    "@opencage/geosearch-core": "^0.0.20",
+    "@opencage/geosearch-core": "^0.0.21",
     "ol": "^7.3.0"
   }
 }
