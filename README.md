@@ -209,7 +209,7 @@ Check Algolia's Autocomplete [CSS styles](https://www.algolia.com/doc/ui-librari
 
 ## Multiple datasources
 
-It is possible to query not just geosearch but also other datasource. [Please see our examples](examples/multiple-sources/).
+It is possible to query not just geosearch but also other datasources. [Please see our examples](examples/multiple-sources/).
 
 ## Packages
 
