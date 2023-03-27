@@ -29,6 +29,11 @@ By configuring the two required parameters (`container` and `key`), and configur
 
 See a configurable, [live demo on the OpenCage site](https://opencagedata.com/geosearch/demo), or play with the html/css/js [on codepen](https://codepen.io/collection/oEMyOj).
 
+We also have tutorials/examples for integration on a map: 
+[Leaflet](https://opencagedata.com/tutorials/leaflet-location-search),
+[OpenLayers](https://opencagedata.com/tutorials/openlayers-location-search),
+[MapLibre](https://codepen.io/opencage/pen/JjaepyE).
+
 ## Usage
 
 For convenience, this repository is published as multiple [packages](#packages). For a simple usage, we bundle it with the [Algolia's Autocomplete](https://github.com/algolia/autocomplete).
