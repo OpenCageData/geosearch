@@ -25,15 +25,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
-      # - name: restore lerna
-      #   uses: actions/cache@v2
-      #   with:
-      #     path: |
-      #       node_modules
-      #       */*/node_modules
-      #     key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - run: yarn install
       - run: yarn bootstrap
       - run: yarn lint
       - run: yarn test:coverage
       - run: yarn build
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        # with:
+        #   token: ${{ secrets.CODECOV_TOKEN }}
