@@ -6,7 +6,7 @@
 
 <p>A JavaScript library that lets you quickly add a search box and help your users find locations</p>
 
-[![Build Status](https://app.travis-ci.com/OpenCageData/geosearch.svg?token=8YN5QSo2Lnt3LymLoxZZ&branch=develop)](https://app.travis-ci.com/OpenCageData/geosearch)
+[![Node.js CI](https://github.com/OpenCageData/geosearch/actions/workflows/node.js.yml/badge.svg)](https://github.com/OpenCageData/geosearch/actions/workflows/node.js.yml)
 [![Version](https://img.shields.io/npm/v/@opencage/geosearch-core.svg?style=flat-square)](https://www.npmjs.com/package/@opencage/geosearch-core)
 [![codecov](https://codecov.io/gh/OpenCageData/geosearch/branch/master/graph/badge.svg?token=VAZ0RZCGL3)](https://codecov.io/gh/OpenCageData/geosearch)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
@@ -29,7 +29,7 @@ By configuring the two required parameters (`container` and `key`), and configur
 
 See a configurable, [live demo on the OpenCage site](https://opencagedata.com/geosearch/demo), or play with the html/css/js [on codepen](https://codepen.io/collection/oEMyOj).
 
-We also have tutorials/examples for integration on a map: 
+We also have tutorials/examples for integration on a map:
 [Leaflet](https://opencagedata.com/tutorials/leaflet-location-search),
 [OpenLayers](https://opencagedata.com/tutorials/openlayers-location-search),
 [MapLibre](https://codepen.io/opencage/pen/JjaepyE).
