@@ -15,6 +15,6 @@
     "dotenv": "../../scripts/dotenv.sh $@"
   },
   "dependencies": {
-    "@opencage/geosearch-core": "^0.0.21"
+    "@opencage/geosearch-core": "^0.0.22"
   }
 }
