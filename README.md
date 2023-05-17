@@ -23,6 +23,8 @@ This library comes as a plugin on [Algolia's Autocomplete](https://github.com/al
 
 By configuring the two required parameters (`container` and `key`), and configuring the CORS header in your OpenCage dashboard you can have an interactive geosearch experience for places (countries, states/provinces, cities/towns/villages, suburbs/neighbourhoods, major POIS) around the world.
 
+**Note**: to learn more about this service please see the [OpenCage geosearch site](https://opencagedata.com/geosearch) (especially the [FAQ section](https://opencagedata.com/geosearch#faq)).
+
 ## Example
 
 ![header](/resources/screenshot-results-berlin.png)
@@ -211,6 +213,14 @@ Check Algolia's Autocomplete [CSS styles](https://www.algolia.com/doc/ui-librari
 
 It is possible to query not just geosearch but also other datasources. [Please see our examples](examples/multiple-sources/).
 
+## React
+
+In the `/examples directory` you can find an example implemenation with React.
+
+## Geosearch on a map
+
+We have tutorials showing how to [integrate geosearch with a Leaflet map](https://opencagedata.com/tutorials/leaflet-location-search) or [OpenLayers](https://opencagedata.com/tutorials/openlayers-location-search), and [a MapLibre codepen example](https://codepen.io/opencage/pen/JjaepyE).
+
 ## Packages
 
 ### [`@opencage/geosearch-bundle`](./packages/geosearch-bundle/)
@@ -221,7 +231,7 @@ This package bumdles the [Algolia Autocomplete](https://github.com/algolia/autoc
 
 ### [`@opencage/geosearch-core`](./packages/geosearch-core/)
 
-_For whom is using a javascript dependency manager_
+_For those is using a javascript dependency manager_
 
 This is the core package: the GeoSearch plugin to use with [Algolia Autocomplete](https://github.com/algolia/autocomplete).
 
