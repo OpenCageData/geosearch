@@ -11,6 +11,7 @@ Tested with versions:
 - 6.14.1
 - 7.1.0
 - 7.3.0
+- 7.4.0
 
 ## Other external dependencies
 
