@@ -26,7 +26,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
       - run: yarn install
-      - run: yarn bootstrap
       - run: yarn lint
       - run: yarn test:coverage
       - run: yarn build
