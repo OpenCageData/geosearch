@@ -27,12 +27,6 @@ To set up the environment, once:
 yarn
 ```
 
-Link the packages to develop and directly see the changes accross the packages and examples:
-
-```bash
-yarn bootstrap
-```
-
 Create `.env` file containing your personal Key
 
 ```bash
