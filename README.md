@@ -15,7 +15,7 @@
 
 To get started you need:
 
-- A container to inject the autosuggest into
+- A container (typically a `div`) to inject the autosuggest into
 - An [OpenCage geosearch](https://opencagedata.com/geosearch) key (available when you become a geosearch customer)
 - To specify the domain for the `access-control-allow-origin` HTTP header (commonly known as a CORS header) in your [OpenCage account dashboard](https://opencagedata.com/dashboard) in the "Geosearch" tab.
 
