@@ -17,9 +17,9 @@ To get started you need:
 
 - A container to inject the autosuggest into
 - An [OpenCage geosearch](https://opencagedata.com/geosearch) key (available when you become a geosearch customer)
-- To specify the domain for the `access-control-allow-origin` HTTP header (commonly known as a CORS header) in your [OpenCage account dashboard](https://opencagedata.com/dashboard)
+- To specify the domain for the `access-control-allow-origin` HTTP header (commonly known as a CORS header) in your [OpenCage account dashboard](https://opencagedata.com/dashboard) in the "Geosearch" tab.
 
-This library comes as a plugin on [Algolia's Autocomplete](https://github.com/algolia/autocomplete), then, that creates an input and provides the interactivity and accessibility attributes.
+This library comes as a plugin on [Algolia's Autocomplete](https://github.com/algolia/autocomplete), which creates an input and provides the interactivity and accessibility attributes.
 
 By configuring the two required parameters (`container` and `key`), and configuring the CORS header in your OpenCage dashboard you can have an interactive geosearch experience for places (countries, states/provinces, cities/towns/villages, suburbs/neighbourhoods, major POIS) around the world.
 
