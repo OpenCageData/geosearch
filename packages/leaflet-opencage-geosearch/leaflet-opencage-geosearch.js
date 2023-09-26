@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-undef */
 /* eslint-disable global-require */
@@ -17,17 +18,25 @@
   }
 })(function (L) {
   const OpenCageGeosearchControl = L.Control.extend({
+    _map: undefined,
+    _marker: undefined,
+
     options: {
       key: '',
       bounds: '',
       countrycode: '',
       language: '',
       limit: '',
+
+      customMarkerOptions: {},
+      placeholder: 'Search for places',
+      defaultZoomLevel: 13,
     },
 
     onAdd(map) {
       const className = 'leaflet-control-opencage-geosearch';
       const geosearch = L.DomUtil.create('div', className);
+      this._map = map;
 
       const handleSelect = (params) => {
         if (typeof this.options.onSelect === 'function') {
@@ -36,14 +45,19 @@
         }
         const { item } = params;
         const latlng = [item.geometry.lat, item.geometry.lng];
-        marker = L.marker(latlng).addTo(map);
-        marker.bindPopup(item.formatted);
-        map.setView(latlng, 13);
+        if (this._marker) {
+          this._map.removeLayer(this._marker);
+        }
+        this._marker = L.marker(latlng, this.options.customMarkerOptions)
+          .bindPopup(item.formatted)
+          .addTo(this._map);
+
+        this._map.setView(latlng, this.options.defaultZoomLevel);
       };
 
       opencage.algoliaAutocomplete({
         container: geosearch,
-        placeholder: 'Search for places',
+        placeholder: this.options.placeholder,
         plugins: [
           opencage.OpenCageGeoSearchPlugin(this.options, {
             onSelect: handleSelect,

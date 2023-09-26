@@ -90,13 +90,15 @@ it uses the core version of the package and demonstrates the different options o
 serve -S examples/advanced-example
 ```
 
-### Multisources example
+### Multisources examples
 
 Two examples how to use the plugin and other sources in the same autocomplete input.
 
 ```bash
 serve -S examples/multiple-sources
 ```
+
+check the examples:
 
 1- open http://localhost:3000/ : adding your own data, a set of place in this example
 2- open http://localhost:3000/index2.html: adding a aynch request, a query to wikipedia in this example
@@ -109,6 +111,11 @@ it uses the bundle version along with the dedicated [Leaflet](https://leafletjs.
 serve -S examples/leaflet-plugin-example
 ```
 
+check the examples:
+
+1- open http://localhost:3000/
+2- open http://localhost:3000/index-with-custom-marker
+
 ### OpenLayers's library example
 
 it uses the bundle version along with the dedicated [OpenLayers](https://openlayers.org/)'s plugin
@@ -116,6 +123,8 @@ it uses the bundle version along with the dedicated [OpenLayers](https://openlay
 ```bash
 serve -S examples/openlayers-library-example
 ```
+
+1- open http://localhost:3000/
 
 ## linter
 

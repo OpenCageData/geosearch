@@ -41,7 +41,7 @@ const options = {
   // noResults: 'Pas de résultat.',
   //
   // leafletjs options:
-  position: 'topright', // Possible values are 'topleft', 'topright', 'bottomleft' or 'bottomright'
+  position: 'topright', // Possible values are 'topleft', 'topright' [default], 'bottomleft' or 'bottomright'
 };
 
 var geosearchControl = L.Control.openCageGeosearch(options).addTo(map);
@@ -62,13 +62,24 @@ You can specify a specific version of the plugin and geosearch bundle using
 
 ## API reference
 
-1. the `options` parameter has the same API as the [core sdk](https://github.com/OpenCageData/geosearch)
+1. the `options` parameter has the same API as the [core sdk](https://github.com/OpenCageData/geosearch) and dedicated leaflet ones, please see the example below
 
 2. the `events` from the [core sdk](https://github.com/OpenCageData/geosearch) can be included directly in the `options` parameter.
 
    | example:
 
 ```js
+var greenIcon = L.icon({
+  iconUrl: 'leaf-green.png',
+  shadowUrl: 'leaf-shadow.png',
+
+  iconSize: [38, 95], // size of the icon
+  shadowSize: [50, 64], // size of the shadow
+  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+  shadowAnchor: [4, 62], // the same for the shadow
+  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
+});
+
 const options = {
   key: window.OPENCAGE_GEOSEARCH_KEY,
   // you will need to become a customer to get a geosearch key
@@ -78,7 +89,10 @@ const options = {
   },
   //
   // leafletjs options:
-  position: 'topright', // Possible values are 'topleft', 'topright', 'bottomleft' or 'bottomright'
+  position: 'topright', // Possible values are 'topleft', 'topright' [default], 'bottomleft' or 'bottomright'
+  customMarkerOptions: { icon: greenIcon }, // Optional Leaflet Marker options https://leafletjs.com/reference.html#marker-option, default is [{}]
+  placeholder: 'Type here to search for places', // default [13]
+  defaultZoomLevel: 12, // default [13]
 };
 ```
 
