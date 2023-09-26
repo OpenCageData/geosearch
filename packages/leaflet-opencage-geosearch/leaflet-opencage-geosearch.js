@@ -23,6 +23,7 @@
       countrycode: '',
       language: '',
       limit: '',
+      customMarkerOptions: {},
     },
 
     onAdd(map) {
@@ -36,7 +37,7 @@
         }
         const { item } = params;
         const latlng = [item.geometry.lat, item.geometry.lng];
-        marker = L.marker(latlng).addTo(map);
+        marker = L.marker(latlng, options.customMarkerOptions).addTo(map);
         marker.bindPopup(item.formatted);
         map.setView(latlng, 13);
       };
