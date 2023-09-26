@@ -90,7 +90,7 @@ const options = {
   //
   // leafletjs options:
   position: 'topright', // Possible values are 'topleft', 'topright' [default], 'bottomleft' or 'bottomright'
-  customMarkerOptions: { icon: greenIcon }, // Leaflet Marker options https://leafletjs.com/reference.html#marker-option
+  customMarkerOptions: { icon: greenIcon }, // Optional Leaflet Marker options https://leafletjs.com/reference.html#marker-option, default is [{}]
   placeholder: 'Type here to search for places', // default [13]
   defaultZoomLevel: 12, // default [13]
 };
