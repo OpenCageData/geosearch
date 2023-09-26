@@ -104,7 +104,9 @@
             // onActive: () => { console.log('Happy') },
             // leafletjs options:
             position: 'topright', // Possible values are 'topleft', 'topright', 'bottomleft' or 'bottomright'
-            customMarkerOptions: { icon: greenIcon }
+            customMarkerOptions: { icon: greenIcon },
+            placeholder: 'Your search',
+            defaultZoomLevel: 8
         };
 
         var geosearchControl = L.Control.openCageGeosearch(options).addTo(map);
