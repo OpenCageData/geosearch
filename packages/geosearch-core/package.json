@@ -32,8 +32,10 @@
   "main": "dist/js/opencage-geosearch-core.cjs.js",
   "browser": "dist/js/opencage-geosearch-core.js",
   "module": "dist/js/opencage-geosearch-core.esm.js",
+  "types": "index.d.ts",
   "files": [
-    "dist/"
+    "dist/",
+    "index.d.ts"
   ],
   "scripts": {
     "build": "rollup -c",

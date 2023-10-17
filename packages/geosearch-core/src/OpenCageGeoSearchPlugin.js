@@ -25,7 +25,6 @@ export const OpenCageGeoSearchPlugin = (
 
   return {
     async getSources({ query }) {
-      // TODO: API key missing?
       // if (!window.fetch) {
       //   console.warn('Please Contact the developer of this website!');
       // }
