@@ -6,7 +6,7 @@ We use [lerna](https://lerna.js.org/) in addition to [yarn workspaces](https://c
 
 The prerequisites are :
 
-- [node](https://nodejs.org/en/download/) 14 or higher
+- [node](https://nodejs.org/en/download/) 18 or higher
 - [yarn](https://yarnpkg.com/)
 - An [OpenCage geosearch](https://opencagedata.com/geosearch) key
 
