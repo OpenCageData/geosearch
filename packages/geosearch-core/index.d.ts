@@ -8,6 +8,10 @@ import {
 declare module '@opencage/geosearch-core' {
   interface OpenCageGeoSearchPluginOptions {
     /**
+     * The GEOSEARCH Key
+     */
+    key: string;
+    /**
      * restricts the possible results to a defined bounding box.
      *
      * The value of the bounds parameter should be specified as two coordinate points forming the south-west and north-east corners of a bounding box (min longitude, min latitude, max longitude, max latitude).
@@ -92,6 +96,6 @@ declare module '@opencage/geosearch-core' {
 
   export function OpenCageGeoSearchPlugin(
     options: OpenCageGeoSearchPluginOptions,
-    events: OpenCageGeoSearchPluginEvents
+    events?: OpenCageGeoSearchPluginEvents
   ): AutocompletePlugin<any, any>;
 }
