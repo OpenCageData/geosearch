@@ -13,6 +13,7 @@ Tested with versions:
 - 7.3.0
 - 7.4.0
 - 8.1.0
+- 8.2.0
 
 ## Other external dependencies
 

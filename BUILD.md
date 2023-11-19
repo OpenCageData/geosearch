@@ -116,7 +116,7 @@ check the examples:
 1- open http://localhost:3000/
 2- open http://localhost:3000/index-with-custom-marker
 
-### OpenLayers's library example
+### OpenLayers library example
 
 it uses the bundle version along with the dedicated [OpenLayers](https://openlayers.org/)'s plugin
 
