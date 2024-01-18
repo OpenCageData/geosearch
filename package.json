@@ -21,13 +21,13 @@
     "watch": "lerna run watch --parallel"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.6",
-    "@babel/preset-env": "^7.23.6",
-    "@babel/register": "^7.22.15",
+    "@babel/core": "^7.23.7",
+    "@babel/preset-env": "^7.23.7",
+    "@babel/register": "^7.23.7",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "chai": "^4.3.10",
-    "cssnano": "^6.0.2",
+    "cssnano": "^6.0.3",
     "eslint": "8.56.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",
@@ -42,12 +42,12 @@
     "lerna": "^7.4.2",
     "mocha": "^10.2.0",
     "nyc": "^15.1.0",
-    "postcss": "^8.4.32",
+    "postcss": "^8.4.33",
     "postcss-cli": "^11.0.0",
     "prettier": "^3.1.1",
     "rollup": "2.79.1",
     "rollup-plugin-replace": "^2.2.0",
-    "sass": "^1.69.5",
+    "sass": "^1.69.7",
     "sinon": "^17.0.1"
   }
 }
