@@ -39,7 +39,7 @@
     "eslint-plugin-security": "^2.1.0",
     "fetch-mock": "^9.11.0",
     "isomorphic-unfetch": "^4.0.2",
-    "lerna": "^7.4.2",
+    "lerna": "^8.0.2",
     "mocha": "^10.2.0",
     "nyc": "^15.1.0",
     "postcss": "^8.4.33",
