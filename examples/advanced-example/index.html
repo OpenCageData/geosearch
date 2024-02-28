@@ -12,7 +12,7 @@
     <!-- ... -->
     <style>
         #map {
-            height: 804px;
+            height: 600px;
         }
     </style>
 </head>
@@ -21,15 +21,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-    <script type="text/javascript" src="https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js?v1.3.0"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@opencage/geosearch-bundle"></script> -->
     <script type="text/javascript" src="./dist/js/opencage-geosearch-core.js"></script>
 
     <!-- ... -->
     <div class="container mx-auto pt-8 z-9999">
 
-        <div class="flex flex-col md:flex-row space-x-4 ">
-            <div class="flex-row space-y-4 ">
+        <div class="flex flex-col md:flex-row md:space-x-4">
+            <div class="flex-row">
                 <div class="w-full max-w-3xl">
                     <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                         <div class="flex flex-wrap -mx-3 mb-6">
@@ -146,7 +144,7 @@
                 </div>
             </div>
             <div class="w-full max-w-3xl">
-                <div class="h-full w-fill shadow-md rounded" id="wrapper">
+                <div class="w-fill shadow-md rounded">
                     <div id="map"></div>
                 </div>
             </div>
@@ -160,12 +158,17 @@
 
 
     <script>
-        var layer = new L.StamenTileLayer("toner");
         var map = new L.Map("map", {
             center: new L.LatLng(51.505, -0.13),
             zoom: 11
         });
-        map.addLayer(layer);
+        L.tileLayer(
+            "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+            {
+                attribution:
+                    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/attribution">CARTO</a>'
+            }
+        ).addTo(map);
 
         var marker;
 
