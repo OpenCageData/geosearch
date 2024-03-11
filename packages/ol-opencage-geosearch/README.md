@@ -14,6 +14,7 @@ Tested with versions:
 - 7.4.0
 - 8.1.0
 - 8.2.0
+- 9.0.0
 
 ## Other external dependencies
 
