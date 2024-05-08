@@ -15,12 +15,12 @@
     "@algolia/autocomplete-js": "^1.17.0",
     "@algolia/autocomplete-theme-classic": "^1.17.0",
     "@opencage/geosearch-core": "^0.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.79",
-    "@types/react-dom": "^18.2.24",
+    "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.2.1",
     "vite": "^5.2.10"
   }
