@@ -1,25 +1,26 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import replace from 'rollup-plugin-replace';
 
-import pkg from './package.json';
-
+import pkg from './package.json' with { type: 'json' };
 const source = 'src/index.js';
+// indicate which modules should be treated as external
+const external = [
+  '@algolia/autocomplete-js',
+  '@algolia/autocomplete-theme-classic',
+];
 
 export default [
   // browser-friendly UMD build
   {
     input: source,
+    external,
     output: {
       name: 'opencage',
-      file: pkg.main,
+      file: pkg.browser,
       format: 'umd',
       sourcemap: true,
     },
     plugins: [
-      replace({
-        'process.env.NODE_ENV': JSON.stringify('production'),
-      }),
       resolve(),
       commonjs({
         exclude: 'src/**',
@@ -34,11 +35,12 @@ export default [
   // builds from a single configuration where possible, using
   // an array for the `output` option, where we can specify
   // `file` and `format` for each target)
-  // {
-  //   input: source,
-  //   output: [
-  //     { file: pkg.main, format: 'cjs' },
-  //     { file: pkg.module, format: 'es' },
-  //   ],
-  // },
+  {
+    input: source,
+    external,
+    output: [
+      { file: pkg.main, format: 'cjs' },
+      { file: pkg.module, format: 'es' },
+    ],
+  },
 ];

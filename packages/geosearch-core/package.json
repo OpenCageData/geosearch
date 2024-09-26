@@ -38,7 +38,7 @@
     "index.d.ts"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "rollup --strictDeprecations -c",
     "build:clean": "rm -rf dist",
     "dotenv": "../../scripts/dotenv.sh $@",
     "lint": "eslint .",
