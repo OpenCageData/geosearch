@@ -1,7 +1,7 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-
 import pkg from './package.json' with { type: 'json' };
+
 const source = 'src/index.js';
 // indicate which modules should be treated as external
 const external = [
