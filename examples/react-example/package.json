@@ -12,15 +12,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@algolia/autocomplete-js": "^1.17.4",
-    "@algolia/autocomplete-theme-classic": "^1.17.4",
+    "@algolia/autocomplete-js": "^1.17.6",
+    "@algolia/autocomplete-theme-classic": "^1.17.6",
     "@opencage/geosearch-core": "^0.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/react": "^18.3.9",
-    "@types/react-dom": "^18.3.0",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.2",
     "eslint-plugin-jest": "^28.8.3",
     "vite": "^5.4.8"
