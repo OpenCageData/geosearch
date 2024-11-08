@@ -70,12 +70,15 @@ describe('geosearch-core:OpenCageGeoSearchPlugin', () => {
     const url = `https://api.opencagedata.com/geosearch?q=${query}`;
 
     beforeEach(() => {
+      fetchMock.mockGlobal();
       fetchMock.get(url, payload);
     });
 
     afterEach(() => {
-      fetchMock.reset();
+      fetchMock.clearHistory();
+      fetchMock.unmockGlobal();
     });
+
     it('should return results with greno', async () => {
       const plugin = theModule.OpenCageGeoSearchPlugin({
         key: 'a real key',
