@@ -18,6 +18,7 @@ Tested with versions:
 - 9.1.0
 - 9.2.3
 - 10.0.0
+- 10.5.0
 
 ## Other external dependencies
 
