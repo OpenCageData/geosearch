@@ -43,14 +43,14 @@
     "globals": "^16.1.0",
     "isomorphic-unfetch": "^4.0.2",
     "lerna": "^8.1.8",
-    "mocha": "^11.2.2",
+    "mocha": "^11.5.0",
     "nyc": "^17.1.0",
     "postcss": "^8.5.3",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.5.3",
-    "rollup": "4.40.1",
+    "rollup": "4.41.1",
     "rollup-plugin-replace": "^2.2.0",
-    "sass": "^1.87.0",
+    "sass": "^1.89.0",
     "sinon": "^20.0.0"
   }
 }
