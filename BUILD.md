@@ -128,7 +128,7 @@ serve -S examples/openlayers-library-example
 
 ## linter
 
-We use the `airnnb` config with `eslint`
+We use the `airbnb` config with `eslint`
 
 ```bash
 yarn lint
