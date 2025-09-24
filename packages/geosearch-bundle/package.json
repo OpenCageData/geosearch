@@ -44,8 +44,8 @@
     "test": "echo \"Warning: run tests from root\" && exit 0"
   },
   "dependencies": {
-    "@algolia/autocomplete-js": "^1.19.2",
-    "@algolia/autocomplete-theme-classic": "^1.19.2",
+    "@algolia/autocomplete-js": "^1.19.3",
+    "@algolia/autocomplete-theme-classic": "^1.19.3",
     "@opencage/geosearch-core": "^0.1.12"
   }
 }
