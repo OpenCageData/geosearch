@@ -48,8 +48,8 @@
     "watch": "rollup --watch -c"
   },
   "devDependencies": {
-    "@algolia/autocomplete-js": "^1.19.3",
-    "@algolia/autocomplete-theme-classic": "^1.19.3"
+    "@algolia/autocomplete-js": "^1.19.4",
+    "@algolia/autocomplete-theme-classic": "^1.19.4"
   },
   "peerDependencies": {
     "@algolia/autocomplete-js": "^1.*",
