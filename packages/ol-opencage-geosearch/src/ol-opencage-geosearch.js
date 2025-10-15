@@ -3,6 +3,7 @@ import { transform } from 'ol/proj';
 
 import { autocomplete } from '@algolia/autocomplete-js';
 
+// eslint-disable-next-line import/no-unresolved
 import { OpenCageGeoSearchPlugin } from '@opencage/geosearch-core';
 
 export default class OpenCageGeosearchControl extends Control {

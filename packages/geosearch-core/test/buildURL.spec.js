@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { expect, describe, it } from 'vitest';
 import { buildURL } from '../src/URLBuilder';
 
 describe('geosearch-core:buildURL', () => {
