@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { expect, describe, it } from 'vitest';
 import sinon from 'sinon';
 
 import { debouncePromise } from '../../src/helpers/debounce';

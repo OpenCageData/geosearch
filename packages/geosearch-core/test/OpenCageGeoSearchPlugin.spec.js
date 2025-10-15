@@ -1,5 +1,5 @@
 /* eslint-disable import/no-named-as-default-member */
-import { expect } from 'chai';
+import { expect, describe, it, beforeEach, afterEach } from 'vitest';
 import fetchMock from 'fetch-mock';
 
 // fetch polyfill

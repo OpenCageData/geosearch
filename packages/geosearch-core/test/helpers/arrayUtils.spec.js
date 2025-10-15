@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { expect, describe, it } from 'vitest';
 import { uniqByKeepFirst } from '../../src/helpers/arrayUtils';
 
 describe('geosearch-core:Array', () => {

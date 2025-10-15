@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { expect, describe, it } from 'vitest';
 import { handleResult } from '../src/handleResult';
 import { SOURCE_ID } from '../src/constants';
 

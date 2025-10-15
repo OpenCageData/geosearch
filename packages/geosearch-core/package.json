@@ -50,8 +50,8 @@
     "dotenv": "../../scripts/dotenv.sh $@",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "test": "mocha --require @babel/register --recursive",
-    "test:coverage": "nyc --reporter=lcovonly --reporter=html --reporter=text mocha --require @babel/register --recursive",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "watch": "vite build --watch"
   },
   "devDependencies": {
