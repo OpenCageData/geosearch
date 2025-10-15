@@ -28,11 +28,18 @@
   "publishConfig": {
     "access": "public"
   },
+  "type": "module",
   "source": "src/index.js",
   "main": "dist/js/opencage-geosearch-core.cjs.js",
   "browser": "dist/js/opencage-geosearch-core.js",
   "module": "dist/js/opencage-geosearch-core.esm.js",
   "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "import": "dist/js/opencage-geosearch-core.esm.js",
+      "require": "dist/js/opencage-geosearch-core.cjs.js"
+    }
+  },
   "files": [
     "dist/",
     "index.d.ts"
