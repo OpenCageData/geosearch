@@ -45,14 +45,14 @@
     "index.d.ts"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build": "vite build",
     "build:clean": "rm -rf dist",
     "dotenv": "../../scripts/dotenv.sh $@",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "mocha --require @babel/register --recursive",
     "test:coverage": "nyc --reporter=lcovonly --reporter=html --reporter=text mocha --require @babel/register --recursive",
-    "watch": "rollup --watch -c"
+    "watch": "vite build --watch"
   },
   "devDependencies": {
     "@algolia/autocomplete-js": "^1.19.4",
