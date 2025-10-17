@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenCage Geosearch Demos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      width: 100%;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #1a202c;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: #718096;
+      margin-bottom: 30px;
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .demo-card {
+      background: #f7fafc;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .demo-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      border-color: #667eea;
+    }
+
+    .demo-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .demo-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .demo-card h2 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #2d3748;
+    }
+
+    .demo-card .version {
+      display: inline-block;
+      background: #667eea;
+      color: white;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .demo-card .version.v1 {
+      background: #48bb78;
+    }
+
+    .demo-card .description {
+      font-size: 14px;
+      color: #718096;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .demo-card .features {
+      list-style: none;
+      font-size: 13px;
+      color: #4a5568;
+    }
+
+    .demo-card .features li {
+      margin-bottom: 6px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .demo-card .features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #667eea;
+      font-weight: bold;
+    }
+
+    .info-section {
+      background: #edf2f7;
+      border-left: 4px solid #667eea;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+
+    .info-section h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #2d3748;
+    }
+
+    .info-section p {
+      font-size: 14px;
+      color: #4a5568;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    .info-section code {
+      background: #cbd5e0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e2e8f0;
+      color: #718096;
+      font-size: 14px;
+    }
+
+    .footer a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>🗺️ OpenCage Geosearch Demos</h1>
+    <p class="subtitle">Interactive examples for Leaflet 1.x and Leaflet 2.0</p>
+
+    <div class="demo-grid">
+      <!-- Leaflet 2.0 ESM Demo -->
+      <a href="./leaflet2-esm.html" class="demo-card">
+        <span class="version">Leaflet 2.0</span>
+        <h2>ESM Factory Method</h2>
+        <p class="description">Modern ES modules with factory function approach</p>
+        <ul class="features">
+          <li>Import Maps</li>
+          <li>openCageGeosearch()</li>
+          <li>Easy migration from 1.x</li>
+        </ul>
+      </a>
+
+      <!-- Leaflet 2.0 Class Demo -->
+      <a href="./leaflet2-esm-class.html" class="demo-card">
+        <span class="version">Leaflet 2.0</span>
+        <h2>ESM Class-based</h2>
+        <p class="description">Recommended Leaflet 2.0 approach with class constructors</p>
+        <ul class="features">
+          <li>new OpenCageGeosearchControl()</li>
+          <li>Pure ES6 classes</li>
+          <li>Modern best practices</li>
+        </ul>
+      </a>
+
+      <!-- Leaflet 1.x UMD Demo -->
+      <a href="./leaflet1-umd.html" class="demo-card">
+        <span class="version v1">Leaflet 1.x</span>
+        <h2>Classic UMD</h2>
+        <p class="description">Traditional Leaflet 1.x implementation with script tags</p>
+        <ul class="features">
+          <li>Global L object</li>
+          <li>L.Control factory</li>
+          <li>No build tools needed</li>
+        </ul>
+      </a>
+    </div>
+
+    <div class="info-section">
+      <h3>⚠️ Before You Start</h3>
+      <p>All demos require an OpenCage GEOSEARCH key. Sign up at <a href="https://opencagedata.com/"
+          target="_blank">opencagedata.com</a>.</p>
+      <p>Replace <code>YOUR-GEOSEARCH-KEY</code> in the demo files with your actual GEOSEARCH key.</p>
+      <p><strong>Note:</strong> ESM demos (Leaflet 2.0) require a local web server. Use
+        <code>npx serve</code> or similar.
+      </p>
+    </div>
+
+    <div class="footer">
+      <p>
+        Part of <a href="https://github.com/OpenCageData/geosearch"
+          target="_blank">@opencage/leaflet-opencage-geosearch</a><br>
+        Made with ❤️ by <a href="https://opencagedata.com/" target="_blank">OpenCage</a>
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

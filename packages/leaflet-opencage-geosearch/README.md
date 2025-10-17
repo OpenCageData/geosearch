@@ -2,11 +2,22 @@
 
 <p>A Leaflet plugin that lets you quickly add a search box and help your users find locations on the map</p>
 
-Check out a demo page in [/leaflet-plugin-example](https://github.com/OpenCageData/geosearch/tree/master/examples/leaflet-plugin-example). Or take a look at the [live demo](https://codepen.io/opencage/full/podemjq).
+**🆕 Now supports both Leaflet 1.x and Leaflet 2.0 alpha!**
+
+## Demos
+
+Check out the interactive demo pages in the [demo/](demo/) directory:
+
+- **[Leaflet 2.0 ESM Demo](demo/leaflet2-esm.html)** - Modern ESM with factory methods
+- **[Leaflet 2.0 Class Demo](demo/leaflet2-esm-class.html)** - Recommended Leaflet 2.0 approach
+- **[Leaflet 1.x UMD Demo](demo/leaflet1-umd.html)** - Classic Leaflet 1.x implementation
+
+Or view the [live CodePen demo](https://codepen.io/opencage/full/podemjq) (Leaflet 1.x).
 
 ## Leaflet version
 
-Tested with latest versions 1.7 to 1.9.4
+- **Leaflet 1.x:** Tested with versions 1.7 to 1.9.4
+- **Leaflet 2.0:** Compatible with v2.0.0-alpha and above
 
 ## Other external dependencies
 
@@ -62,18 +73,36 @@ You can specify a specific version of the plugin and geosearch bundle using
 
 ## Usage with Leaflet v2.x alpha (new)
 
+### Option 1: Class-based (Recommended for Leaflet 2.0)
+
 ```javascript
-// ESM (recommended)
-import { Map } from 'leaflet';
+import { Map, TileLayer } from 'leaflet';
 import { OpenCageGeosearchControl } from '@opencage/leaflet-opencage-geosearch';
+import '@opencage/leaflet-opencage-geosearch/leaflet-opencage-geosearch.css';
 
-const control = new OpenCageGeosearchControl({ key: 'your-key' });
+const map = new Map('map', { center: [51.505, -0.09], zoom: 13 });
+const tileLayer = new TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+tileLayer.addTo(map);
+
+const control = new OpenCageGeosearchControl({
+  key: 'YOUR-API-KEY',
+  placeholder: 'Search for places...'
+});
 map.addControl(control);
-
-// Factory function still works
-import { openCageGeosearch } from '@opencage/leaflet-opencage-geosearch';
-openCageGeosearch({ key: 'your-key' }).addTo(map);
 ```
+
+### Option 2: Factory function (Backward compatible)
+
+```javascript
+import { Map } from 'leaflet';
+import { openCageGeosearch } from '@opencage/leaflet-opencage-geosearch';
+import '@opencage/leaflet-opencage-geosearch/leaflet-opencage-geosearch.css';
+
+const map = new Map('map', { center: [51.505, -0.09], zoom: 13 });
+openCageGeosearch({ key: 'YOUR-API-KEY' }).addTo(map);
+```
+
+**📘 See the [demo/README.md](demo/README.md) for complete working examples with import maps (no build tools required).**
 
 ## API reference
 

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://opencagedata.com/favicon.ico" type="image/x-icon">
+  <title>Leaflet 1.x UMD Demo - OpenCage Geosearch</title>
+
+  <!-- Leaflet 1.x CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- OpenCage Geosearch CSS -->
+  <link rel="stylesheet" href="/dist/leaflet-opencage-geosearch.css" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+
+    .info-panel {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      max-width: 300px;
+    }
+
+    .info-panel h2 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .info-panel p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .info-panel code {
+      background: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+
+    .api-key-notice {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    .code-example {
+      background: #f8f9fa;
+      border: 1px solid #dee2e6;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-size: 12px;
+      font-family: 'Courier New', monospace;
+      overflow-x: auto;
+    }
+  </style>
+
+  <!-- Leaflet 1.x JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- OpenCage Geosearch (bundled with dependencies) -->
+  <script src="https://cdn.jsdelivr.net/npm/@opencage/geosearch-bundle"></script>
+
+  <!-- OpenCage Geosearch Leaflet Plugin -->
+  <script src="/dist/leaflet-opencage-geosearch.js"></script>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <div class="info-panel">
+    <h2>🗺️ Leaflet 1.x UMD Demo</h2>
+    <p><strong>Leaflet:</strong> <code>v1.9.4</code></p>
+    <p><strong>Style:</strong> <code>Factory (classic)</code></p>
+    <p><strong>Plugin:</strong> OpenCage Geosearch</p>
+    <div class="code-example">
+      L.Control.openCageGeosearch(opts)<br>
+      &nbsp;&nbsp;.addTo(map);
+    </div>
+    <div class="api-key-notice">
+      ⚠️ Replace <code>YOUR-GEOSEARCH-KEY</code> in the source code with your OpenCage GEOSEARCH key.
+    </div>
+  </div>
+
+  <!-- Load config or prompt for the OpenCage Geosearch key -->
+  <script src="config.js"></script>
+
+  <script>
+    console.log('Leaflet 1.x UMD Demo initialized');
+
+    // Create map using Leaflet 1.x factory method
+    var map = L.map('map').setView([0, 0], 3);
+
+    // Add tile layer using factory method
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    // Initialize OpenCage Geosearch control using factory method
+    L.Control.openCageGeosearch({
+      key: window.OPENCAGE_GEOSEARCH_KEY, // Replace with your OpenCage Geosearch key
+
+      // Optional: Handle selection events
+      // onSelect: function (params) {
+      //   var item = params.item;
+      //   console.log('📍 Selected:', item.formatted);
+      //   console.log('   Coordinates:', item.geometry.lat + ', ' + item.geometry.lng);
+      // },
+
+      // Optional: Additional parameters
+      // countrycode: 'us',
+      // language: 'en',
+      // limit: 5
+
+      // leafletjs options:
+      position: 'topright', // Possible values are 'topleft', 'topright', 'bottomleft' or 'bottomright'
+    }).addTo(map);
+
+    console.log('✅ Map initialized with OpenCage Geosearch (Leaflet 1.x style)');
+    console.log('💡 This demo uses classic Leaflet 1.x factory methods');
+    console.log('   L.map(), L.tileLayer(), L.Control.openCageGeosearch()');
+  </script>
+</body>
+
+</html>
