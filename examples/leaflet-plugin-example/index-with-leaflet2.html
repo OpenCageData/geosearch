@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Geosearch control - Leaflet</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="https://opencagedata.com/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="dist/leaflet-opencage-geosearch.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@opencage/geosearch-bundle"></script>
+    <script src="dist/leaflet-opencage-geosearch.js"></script>
+
+    <script src="config.js"></script>
+
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .leaflet-container {
+            height: 800px;
+            width: 1000px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "leaflet": "https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.js"
+        }
+      }
+    </script>
+    <script type="module">
+        import L, {
+            Map,
+            TileLayer,
+            Marker,
+            Circle,
+            Polygon,
+            Popup,
+        } from 'leaflet';
+        // Initialize map
+        const map = new Map('map', {
+            center: [40, 0],
+            zoom: 3,
+        });
+        // Add tile layer with  attribution
+        const tiles = new TileLayer(
+            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            {
+                attribution:
+                    '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors',
+            }
+        ).addTo(map);
+        const options = {
+            key: window.OPENCAGE_GEOSEARCH_KEY,
+            // limit: 3,
+            // noResults: 'Pas de résultat.',
+            // onActive: () => {console.log('Happy')},
+            // leafletjs options:
+            position: 'topright', // Possible values are 'topleft', 'topright', 'bottomleft' or 'bottomright'
+        };
+        // const geosearchControl = new OpenCageGeosearchControl(options).addTo(map);
+    </script>
+</body>
+
+</html>

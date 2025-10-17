@@ -39,7 +39,7 @@ createSymLink "dist" "../../packages/geosearch-bundle/dist"
 cd ../leaflet-plugin-example
 
 # ln -sf ../../packages/leaflet-opencage-geosearch dist
-createSymLink "dist" "../../packages/leaflet-opencage-geosearch"
+createSymLink "dist" "../../packages/leaflet-opencage-geosearch/dist"
 
 cd ../openlayers-library-example
 

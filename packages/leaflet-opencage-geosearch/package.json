@@ -30,23 +30,39 @@
   "publishConfig": {
     "access": "public"
   },
-  "source": "leaflet-opencage-geosearch.js",
-  "main": "leaflet-opencage-geosearch.js",
+  "source": "src/index.js",
+  "main": "dist/leaflet-opencage-geosearch.js",
+  "module": "dist/leaflet-opencage-geosearch.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/leaflet-opencage-geosearch.esm.js",
+      "require": "./dist/leaflet-opencage-geosearch.js"
+    },
+    "./leaflet-opencage-geosearch.css": "./dist/leaflet-opencage-geosearch.css"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "build": "vite build",
+    "build:clean": "rm -rf dist && yarn build",
+    "watch": "vite build --watch",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test": "echo \"Warning: run tests from root\" && exit 0"
   },
   "dependencies": {
     "@algolia/autocomplete-js": "^1.19.4",
-    "@opencage/geosearch-core": "^0.1.12"
+    "@opencage/geosearch-core": "^0.1.12",
+    "leaflet": "^1.9.4"
   },
   "peerDependencies": {
     "@algolia/autocomplete-js": "^1.*",
     "@opencage/geosearch-core": "^0.0.19",
-    "leaflet": "^1.*"
+    "leaflet": "^1.* || ^2.*"
   },
   "devDependencies": {
-    "leaflet": "^1.9.4"
+    "vite": "^7.1.10"
   }
 }
