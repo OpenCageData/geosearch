@@ -81,12 +81,14 @@ import { OpenCageGeosearchControl } from '@opencage/leaflet-opencage-geosearch';
 import '@opencage/leaflet-opencage-geosearch/leaflet-opencage-geosearch.css';
 
 const map = new Map('map', { center: [51.505, -0.09], zoom: 13 });
-const tileLayer = new TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+const tileLayer = new TileLayer(
+  'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+);
 tileLayer.addTo(map);
 
 const control = new OpenCageGeosearchControl({
   key: 'YOUR-API-KEY',
-  placeholder: 'Search for places...'
+  placeholder: 'Search for places...',
 });
 map.addControl(control);
 ```
