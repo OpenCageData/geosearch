@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+    <link rel="shortcut icon" href="https://opencagedata.com/favicon.ico" type="image/x-icon">
 
     <!-- Leaflet 1.9.3  -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
@@ -53,7 +53,7 @@
     <div id='map'></div>
 
     <script type="text/javascript">
-        var map = L.map('map', {
+        const map = L.map('map', {
             attributionControl: false, // added later below
             center: [40, 0],
             zoom: 3
@@ -84,7 +84,7 @@
             return new L.Control.Watermark(opts);
         };
 
-        var watermarkControl = L.Control.watermark({ position: 'bottomleft' }).addTo(map);
+        const watermarkControl = L.Control.watermark({ position: 'bottomleft' }).addTo(map);
 
         const options = {
             key: window.OPENCAGE_GEOSEARCH_KEY,
@@ -95,7 +95,7 @@
             position: 'topright', // Possible values are 'topleft', 'topright', 'bottomleft' or 'bottomright'
         };
 
-        var geosearchControl = L.Control.openCageGeosearch(options).addTo(map);
+        const geosearchControl = L.Control.openCageGeosearch(options).addTo(map);
 
     </script>
 

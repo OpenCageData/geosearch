@@ -53,7 +53,7 @@
     <div id='map'></div>
 
     <script type="text/javascript">
-        var map = L.map('map', {
+        const map = L.map('map', {
             attributionControl: false, // added later below
             center: [40, 0],
             zoom: 3
@@ -84,9 +84,9 @@
             return new L.Control.Watermark(opts);
         };
 
-        var watermarkControl = L.Control.watermark({ position: 'bottomleft' }).addTo(map);
+        const watermarkControl = L.Control.watermark({ position: 'bottomleft' }).addTo(map);
 
-        var greenIcon = L.icon({
+        const greenIcon = L.icon({
             iconUrl: 'leaf-green.png',
             shadowUrl: 'leaf-shadow.png',
 
@@ -109,7 +109,7 @@
             defaultZoomLevel: 8
         };
 
-        var geosearchControl = L.Control.openCageGeosearch(options).addTo(map);
+        const geosearchControl = L.Control.openCageGeosearch(options).addTo(map);
 
     </script>
 

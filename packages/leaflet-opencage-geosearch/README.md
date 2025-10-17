@@ -6,17 +6,17 @@ Check out a demo page in [/leaflet-plugin-example](https://github.com/OpenCageDa
 
 ## Leaflet version
 
-Tested with latest version 1.7.1, 18.0 and 1.9.1, 1.9.3, 1.9.4
+Tested with latest versions 1.7 to 1.9.4
 
 ## Other external dependencies
 
-This plugin at the moment uses the [Opencage geoseach SDK bundle]() with alogolia's autocomplete. Check the [instructions](#usage).
+This plugin uses the [Opencage geoseach SDK bundle](https://github.com/OpenCageData/geosearch/tree/master/packages/geosearch-bundle) with Alogolia's autocomplete. Check the [instructions](#usage).
 
 ## Browser / device compatibility
 
 This plugin will be compatible with the same browsers / device than the leaflet library is.
 
-## Usage
+## Usage with Leaflet v1.x
 
 Load the plugin's CSS and JavaScript files:
 
@@ -44,7 +44,7 @@ const options = {
   position: 'topright', // Possible values are 'topleft', 'topright' [default], 'bottomleft' or 'bottomright'
 };
 
-var geosearchControl = L.Control.openCageGeosearch(options).addTo(map);
+const geosearchControl = L.Control.openCageGeosearch(options).addTo(map);
 ```
 
 **NB:**
@@ -60,6 +60,21 @@ You can specify a specific version of the plugin and geosearch bundle using
 <script src="https://cdn.jsdelivr.net/npm/@opencage/leaflet-opencage-geosearch@0.0.6"></script>
 ```
 
+## Usage with Leaflet v2.x alpha (new)
+
+```javascript
+// ESM (recommended)
+import { Map } from 'leaflet';
+import { OpenCageGeosearchControl } from '@opencage/leaflet-opencage-geosearch';
+
+const control = new OpenCageGeosearchControl({ key: 'your-key' });
+map.addControl(control);
+
+// Factory function still works
+import { openCageGeosearch } from '@opencage/leaflet-opencage-geosearch';
+openCageGeosearch({ key: 'your-key' }).addTo(map);
+```
+
 ## API reference
 
 1. the `options` parameter has the same API as the [core sdk](https://github.com/OpenCageData/geosearch) and dedicated leaflet ones, please see the example below
@@ -69,7 +84,7 @@ You can specify a specific version of the plugin and geosearch bundle using
    | example:
 
 ```js
-var greenIcon = L.icon({
+const greenIcon = L.icon({
   iconUrl: 'leaf-green.png',
   shadowUrl: 'leaf-shadow.png',
 
