@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaflet 2.0 ESM Demo - OpenCage Geosearch</title>
+
+  <!-- Leaflet 2.0 CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.css" />
+
+  <!-- OpenCage Geosearch CSS -->
+  <link rel="stylesheet" href="/dist/leaflet-opencage-geosearch.css" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+
+    .info-panel {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      max-width: 300px;
+    }
+
+    .info-panel h2 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .info-panel p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .info-panel code {
+      background: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+
+    .api-key-notice {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <div class="info-panel">
+    <h2>🗺️ Leaflet 2.0 ESM Demo</h2>
+    <p><strong>Leaflet:</strong> <code>v2.0.0-alpha</code></p>
+    <p><strong>Module:</strong> <code>ESM</code></p>
+    <p><strong>Plugin:</strong> OpenCage Geosearch</p>
+    <div class="api-key-notice">
+      ⚠️ Replace <code>YOUR-GEOSEARCH-KEY</code> in the source code with your OpenCage GEOSEARCH key.
+    </div>
+  </div>
+
+  <!-- Import Map for dependencies -->
+  <script type="importmap">
+    {
+      "imports": {
+        "leaflet": "https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.js",
+        "@algolia/autocomplete-js": "https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js@1.19.4/+esm",
+        "@opencage/geosearch-core": "https://cdn.jsdelivr.net/npm/@opencage/geosearch-core@0.1.12/+esm"
+      }
+    }
+  </script>
+
+  <!-- Main application -->
+  <script type="module">
+    // Import Leaflet 2.0 components
+    import { Map, TileLayer } from 'leaflet';
+
+    // Import OpenCage Geosearch (using local build for demo)
+    // In production, you would use: import { openCageGeosearch } from '@opencage/leaflet-opencage-geosearch';
+    import { openCageGeosearch } from '../dist/leaflet-opencage-geosearch.esm.js';
+
+    console.log('Leaflet 2.0 ESM Demo initialized');
+
+    // Create map using Leaflet 2.0 constructor syntax
+    const map = new Map('map', {
+      center: [51.505, -0.09],
+      zoom: 13
+    });
+
+    // Add tile layer
+    const tileLayer = new TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
+    tileLayer.addTo(map);
+
+    // Initialize OpenCage Geosearch control
+    const geosearchControl = openCageGeosearch({
+      key: 'YOUR-API-KEY', // Replace with your OpenCage API key
+      placeholder: 'Search for a location...',
+      defaultZoomLevel: 15,
+
+      // Optional: Handle selection events
+      // onSelect: (params) => {
+      //   console.log('Selected location:', params);
+      //   const { item } = params;
+      //   console.log(`📍 ${item.formatted}`);
+      //   console.log(`   Coordinates: ${item.geometry.lat}, ${item.geometry.lng}`);
+      // },
+
+      // Optional: Additional OpenCage API parameters
+      countrycode: '', // e.g., 'us,ca' for US and Canada
+      language: 'en',
+      limit: 5
+    });
+
+    // Add control to map
+    geosearchControl.addTo(map);
+
+    console.log('✅ Map and geosearch control initialized');
+    console.log('💡 Try searching for a location using the search box');
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaflet 2.0 ESM Demo (Class-based) - OpenCage Geosearch</title>
+
+  <!-- Leaflet 2.0 CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.css" />
+
+  <!-- OpenCage Geosearch CSS -->
+  <link rel="stylesheet" href="/dist/leaflet-opencage-geosearch.css" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    }
+
+    #map {
+      height: 100vh;
+      width: 100%;
+    }
+
+    .info-panel {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+      max-width: 320px;
+    }
+
+    .info-panel h2 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .info-panel p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #666;
+    }
+
+    .info-panel code {
+      background: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 12px;
+    }
+
+    .api-key-notice {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-size: 13px;
+    }
+
+    .code-example {
+      background: #f8f9fa;
+      border: 1px solid #dee2e6;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+      font-size: 12px;
+      font-family: 'Courier New', monospace;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <div class="info-panel">
+    <h2>🗺️ Leaflet 2.0 ESM Demo</h2>
+    <p><strong>Leaflet:</strong> <code>v2.0.0-alpha</code></p>
+    <p><strong>Style:</strong> <code>Class-based (new)</code></p>
+    <p><strong>Plugin:</strong> OpenCage Geosearch</p>
+    <div class="code-example">
+      const control = new OpenCageGeosearchControl(opts);<br>
+      map.addControl(control);
+    </div>
+    <div class="api-key-notice">
+      ⚠️ Replace <code>YOUR-GEOSEARCH-KEY</code> in the source code with your OpenCage GEOSEARCH key.
+    </div>
+  </div>
+
+  <!-- Load config or prompt for the OpenCage Geosearch key -->
+  <script src="config.js"></script>
+
+  <!-- Import Map for dependencies -->
+  <script type="importmap">
+    {
+      "imports": {
+        "leaflet": "https://unpkg.com/leaflet@2.0.0-alpha.1/dist/leaflet.js",
+        "@algolia/autocomplete-js": "https://cdn.jsdelivr.net/npm/@algolia/autocomplete-js@1.19.4/+esm",
+        "@opencage/geosearch-core": "https://cdn.jsdelivr.net/npm/@opencage/geosearch-core@0.1.12/+esm"
+      }
+    }
+  </script>
+
+  <!-- Main application -->
+  <script type="module">
+    // Import Leaflet 2.0 components using new ESM syntax
+    import { Map, TileLayer } from 'leaflet';
+
+    // Import OpenCage Geosearch Control class
+    // In production: import { OpenCageGeosearchControl } from '@opencage/leaflet-opencage-geosearch';
+    import { OpenCageGeosearchControl } from '/dist/leaflet-opencage-geosearch.esm.js';
+
+    console.log('Leaflet 2.0 ESM Demo (Class-based) initialized');
+
+    // Create map using Leaflet 2.0 constructor syntax (no more L.map())
+    const map = new Map('map', {
+      center: [40.7128, -74.0060], // New York City
+      zoom: 12
+    });
+
+    // Add tile layer using constructor (no more L.tileLayer())
+    const tileLayer = new TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    });
+    tileLayer.addTo(map);
+
+    // Create OpenCage Geosearch control using class constructor
+    // This is the Leaflet 2.0 recommended approach
+    const geosearchControl = new OpenCageGeosearchControl({
+      key: window.OPENCAGE_GEOSEARCH_KEY, // Replace with your OpenCage Geosearch key
+      placeholder: 'Search New York...',
+      defaultZoomLevel: 16,
+
+      // Optional: Restrict search to specific region
+      bounds: '-74.259,40.477,-73.700,40.917', // NYC bounds (sw_lng,sw_lat,ne_lng,ne_lat)
+
+      // Optional: Handle selection
+      onSelect: (params) => {
+        const { item } = params;
+        console.log('📍 Selected:', item.formatted);
+
+        // You can add custom behavior here
+        // For example, show additional information about the location
+        if (item.components?.borough) {
+          console.log('   Borough:', item.components.borough);
+        }
+      },
+
+      // Optional: Additional parameters
+      language: 'en',
+      limit: 8
+    });
+
+    // Add control to map using Leaflet 2.0 method
+    map.addControl(geosearchControl);
+
+    // Optional: You can remove the control later if needed
+    // map.removeControl(geosearchControl);
+
+    console.log('✅ Map initialized with OpenCage Geosearch');
+    console.log('💡 This demo uses Leaflet 2.0 class-based syntax');
+    console.log('   new Map(), new TileLayer(), new OpenCageGeosearchControl()');
+  </script>
+</body>
+
+</html>

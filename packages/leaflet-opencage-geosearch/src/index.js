@@ -1,6 +1,8 @@
 /* eslint-disable no-underscore-dangle */
 import * as L from 'leaflet';
 import * as opencage from '@opencage/geosearch-core';
+// import { autocomplete } from '@algolia/autocomplete-js';
+// import { OpenCageGeoSearchPlugin } from '@opencage/geosearch-core';
 
 import './leaflet-opencage-geosearch.css';
 /**
