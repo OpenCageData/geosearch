@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { expect, describe, it } from 'vitest';
 import { checkResponseStatus } from '../../src/helpers/fetchUtils';
 
 describe('geosearch-core:Fetch', () => {

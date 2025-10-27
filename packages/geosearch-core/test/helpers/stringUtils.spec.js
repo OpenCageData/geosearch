@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { expect, describe, it } from 'vitest';
 import { isString } from '../../src/helpers/stringUtils';
 
 describe('geosearch-core:Strings', () => {

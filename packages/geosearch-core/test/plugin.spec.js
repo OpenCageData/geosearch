@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { expect, describe, it } from 'vitest';
 import TheModule, { OpenCageGeoSearchPlugin } from '../src/index';
 
 describe('geosearch-core:index', () => {
