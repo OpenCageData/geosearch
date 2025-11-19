@@ -49,6 +49,6 @@
   "dependencies": {
     "@algolia/autocomplete-js": "^1.19.4",
     "@opencage/geosearch-core": "^0.1.12",
-    "ol": "^10.6.1"
+    "ol": "^10.7.0"
   }
 }
