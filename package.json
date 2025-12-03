@@ -6,7 +6,6 @@
     "examples/*"
   ],
   "scripts": {
-    "bootstrap": "lerna bootstrap",
     "build": "lerna run build --no-private",
     "build:clean": "lerna run build:clean --no-private",
     "clean": "lerna clean",
