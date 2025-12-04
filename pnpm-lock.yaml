@@ -150,10 +150,13 @@ importers:
       '@opencage/geosearch-core':
         specifier: ^0.1.12
         version: 0.1.12(@algolia/autocomplete-js@1.19.4(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.4)
-    devDependencies:
       leaflet:
         specifier: ^1.9.4
         version: 1.9.4
+    devDependencies:
+      vite:
+        specifier: ^7.1.10
+        version: 7.2.6(sass@1.94.2)(yaml@2.8.2)
 
   packages/ol-opencage-geosearch:
     dependencies:
