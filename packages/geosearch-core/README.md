@@ -5,6 +5,8 @@ The `geosearch-core` package is an Algolia [autocomplete](https://github.com/alg
 ## Installation
 
 ```bash
+pnpm add @opencage/geosearch-core
+or
 yarn add @opencage/geosearch-core
 # or
 npm install @opencage/geosearch-core

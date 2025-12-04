@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: ['master']
+    branches: ["master"]
   pull_request:
-    branches: ['master']
+    branches: ["master"]
 
 jobs:
   build:
@@ -19,16 +19,25 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Check out code
+        uses: actions/checkout@v6
+      - name: Setup pnpm package manager
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.20
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
-      - run: yarn install
-      - run: yarn lint
-      - run: yarn test:coverage
-      - run: yarn build
+          cache: "pnpm"
+      - name: Install dependencies
+        run: pnpm install
+      - name: Lint
+        run: pnpm lint
+      - name: Test
+        run: pnpm test:coverage
+      - name: Build
+        run: pnpm build
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:

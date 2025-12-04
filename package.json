@@ -1,10 +1,6 @@
 {
   "name": "@opencage/geosearch-monorepo",
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "examples/*"
-  ],
   "scripts": {
     "build": "lerna run build --no-private",
     "build:clean": "lerna run build:clean --no-private",
@@ -12,8 +8,8 @@
     "dotenv": "lerna run dotenv -- $@",
     "lint": "lerna run lint --no-private",
     "lint:fix": "lerna run lint:fix --no-private",
-    "playground:start": "yarn workspace @opencage/geosearch-react-example dev",
-    "start": "yarn run watch",
+    "playground:start": "pnpm run -r dev",
+    "start": "pnpm run watch",
     "symlinks": "./scripts/symlinks.sh",
     "test": "lerna run test --no-private",
     "test:coverage": "lerna run test:coverage --no-private",

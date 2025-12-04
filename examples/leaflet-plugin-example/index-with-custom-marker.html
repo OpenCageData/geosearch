@@ -13,21 +13,19 @@
     <!-- Leaflet 1.9.3  -->
     <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
-
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script> -->
 
     <!-- Leaflet 1.9.4  -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-
+    <!-- geosearch plugins with algolia-->
     <link rel="stylesheet" href="dist/leaflet-opencage-geosearch.css" />
-
-    <script src="https://cdn.jsdelivr.net/npm/@opencage/geosearch-bundle"></script>
-
+    <script src='https://cdn.jsdelivr.net/npm/@opencage/geosearch-bundle'></script>
     <script src="dist/leaflet-opencage-geosearch.js"></script>
 
+    <!-- config for the application -->
     <script src="config.js"></script>
 
     <style>
@@ -53,7 +51,7 @@
     <div id='map'></div>
 
     <script type="text/javascript">
-        var map = L.map('map', {
+        const map = L.map('map', {
             attributionControl: false, // added later below
             center: [40, 0],
             zoom: 3
@@ -84,9 +82,9 @@
             return new L.Control.Watermark(opts);
         };
 
-        var watermarkControl = L.Control.watermark({ position: 'bottomleft' }).addTo(map);
+        const watermarkControl = L.Control.watermark({ position: 'bottomleft' }).addTo(map);
 
-        var greenIcon = L.icon({
+        const greenIcon = L.icon({
             iconUrl: 'leaf-green.png',
             shadowUrl: 'leaf-shadow.png',
 
@@ -109,7 +107,7 @@
             defaultZoomLevel: 8
         };
 
-        var geosearchControl = L.Control.openCageGeosearch(options).addTo(map);
+        const geosearchControl = L.Control.openCageGeosearch(options).addTo(map);
 
     </script>
 

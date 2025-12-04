@@ -38,7 +38,7 @@
   "main": "dist/ol-opencage-geosearch.cjs.js",
   "module": "dist/ol-opencage-geosearch.esm.js",
   "scripts": {
-    "build": "yarn build:vite && yarn build:copy",
+    "build": "pnpm build:vite && pnpm build:copy",
     "build:copy": "mkdir -p dist && cp -f ol-opencage-geosearch.js dist/",
     "build:vite": "vite build",
     "build:clean": "rm -rf dist",

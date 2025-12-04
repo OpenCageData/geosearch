@@ -1,18 +1,20 @@
 # Opencage Geosearch javascript client library developer documentation
 
-As ususal, please clone the repo first.
+As usual, please clone the repo first.
 
-We use [lerna](https://lerna.js.org/) in addition to [yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces/)
+We use [lerna](https://lerna.js.org/) in addition to [pnpm workspaces](https://pnpm.io/workspaces).
 
 The prerequisites are :
 
 - [node](https://nodejs.org/en/download/) 22 or higher
-- [yarn](https://yarnpkg.com/)
+- [pnpm](https://pnpm.io/) or (`corepack enable`)
 - An [OpenCage geosearch](https://opencagedata.com/geosearch) key
 
-We would recommend installing globally `serve`. To serve the examples
+We would recommend installing globally `serve` to serve the examples.
 
 ```bash
+pnpm add --global serve
+# or
 yarn global add serve
 # or
 npm i -g serve
@@ -24,16 +26,16 @@ To set up the environment, once:
 
 ```bash
 # install the dependencies
-yarn
+pnpm i
 ```
 
 Create `.env` file containing your personal Key
 
 ```bash
-yarn dotenv <YOUR-GEOSEARCH-KEY>
+pnpm dotenv <YOUR-GEOSEARCH-KEY>
 ```
 
-this will create a .env file in :
+This will create a `.env` file in :
 
 - [packages/geosearch-core](./packages/geosearch-core)
 - [examples/react-example](./examples/react-example)
@@ -41,33 +43,33 @@ this will create a .env file in :
 Create the symbolic links
 
 ```bash
-yarn symlinks
+pnpm symlinks
 ```
 
 This will create symbolic links, so the examples can use the locally built version of the packages.
 
 ## Build and watch
 
-to build the packages run the command
+To build the packages run the command
 
 ```bash
-yarn build
+pnpm build
 ```
 
-to run a continuous build, use the command
+To run a continuous build, use the command
 
 ```bash
-yarn watch
+pnpm watch
 ```
 
 ## Playground
 
 The playground is the [React example](./examples/react-example) which allows checking the built [core](./packages/geosearch-core) package.
 
-Start the playground with the command
+Start the playground with the command:
 
 ```bash
-yarn playground:start
+pnpm playground:start
 ```
 
 ## Others examples
@@ -79,36 +81,36 @@ So far other examples are provided:
 It uses the bundle version of the package for an effortless integration in your website.
 
 ```bash
-serve -S examples/simple-example
+npx serve -S examples/simple-example
 ```
 
 ### Advanced example
 
-it uses the core version of the package and demonstrates the different options on the geosearch
+It uses the core version of the package and demonstrates the different options on the geosearch.
 
 ```bash
-serve -S examples/advanced-example
+npx serve -S examples/advanced-example
 ```
 
-### Multisources examples
+### Multi sources examples
 
 Two examples how to use the plugin and other sources in the same autocomplete input.
 
 ```bash
-serve -S examples/multiple-sources
+npx serve -S examples/multiple-sources
 ```
 
 check the examples:
 
 1- open http://localhost:3000/ : adding your own data, a set of place in this example
-2- open http://localhost:3000/index2.html: adding a aynch request, a query to wikipedia in this example
+2- open http://localhost:3000/index2.html: adding an asynchronous request, a query to wikipedia in this example.
 
 ### Leaflet's plugin example
 
-it uses the bundle version along with the dedicated [Leaflet](https://leafletjs.com/)'s plugin
+It uses the bundle version along with the dedicated [Leaflet](https://leafletjs.com/)'s plugin
 
 ```bash
-serve -S examples/leaflet-plugin-example
+npx serve -S examples/leaflet-plugin-example
 ```
 
 check the examples:
@@ -118,10 +120,10 @@ check the examples:
 
 ### OpenLayers library example
 
-it uses the bundle version along with the dedicated [OpenLayers](https://openlayers.org/)'s plugin
+It uses the bundle version along with the dedicated [OpenLayers](https://openlayers.org/)'s plugin
 
 ```bash
-serve -S examples/openlayers-library-example
+npx serve -S examples/openlayers-library-example
 ```
 
 1- open http://localhost:3000/
@@ -131,35 +133,35 @@ serve -S examples/openlayers-library-example
 We use the `airbnb` config with `eslint`
 
 ```bash
-yarn lint
+pnpm lint
 ```
 
 ## unit tests
 
 ```bash
-yarn test
+pnpm test
 ```
 
 ## coverage
 
 ```bash
-yarn test:coverage
+pnpm test:coverage
 ```
 
-the open your browser with `open ./packages/geosearch-core/coverage/index.html`
+Then, open your browser with `open ./packages/geosearch-core/coverage/index.html`
 
 ## Clean build packages
 
-run the command
+Run the command
 
 ```bash
-yarn build:clean
+pnpm build:clean
 ```
 
 ## Remove node_modules folders
 
 ```bash
-yarn clean
+pnpm clean
 ```
 
 ## Publish to npmjs.com
@@ -170,19 +172,19 @@ npm login
 # DO NOT FORGET TO BUILD FIRST
 yarn build
 # Let's publish
-lerna publish --no-private
+npx lerna publish --no-private
 
 ```
 
-after publishing, run
+After publishing, run
 
 ```bash
-yarn
+pnpm i
 
-yarn outdated
+pnpm outdated
 ```
 
-update the deps for the examples:
+Update the deps for the examples:
 
 ```
 Package                  Current Wanted Latest Workspace
@@ -190,13 +192,13 @@ Package                  Current Wanted Latest Workspace
 @opencage/geosearch-core 0.0.19  0.0.19 0.0.20 @opencage/geosearch-react-example
 ```
 
-update the yarn lock file with
+Update the pnpm lock file with
 
 ```bash
-yarn
+pnpm i
 ```
 
-and finally commit with a post publish message:
+And finally commit with a post publish message:
 
 ```bash
 git commit -am "post publish updates"
