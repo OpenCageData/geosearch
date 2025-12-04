@@ -38,8 +38,8 @@
     "build:js": "vite build",
     "build:sass": "sass src/theme.scss dist/css/autocomplete-theme-classic.css",
     "build:mini": "postcss dist/css/autocomplete-theme-classic.css > dist/css/autocomplete-theme-classic.min.css",
-    "build:css": "yarn build:sass && yarn build:mini",
-    "build": "yarn build:js && yarn build:css",
+    "build:css": "pnpm build:sass && pnpm build:mini",
+    "build": "pnpm build:js && pnpm build:css",
     "watch": "vite build --watch",
     "test": "echo \"Warning: run tests from root\" && exit 0"
   },
