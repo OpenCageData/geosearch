@@ -52,7 +52,7 @@ export const OpenCageGeoSearchPlugin = (
           { noResults: options.noResults, onActive, onSelect }
         );
       const url = buildURL(
-        `https://api.opencagedata.com/geosearch?q=${query}`,
+        `https://api.opencagedata.com/geosearch?q=${encodeURIComponent(query)}`,
         options
       );
       const headers = {
