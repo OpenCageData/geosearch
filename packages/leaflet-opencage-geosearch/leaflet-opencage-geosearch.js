@@ -48,8 +48,10 @@
         if (this._marker) {
           this._map.removeLayer(this._marker);
         }
+        const popupContent = document.createElement('span');
+        popupContent.textContent = item.formatted;
         this._marker = L.marker(latlng, this.options.customMarkerOptions)
-          .bindPopup(item.formatted)
+          .bindPopup(popupContent)
           .addTo(this._map);
 
         this._map.setView(latlng, this.options.defaultZoomLevel);

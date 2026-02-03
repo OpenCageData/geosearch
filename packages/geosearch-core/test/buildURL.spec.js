@@ -45,7 +45,7 @@ describe('geosearch-core:buildURL', () => {
   it(`should return url with bounds when the options has a bounds`, () => {
     const url = DEFAULT_URL;
     const bounds = `-11.47934,35.70526,3.68042,59.17839`;
-    const expected = `${DEFAULT_URL}&bounds=${bounds}`;
+    const expected = `${DEFAULT_URL}&bounds=${encodeURIComponent(bounds)}`;
     expect(buildURL(url, { bounds })).to.equal(expected);
   });
   it(`should return url with parameters in the order`, () => {
@@ -55,8 +55,7 @@ describe('geosearch-core:buildURL', () => {
     const countrycode = 'de';
     const language = 'fr';
     const bounds = `-11.47934,35.70526,3.68042,59.17839`;
-    // const expected = `${DEFAULT_URL}&key=${key}&limit=${limit}&countrycode=${countrycode}&language=${language}&bounds=${bounds}`;
-    const expected = `${DEFAULT_URL}&limit=${limit}&countrycode=${countrycode}&language=${language}&bounds=${bounds}`;
+    const expected = `${DEFAULT_URL}&limit=${limit}&countrycode=${countrycode}&language=${language}&bounds=${encodeURIComponent(bounds)}`;
     expect(
       buildURL(url, { key, limit, countrycode, language, bounds })
     ).to.equal(expected);

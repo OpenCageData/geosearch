@@ -1,5 +1,4 @@
 import { uniqByKeepFirst } from './helpers/arrayUtils';
-import { htmlFooter } from './Footer';
 import { SOURCE_ID } from './constants';
 
 const fn = () => {};
@@ -49,11 +48,88 @@ export const handleResult = (
         },
         footer({ createElement }) {
           // type: (params: { state: AutocompleteState<TItem>, source: AutocompleteSource<TItem>, items: TItem[], createElement: Pragma, Fragment: PragmaFrag }) => VNode | string
-          return createElement('div', {
-            dangerouslySetInnerHTML: {
-              __html: htmlFooter,
+          const linkStyle = 'text-decoration:none;color:#009966;';
+          return createElement(
+            'div',
+            {
+              style: 'display:flex;flex-direction:column;align-items:flex-end;',
             },
-          });
+            createElement(
+              'div',
+              {
+                style:
+                  'display:flex;align-items:center;justify-content:center;font-family:sans-serif;font-size:0.7em;color:#009966;',
+              },
+              createElement(
+                'span',
+                null,
+                createElement(
+                  'a',
+                  {
+                    href: 'https://opencagedata.com/geosearch',
+                    target: '_blank',
+                    rel: 'noreferrer',
+                  },
+                  createElement('img', {
+                    src: 'https://assets.opencagedata.com/opencage-20x21.png',
+                    height: '21',
+                    width: '20',
+                    border: '0',
+                    alt: 'OpenCage',
+                    style: 'display:inline;',
+                  })
+                )
+              ),
+              createElement(
+                'span',
+                null,
+                '\u00A0\u00A0Made by ',
+                createElement(
+                  'a',
+                  {
+                    href: 'https://opencagedata.com/geosearch',
+                    target: '_blank',
+                    rel: 'noreferrer',
+                    style: linkStyle,
+                  },
+                  'OpenCage'
+                ),
+                '.'
+              ),
+              createElement(
+                'span',
+                null,
+                '\u00A0\u00A9\u00A0',
+                createElement(
+                  'a',
+                  {
+                    href: 'https://www.openstreetmap.org/copyright',
+                    target: '_blank',
+                    rel: 'noreferrer',
+                    style: linkStyle,
+                  },
+                  'OpenStreetMap'
+                ),
+                ','
+              ),
+              createElement(
+                'span',
+                null,
+                '\u00A0',
+                createElement(
+                  'a',
+                  {
+                    href: 'https://opencagedata.com/credits',
+                    target: '_blank',
+                    rel: 'noreferrer',
+                    style: linkStyle,
+                  },
+                  'others'
+                ),
+                '.'
+              )
+            )
+          );
         },
       },
       // ...
