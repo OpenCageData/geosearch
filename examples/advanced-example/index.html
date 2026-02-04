@@ -187,7 +187,9 @@
             console.log('Selected Item is', item);
             const latlng = [item.geometry.lat, item.geometry.lng]
             marker = L.marker(latlng).addTo(map);
-            marker.bindPopup(item.formatted)
+            const popupContent = document.createElement('span');
+            popupContent.textContent = item.formatted;
+            marker.bindPopup(popupContent);
             map.flyTo(latlng, 13)
             const input = document.getElementById('item-selected');
             input.value = item.formatted;

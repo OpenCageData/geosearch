@@ -1,20 +1,17 @@
 export const buildURL = (url, options) => {
   let result = url;
   if (!options) return result;
-  // if (options.key) {
-  //   result = `${result}&key=${options.key}`;
-  // }
   if (options.limit) {
-    result = `${result}&limit=${options.limit}`;
+    result = `${result}&limit=${encodeURIComponent(options.limit)}`;
   }
   if (options.countrycode) {
-    result = `${result}&countrycode=${options.countrycode}`;
+    result = `${result}&countrycode=${encodeURIComponent(options.countrycode)}`;
   }
   if (options.language) {
-    result = `${result}&language=${options.language}`;
+    result = `${result}&language=${encodeURIComponent(options.language)}`;
   }
   if (options.bounds) {
-    result = `${result}&bounds=${options.bounds}`;
+    result = `${result}&bounds=${encodeURIComponent(options.bounds)}`;
   }
 
   return result;
