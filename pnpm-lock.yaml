@@ -84,8 +84,8 @@ importers:
   examples/nodejs-example:
     dependencies:
       '@opencage/geosearch-core':
-        specifier: ^0.1.0
-        version: 0.1.12(@algolia/autocomplete-js@1.19.4(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.4)
+        specifier: workspace:*
+        version: link:../../packages/geosearch-core
 
   examples/react-example:
     dependencies:
@@ -96,8 +96,8 @@ importers:
         specifier: ^1.19.4
         version: 1.19.4
       '@opencage/geosearch-core':
-        specifier: ^0.1.0
-        version: 0.1.12(@algolia/autocomplete-js@1.19.4(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.4)
+        specifier: workspace:*
+        version: link:../../packages/geosearch-core
       react:
         specifier: ^19.2.4
         version: 19.2.4
@@ -130,8 +130,8 @@ importers:
         specifier: ^1.19.4
         version: 1.19.4
       '@opencage/geosearch-core':
-        specifier: ^0.1.12
-        version: 0.1.12(@algolia/autocomplete-js@1.19.4(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.4)
+        specifier: workspace:*
+        version: link:../geosearch-core
 
   packages/geosearch-core:
     devDependencies:
@@ -148,8 +148,8 @@ importers:
         specifier: ^1.19.4
         version: 1.19.4(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
       '@opencage/geosearch-core':
-        specifier: ^0.1.12
-        version: 0.1.12(@algolia/autocomplete-js@1.19.4(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.4)
+        specifier: workspace:*
+        version: link:../geosearch-core
     devDependencies:
       leaflet:
         specifier: ^1.9.4
@@ -161,8 +161,8 @@ importers:
         specifier: ^1.19.4
         version: 1.19.4(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
       '@opencage/geosearch-core':
-        specifier: ^0.1.12
-        version: 0.1.12(@algolia/autocomplete-js@1.19.4(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.4)
+        specifier: workspace:*
+        version: link:../geosearch-core
       ol:
         specifier: ^10.7.0
         version: 10.7.0
@@ -948,12 +948,6 @@ packages:
 
   '@octokit/types@13.10.0':
     resolution: {integrity: sha512-ifLaO34EbbPj0Xgro4G5lP5asESjwHracYJvVaPIyXMuiuXLlhic3S47cBdTb+jfODkTE5YtGCLt3Ay3+J97sA==}
-
-  '@opencage/geosearch-core@0.1.12':
-    resolution: {integrity: sha512-rYcIqZburrGcB7Q1c6/POeYj6dw9Nc/pf1Jn0sKCHDZmg4aoCrmP9a0uKx7vqxGbO/3jwMivdN8JNy3FgI4qoQ==}
-    peerDependencies:
-      '@algolia/autocomplete-js': ^1.*
-      '@algolia/autocomplete-theme-classic': ^1.*
 
   '@parcel/watcher-android-arm64@2.5.1':
     resolution: {integrity: sha512-KF8+j9nNbUN8vzOFDpRMsaKBHZ/mcjEjMToVMJOhTozkDonQFFrRcfdLWn6yWKCmJKmdVxSgHiYvTCef4/qcBA==}
@@ -5552,11 +5546,6 @@ snapshots:
   '@octokit/types@13.10.0':
     dependencies:
       '@octokit/openapi-types': 24.2.0
-
-  '@opencage/geosearch-core@0.1.12(@algolia/autocomplete-js@1.19.4(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.4)':
-    dependencies:
-      '@algolia/autocomplete-js': 1.19.4(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
-      '@algolia/autocomplete-theme-classic': 1.19.4
 
   '@parcel/watcher-android-arm64@2.5.1':
     optional: true
