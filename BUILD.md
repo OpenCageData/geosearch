@@ -170,7 +170,7 @@ pnpm clean
 # LOGIN on npmjs
 npm login
 # DO NOT FORGET TO BUILD FIRST
-yarn build
+pnpm build
 # Let's publish
 npx lerna publish --no-private
 
