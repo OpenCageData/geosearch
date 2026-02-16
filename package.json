@@ -32,7 +32,7 @@
     "fetch-mock": "^12.6.0",
     "globals": "^16.5.0",
     "isomorphic-unfetch": "^4.0.2",
-    "lerna": "^9.0.3",
+    "lerna": "^9.0.4",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.8.1",
