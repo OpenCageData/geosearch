@@ -88,6 +88,18 @@
                         <div class="flex flex-wrap -mx-3 mb-6">
                             <div class="w-full px-3">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                                    for="grid-proximity">
+                                    proximity
+                                </label>
+                                <input
+                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="grid-proximity" type="text" placeholder="51.507, -0.1275"
+                                    onblur="handleProximityBlur()">
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap -mx-3 mb-6">
+                            <div class="w-full px-3">
+                                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                                     for="autocomplete">
                                     Place (countries, regions, cities, major POIs, ...)
                                 </label>
@@ -129,7 +141,7 @@
                                     id="item-active" type="text" placeholder="none" disabled>
                             </div>
                         </div>
-                        <div class="flex flex-wrap -mx-3 mb-">
+                        <div class="flex flex-wrap -mx-3 mb-24">
                             <div class="w-full px-3">
                                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                                     for="item-submitted">
@@ -151,7 +163,7 @@
         </div>
 
         <p class="text-center text-gray-500 text-xs pt-6">
-            &copy;2021 Opencage GmbH.
+            &copy;2021 OpenCage GmbH.
         </p>
 
     </div>
@@ -180,6 +192,7 @@
             bounds: '',
             language: '',
             countrycode: '',
+            proximity: '',
         };
 
 
@@ -266,6 +279,15 @@
             const value = element.value;
             console.log('Setting Bounds with', value);
             options.bounds = value;
+            resetContainer();
+        }
+
+        function handleProximityBlur() {
+            console.log('--Proximity on Blur');
+            const element = document.getElementById('grid-proximity');
+            const value = element.value;
+            console.log('Setting Proximity with', value);
+            options.proximity = value;
             resetContainer();
         }
 
