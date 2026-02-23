@@ -85,19 +85,19 @@ importers:
     dependencies:
       '@opencage/geosearch-core':
         specifier: ^0.1.0
-        version: 0.1.12(@algolia/autocomplete-js@1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.5)
+        version: 0.1.12(@algolia/autocomplete-js@1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.6)
 
   examples/react-example:
     dependencies:
       '@algolia/autocomplete-js':
-        specifier: ^1.19.5
-        version: 1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
+        specifier: ^1.19.6
+        version: 1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
       '@algolia/autocomplete-theme-classic':
-        specifier: ^1.19.5
-        version: 1.19.5
+        specifier: ^1.19.6
+        version: 1.19.6
       '@opencage/geosearch-core':
         specifier: ^0.1.0
-        version: 0.1.12(@algolia/autocomplete-js@1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.5)
+        version: 0.1.12(@algolia/autocomplete-js@1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.6)
       react:
         specifier: ^19.2.4
         version: 19.2.4
@@ -115,8 +115,8 @@ importers:
         specifier: ^5.1.4
         version: 5.1.4(vite@7.2.6(sass@1.97.3)(yaml@2.8.2))
       eslint-plugin-jest:
-        specifier: ^29.14.0
-        version: 29.14.0(eslint@9.39.1)(typescript@5.9.3)
+        specifier: ^29.15.0
+        version: 29.15.0(eslint@9.39.1)(typescript@5.9.3)
       vite:
         specifier: 7.2.6
         version: 7.2.6(sass@1.97.3)(yaml@2.8.2)
@@ -124,32 +124,32 @@ importers:
   packages/geosearch-bundle:
     dependencies:
       '@algolia/autocomplete-js':
-        specifier: ^1.19.5
-        version: 1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
+        specifier: ^1.19.6
+        version: 1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
       '@algolia/autocomplete-theme-classic':
-        specifier: ^1.19.5
-        version: 1.19.5
+        specifier: ^1.19.6
+        version: 1.19.6
       '@opencage/geosearch-core':
         specifier: ^0.1.12
-        version: 0.1.12(@algolia/autocomplete-js@1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.5)
+        version: 0.1.12(@algolia/autocomplete-js@1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.6)
 
   packages/geosearch-core:
     devDependencies:
       '@algolia/autocomplete-js':
-        specifier: ^1.19.5
-        version: 1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
+        specifier: ^1.19.6
+        version: 1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
       '@algolia/autocomplete-theme-classic':
-        specifier: ^1.19.5
-        version: 1.19.5
+        specifier: ^1.19.6
+        version: 1.19.6
 
   packages/leaflet-opencage-geosearch:
     dependencies:
       '@algolia/autocomplete-js':
-        specifier: ^1.19.5
-        version: 1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
+        specifier: ^1.19.6
+        version: 1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
       '@opencage/geosearch-core':
         specifier: ^0.1.12
-        version: 0.1.12(@algolia/autocomplete-js@1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.5)
+        version: 0.1.12(@algolia/autocomplete-js@1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.6)
     devDependencies:
       leaflet:
         specifier: ^1.9.4
@@ -158,11 +158,11 @@ importers:
   packages/ol-opencage-geosearch:
     dependencies:
       '@algolia/autocomplete-js':
-        specifier: ^1.19.5
-        version: 1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
+        specifier: ^1.19.6
+        version: 1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
       '@opencage/geosearch-core':
         specifier: ^0.1.12
-        version: 0.1.12(@algolia/autocomplete-js@1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.5)
+        version: 0.1.12(@algolia/autocomplete-js@1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.6)
       ol:
         specifier: ^10.8.0
         version: 10.8.0
@@ -173,34 +173,34 @@ packages:
     resolution: {integrity: sha512-a7oQ8dwiyoyVmzLY0FcuBqyqcNSq78qlcOtHmNBumRlHCSnXDcuoYGBGPN1F6n8JoGhviDDsIaF/oQrzTzs6Lg==}
     engines: {node: '>= 14.0.0'}
 
-  '@algolia/autocomplete-core@1.19.5':
-    resolution: {integrity: sha512-/kAE3mMBage/9m0OGnKQteSa7/eIfvhiKx28OWj857+dJ6qYepEBuw5L8its2oTX8ZNM/6TA3fo49kMwgcwjlg==}
+  '@algolia/autocomplete-core@1.19.6':
+    resolution: {integrity: sha512-6EoD7PeM2WBq5GY1jm0gGonDW2JVU4BaHT9tAwDcaPkc6gYIRZeY7X7aFuwdRvk9R/jwsh8sz4flDao0+Kua6g==}
 
-  '@algolia/autocomplete-js@1.19.5':
-    resolution: {integrity: sha512-C2/bEQeqq4nZ4PH2rySRvU9B224KbiCXAPZIn3pmMII/7BiXkppPQyDd+Fdly3ubOmnGFDH6BTzGHamySeOYeg==}
+  '@algolia/autocomplete-js@1.19.6':
+    resolution: {integrity: sha512-rHYKT6P+2FZ1+7a1/JtWIuCmfioOt5eXsAcri6XTYsSutl3BIh8s2e98kbvjbhLfwEuuVDWtST1hdAY2pQdrKw==}
     peerDependencies:
       '@algolia/client-search': '>= 4.5.1 < 6'
       algoliasearch: '>= 4.9.1 < 6'
 
-  '@algolia/autocomplete-plugin-algolia-insights@1.19.5':
-    resolution: {integrity: sha512-5zbetV9h2VxH+Mxx27I7BH2EIACVRUBE1FNykBK+2c2M+mhXYMY4npHbbGYj6QDEw3VVvH2UxAnghFpCtC6B/w==}
+  '@algolia/autocomplete-plugin-algolia-insights@1.19.6':
+    resolution: {integrity: sha512-VD53DBixhEwDvOB00D03DtBVhh5crgb1N0oH3QTscfYk4TpBH+CKrwmN/XrN/VdJAdP+4K6SgwLii/3OwM9dHw==}
     peerDependencies:
       search-insights: '>= 1 < 3'
 
-  '@algolia/autocomplete-preset-algolia@1.19.5':
-    resolution: {integrity: sha512-afdgxUyBxgX1I34THLScCyC+ld2h8wnCTv7JndRxsRNIJjJpFtRNpnYDq0+HVcp+LYeNd1zksDu7CpltTSEsvA==}
+  '@algolia/autocomplete-preset-algolia@1.19.6':
+    resolution: {integrity: sha512-/uQlHGK5Q2x5Nvrp3W7JMg4YNGG/ygkHtQLTltDbkpd45wnhV9jUiQA6aCnBed9cq0BXhOJZRxh1zGVZ3yRhBg==}
     peerDependencies:
       '@algolia/client-search': '>= 4.9.1 < 6'
       algoliasearch: '>= 4.9.1 < 6'
 
-  '@algolia/autocomplete-shared@1.19.5':
-    resolution: {integrity: sha512-yblBczNXtm2cCVzX4UAY3KkjdefmZPn1gWbIi8Q7qfBw7FjcKq2EjEl/65x4kU9nUc/ZkB5SeUf/bkqLEnA5gA==}
+  '@algolia/autocomplete-shared@1.19.6':
+    resolution: {integrity: sha512-DG1n2B6XQw6DWB5veO4RuzQ/N2oGNpG+sSzGT7gUbi7WhF+jN57abcv2QhB5flXZ0NgddE1i6h7dZuQmYBEorQ==}
     peerDependencies:
       '@algolia/client-search': '>= 4.9.1 < 6'
       algoliasearch: '>= 4.9.1 < 6'
 
-  '@algolia/autocomplete-theme-classic@1.19.5':
-    resolution: {integrity: sha512-LjjhOmDbEXmV2IqaA7Xe8jh6lSpG087yC79ffLpXMKJOib4xSHFvPavsXC8NW25pWVHJFoAfplAAmxmeM2/jhw==}
+  '@algolia/autocomplete-theme-classic@1.19.6':
+    resolution: {integrity: sha512-lJg8fGK7ucuapoCwFqciTAvAOb7lI/BgWXN0VP+nW/oG0xtig6FvJz/XXxHxfvfVWLCfDvmW5Dw+vEAnbxXiFA==}
 
   '@algolia/client-abtesting@5.45.0':
     resolution: {integrity: sha512-WTW0VZA8xHMbzuQD5b3f41ovKZ0MNTIXkWfm0F2PU+XGcLxmxX15UqODzF2sWab0vSbi3URM1xLhJx+bXbd1eQ==}
@@ -2156,8 +2156,8 @@ packages:
       '@typescript-eslint/parser':
         optional: true
 
-  eslint-plugin-jest@29.14.0:
-    resolution: {integrity: sha512-njP4UAcCmcE9uYMQcZdi4unNkiVKzMJ6yOdKcw5YqvNayV2hbopTBb+VaDU7mUmteDfRtjbmCZkK/psxbUvdUg==}
+  eslint-plugin-jest@29.15.0:
+    resolution: {integrity: sha512-ZCGr7vTH2WSo2hrK5oM2RULFmMruQ7W3cX7YfwoTiPfzTGTFBMmrVIz45jZHd++cGKj/kWf02li/RhTGcANJSA==}
     engines: {node: ^20.12.0 || ^22.0.0 || >=24.0.0}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': ^8.0.0
@@ -4664,20 +4664,20 @@ snapshots:
       '@algolia/requester-fetch': 5.45.0
       '@algolia/requester-node-http': 5.45.0
 
-  '@algolia/autocomplete-core@1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)':
+  '@algolia/autocomplete-core@1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)':
     dependencies:
-      '@algolia/autocomplete-plugin-algolia-insights': 1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
-      '@algolia/autocomplete-shared': 1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
+      '@algolia/autocomplete-plugin-algolia-insights': 1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
+      '@algolia/autocomplete-shared': 1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
     transitivePeerDependencies:
       - '@algolia/client-search'
       - algoliasearch
       - search-insights
 
-  '@algolia/autocomplete-js@1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)':
+  '@algolia/autocomplete-js@1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)':
     dependencies:
-      '@algolia/autocomplete-core': 1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
-      '@algolia/autocomplete-preset-algolia': 1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
-      '@algolia/autocomplete-shared': 1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
+      '@algolia/autocomplete-core': 1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
+      '@algolia/autocomplete-preset-algolia': 1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
+      '@algolia/autocomplete-shared': 1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
       '@algolia/client-search': 5.45.0
       algoliasearch: 5.45.0
       htm: 3.1.1
@@ -4685,26 +4685,26 @@ snapshots:
     transitivePeerDependencies:
       - search-insights
 
-  '@algolia/autocomplete-plugin-algolia-insights@1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)':
+  '@algolia/autocomplete-plugin-algolia-insights@1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)':
     dependencies:
-      '@algolia/autocomplete-shared': 1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
+      '@algolia/autocomplete-shared': 1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
       search-insights: 2.17.3
     transitivePeerDependencies:
       - '@algolia/client-search'
       - algoliasearch
 
-  '@algolia/autocomplete-preset-algolia@1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)':
+  '@algolia/autocomplete-preset-algolia@1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)':
     dependencies:
-      '@algolia/autocomplete-shared': 1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
+      '@algolia/autocomplete-shared': 1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
       '@algolia/client-search': 5.45.0
       algoliasearch: 5.45.0
 
-  '@algolia/autocomplete-shared@1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)':
+  '@algolia/autocomplete-shared@1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)':
     dependencies:
       '@algolia/client-search': 5.45.0
       algoliasearch: 5.45.0
 
-  '@algolia/autocomplete-theme-classic@1.19.5': {}
+  '@algolia/autocomplete-theme-classic@1.19.6': {}
 
   '@algolia/client-abtesting@5.45.0':
     dependencies:
@@ -5609,10 +5609,10 @@ snapshots:
     dependencies:
       '@octokit/openapi-types': 24.2.0
 
-  '@opencage/geosearch-core@0.1.12(@algolia/autocomplete-js@1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.5)':
+  '@opencage/geosearch-core@0.1.12(@algolia/autocomplete-js@1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3))(@algolia/autocomplete-theme-classic@1.19.6)':
     dependencies:
-      '@algolia/autocomplete-js': 1.19.5(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
-      '@algolia/autocomplete-theme-classic': 1.19.5
+      '@algolia/autocomplete-js': 1.19.6(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
+      '@algolia/autocomplete-theme-classic': 1.19.6
 
   '@parcel/watcher-android-arm64@2.5.1':
     optional: true
@@ -6903,7 +6903,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-jest@29.14.0(eslint@9.39.1)(typescript@5.9.3):
+  eslint-plugin-jest@29.15.0(eslint@9.39.1)(typescript@5.9.3):
     dependencies:
       '@typescript-eslint/utils': 8.48.1(eslint@9.39.1)(typescript@5.9.3)
       eslint: 9.39.1
