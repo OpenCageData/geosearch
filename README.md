@@ -123,7 +123,7 @@ Non-two letter country codes are ignored.
 - `language` - language to display results in.
 
 A two letter language code (such as `es` for Spanish or `de` for German), or `native` in which case we will attempt to return the response in the local language.
-Currently supported languages are: `de`, `en`, `es`, `fr`.
+Currently supported languages are: `de`, `en`, `es`, `fr`, `it`, and `pt`.
 
 Example usage:
 `language: 'de'`
