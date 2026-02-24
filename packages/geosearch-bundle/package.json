@@ -1,6 +1,6 @@
 {
   "name": "@opencage/geosearch-bundle",
-  "version": "0.1.12",
+  "version": "0.2.0",
   "description": "OpenCage GeoSearch bundled with Algolia autocomplete",
   "author": {
     "name": "OpenCage GmbH",
