@@ -13,19 +13,7 @@
 
 </div>
 
-To get started you need:
-
-- A container (typically a `div`) to inject the autosuggest into
-- An [OpenCage geosearch](https://opencagedata.com/geosearch) key (available when you become a geosearch customer)
-- To specify the domain for the `access-control-allow-origin` HTTP header (commonly known as a CORS header) in your [OpenCage account dashboard](https://opencagedata.com/dashboard) in the "Geosearch" tab.
-
-This library comes as a plugin on [Algolia's Autocomplete](https://github.com/algolia/autocomplete), which creates an input and provides the interactivity and accessibility attributes.
-
-By configuring the two required parameters (`container` and `key`), and configuring the CORS header in your OpenCage dashboard you can have an interactive geosearch experience for places (countries, states/provinces, cities/towns/villages, suburbs/neighbourhoods, major POIS) around the world.
-
-**Note**: to learn more about this service please see the [OpenCage geosearch site](https://opencagedata.com/geosearch) (especially the [FAQ section](https://opencagedata.com/geosearch#faq)).
-
-## Example
+## Example Screenshot
 
 ![header](/resources/screenshot-results-berlin.png)
 
@@ -35,6 +23,20 @@ We also have tutorials/examples for integration on a map:
 [Leaflet](https://opencagedata.com/tutorials/leaflet-location-search),
 [OpenLayers](https://opencagedata.com/tutorials/openlayers-location-search),
 [MapLibre](https://codepen.io/opencage/pen/JjaepyE).
+
+## Getting started
+
+To get started you need:
+
+- A container (typically a `div`) to inject the autosuggest into
+- An [OpenCage geosearch](https://opencagedata.com/geosearch) key (available when you become an OpenCage geosearch customer ([see pricing](https://opencagedata.com/pricing#geosearch)))
+- To specify the domain for the `access-control-allow-origin` HTTP header (commonly known as a CORS header) in your [OpenCage account dashboard](https://opencagedata.com/dashboard) in the "Geosearch" tab.
+
+This library comes as a plugin on [Algolia's Autocomplete](https://github.com/algolia/autocomplete), which creates an input and provides the interactivity and accessibility attributes.
+
+By configuring the two required parameters (`container` and `key`), and configuring the CORS header in the geosearch section of your OpenCage account dashboard you can have an interactive geosearch experience for places (countries, states/provinces, cities/towns/villages, suburbs/neighbourhoods, major POIS) around the world.
+
+**Note**: to learn more about this service please see the [OpenCage geosearch site](https://opencagedata.com/geosearch) (especially the [FAQ section](https://opencagedata.com/geosearch#faq)).
 
 ## Usage
 
@@ -52,7 +54,7 @@ Then, insert your search experience into it by calling the `algoliaAutocomplete`
 
 Make sure to provide a container (e.g., a div), not an input. The Geosearch generates a fully accessible search box.
 
-Please note: a geosearch key is unrelated to the keys for the OpenCage geocoding API. Geosearch keys are of the form `oc_gs_...` and will need to be configured for a specific domain in your OpenCage account dashboard.
+Please note: a geosearch key is unrelated to the keys for the OpenCage geocoding API. Geosearch keys are of the form `oc_gs_...` and will need to be configured for a specific domain in your OpenCage account dashboard after you become an OpenCage geosearch customer.
 
 ```html
 <script type="text/javascript">
@@ -225,41 +227,49 @@ We have tutorials showing how to [integrate geosearch with a Leaflet map](https:
 
 ### [`@opencage/geosearch-bundle`](./packages/geosearch-bundle/)
 
+[![npm version](https://badge.fury.io/js/%40opencage%2Fgeosearch-bundle.svg)](https://badge.fury.io/js/%40opencage%2Fgeosearch-bundle)
+
 _For those who just want a simple HTML / JS integration_
 
-This package bumdles the [Algolia Autocomplete](https://github.com/algolia/autocomplete) and our GeoSearch plugin.
+This package bundles the [Algolia Autocomplete](https://github.com/algolia/autocomplete) and our GeoSearch plugin.
 
 ### [`@opencage/geosearch-core`](./packages/geosearch-core/)
 
-_For those is using a javascript dependency manager_
+[![npm version](https://badge.fury.io/js/%40opencage%2Fgeosearch-core.svg)](https://badge.fury.io/js/%40opencage%2Fgeosearch-core)
+
+_For those using a javascript dependency manager_
 
 This is the core package: the GeoSearch plugin to use with [Algolia Autocomplete](https://github.com/algolia/autocomplete).
 
 ### [`@opencage/leaflet-opencage-geosearch`](./packages/leaflet-opencage-geosearch/)
+
+[![npm version](https://img.shields.io/npm/v/@opencage/leaflet-opencage-geosearch.svg)](https://www.npmjs.com/package/@opencage/leaflet-opencage-geosearch)
 
 This is a plugin for the well-known map API [leaflet](https://leafletjs.com/).
 See our [integration tutorial](https://opencagedata.com/tutorials/leaflet-location-search).
 
 ### [`@opencage/ol-opencage-geosearch`](./packages/ol-opencage-geosearch/)
 
+[![npm version](https://img.shields.io/npm/v/@opencage/ol-opencage-geosearch.svg)](https://www.npmjs.com/package/@opencage/ol-opencage-geosearch)
+
 This is a plugin for the well-known map API [OpenLayers](https://openlayers.org).
 See our [integration tutorial](https://opencagedata.com/tutorials/openlayers-location-search).
 
 ## Browser support / Polyfills
 
-This project is written with the latest technologies in mind. Thereby it is required to include a polyfill when you wish to support older browsers:
+This project is written with modern browser technologies in mind. It is required to include a polyfill when you wish to support older browsers:
 
 - [unfetch](https://www.npmjs.com/package/unfetch), for fetch requests.
 
-## Build and develop
+## Contributing
 
-Please refer to the following developer's [notes](BUILD.md)
+We welcome your contributions. Please refer to the following developer's [notes](BUILD.md)
 
-## Issues
+## Reporting Issues
 
 Find a bug or want to request a new feature? Please let us know by submitting [an issue](https://github.com/OpenCageData/geosearch/issues).
 
-## Please Note
+## Please Note - Geosearch is NOT Geocoding
 
 Geosearch is an entirely different service than geocoding. OpenCage also operates a [forward and reverse geocoding API](https://opencagedata.com/api), please don't confuse the geosearch service with the geocoding API.
 
