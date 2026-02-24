@@ -118,13 +118,12 @@ In addition to the mandatory `key` parameter, the following optional parameters 
 
   Example usage: `countrycode: 'de'`
 
-- `proximity` - sets a location bias. Provides the geosearch with a hint to bias results in favour of those closer to the specified location.
+- `proximity` - bias results to favour those close to a specific point
 
-- `debounce` - sets the time (in ms) to pass without any typing before doing a request to the API.
+  The value should be specified as a coordinate point in decimal format (latitude, longitude)
+  Values that are not valid coordinates are ignored.
 
-  Default is 300.
-
-  Example usage: `debounce: 250`
+  Examples: `proximity: '52.5432379,13.4142133'`
 
 - `language` - language to display results in.
 
@@ -142,18 +141,17 @@ In addition to the mandatory `key` parameter, the following optional parameters 
 
   Example usage: `limit: 3`
 
+- `debounce` - sets the time (in ms) to pass without any typing before doing a request to the API.
+
+  Default is 300.
+
+  Example usage: `debounce: 250`
+
 - `noResults` - sets the label to display when the API returns no results (it is i18n).
 
   Default is `No results.`.
 
   Example usage: `noResults: 'Pas de résultat.'`
-
-- `proximity` - bias results to favour those close to a specific point
-
-  The value should be specified as a coordinate point in decimal format (latitude, longitude)
-  Values that are not valid coordinates are ignored.
-
-  Examples: `proximity: '52.5432379,13.4142133'`
 
 ### 2. Events
 
