@@ -108,7 +108,7 @@ In addition to the mandatory `key` parameter, the following optional parameters 
 
   The value should be specified as two coordinate points forming the south-west and north-east corners of a bounding box (min longitude, min latitude, max longitude, max latitude).
   Values that are not valid coordinates are ignored. We have built [a small, map-based tool to easily see bounds values](https://opencagedata.com/bounds-finder).
-  
+
   Example usage: `bounds: '-0.563160,51.280430,0.278970,51.683979'`
 
 - `countrycode` - restricts results to the specified country/territory.
@@ -117,6 +117,8 @@ In addition to the mandatory `key` parameter, the following optional parameters 
   Non-two letter country codes are ignored.
 
   Example usage: `countrycode: 'de'`
+
+- `proximity` - sets a location bias. Provides the geosearch with a hint to bias results in favour of those closer to the specified location.
 
 - `debounce` - sets the time (in ms) to pass without any typing before doing a request to the API.
 
