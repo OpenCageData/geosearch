@@ -46,6 +46,6 @@
   "dependencies": {
     "@algolia/autocomplete-js": "^1.19.6",
     "@algolia/autocomplete-theme-classic": "^1.19.6",
-    "@opencage/geosearch-core": "^0.1.12"
+    "@opencage/geosearch-core": "workspace:*"
   }
 }

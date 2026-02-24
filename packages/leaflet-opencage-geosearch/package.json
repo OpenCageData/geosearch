@@ -39,11 +39,11 @@
   },
   "dependencies": {
     "@algolia/autocomplete-js": "^1.19.6",
-    "@opencage/geosearch-core": "^0.1.12"
+    "@opencage/geosearch-core": "workspace:*"
   },
   "peerDependencies": {
     "@algolia/autocomplete-js": "^1.*",
-    "@opencage/geosearch-core": "^0.0.19",
+    "@opencage/geosearch-core": "^0.*",
     "leaflet": "^1.*"
   },
   "devDependencies": {
