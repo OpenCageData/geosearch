@@ -106,7 +106,7 @@ In addition to the mandatory `key` parameter, the following optional parameters 
 
 - `bounds` - restricts the possible results to a defined bounding box.
 
-  The value of the bounds parameter should be specified as two coordinate points forming the south-west and north-east corners of a bounding box (min longitude, min latitude, max longitude, max latitude).
+  The value should be specified as two coordinate points forming the south-west and north-east corners of a bounding box (min longitude, min latitude, max longitude, max latitude).
   Values that are not valid coordinates are ignored. We have built [a small, map-based tool to easily see bounds values](https://opencagedata.com/bounds-finder).
   
   Example usage: `bounds: '-0.563160,51.280430,0.278970,51.683979'`
@@ -145,6 +145,13 @@ In addition to the mandatory `key` parameter, the following optional parameters 
   Default is `No results.`.
 
   Example usage: `noResults: 'Pas de résultat.'`
+
+- `proximity` - bias results to favour those close to a specific point
+
+  The value should be specified as a coordinate point in decimal format (latitude, longitude)
+  Values that are not valid coordinates are ignored.
+
+  Examples: `proximity: '52.5432379,13.4142133'`
 
 ### 2. Events
 
