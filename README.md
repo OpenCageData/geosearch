@@ -188,7 +188,11 @@ In addition to the mandatory `key` parameter, the following optional parameters 
     itemInputValue: string,
     itemUrl: string,
     source: AutocompleteSource }
-    ) => void`| defaults to`({ setIsOpen }) => setIsOpen(false)
+    ) => void
+  ```
+  defaults to
+  ```
+    ({ setIsOpen }) => setIsOpen(false)
   ```
 
 - `onSubmit` - callback function called when submitting the form.
@@ -225,7 +229,7 @@ We have tutorials showing how to [integrate geosearch with a Leaflet map](https:
 
 ### [`@opencage/geosearch-bundle`](./packages/geosearch-bundle/)
 
-[![npm version](https://badge.fury.io/js/%40opencage%2Fgeosearch-bundle.svg)](https://badge.fury.io/js/%40opencage%2Fgeosearch-bundle)
+[![npm version](https://img.shields.io/npm/v/@opencage/geosearch-bundle.svg?style=flat-square)](https://www.npmjs.com/package/@opencage/geosearch-bundle)
 
 _For those who just want a simple HTML / JS integration_
 
@@ -233,7 +237,7 @@ This package bundles the [Algolia Autocomplete](https://github.com/algolia/autoc
 
 ### [`@opencage/geosearch-core`](./packages/geosearch-core/)
 
-[![npm version](https://badge.fury.io/js/%40opencage%2Fgeosearch-core.svg)](https://badge.fury.io/js/%40opencage%2Fgeosearch-core)
+[![npm version](https://img.shields.io/npm/v/@opencage/geosearch-core.svg?style=flat-square)](https://www.npmjs.com/package/@opencage/geosearch-core)
 
 _For those using a javascript dependency manager_
 
@@ -241,14 +245,14 @@ This is the core package: the GeoSearch plugin to use with [Algolia Autocomplete
 
 ### [`@opencage/leaflet-opencage-geosearch`](./packages/leaflet-opencage-geosearch/)
 
-[![npm version](https://img.shields.io/npm/v/@opencage/leaflet-opencage-geosearch.svg)](https://www.npmjs.com/package/@opencage/leaflet-opencage-geosearch)
+[![npm version](https://img.shields.io/npm/v/@opencage/leaflet-opencage-geosearch.svg?style=flat-square)](https://www.npmjs.com/package/@opencage/leaflet-opencage-geosearch)
 
 This is a plugin for the well-known map API [leaflet](https://leafletjs.com/).
 See our [integration tutorial](https://opencagedata.com/tutorials/leaflet-location-search).
 
 ### [`@opencage/ol-opencage-geosearch`](./packages/ol-opencage-geosearch/)
 
-[![npm version](https://img.shields.io/npm/v/@opencage/ol-opencage-geosearch.svg)](https://www.npmjs.com/package/@opencage/ol-opencage-geosearch)
+[![npm version](https://img.shields.io/npm/v/@opencage/ol-opencage-geosearch.svg?style=flat-square)](https://www.npmjs.com/package/@opencage/ol-opencage-geosearch)
 
 This is a plugin for the well-known map API [OpenLayers](https://openlayers.org).
 See our [integration tutorial](https://opencagedata.com/tutorials/openlayers-location-search).
