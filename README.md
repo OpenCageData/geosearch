@@ -263,6 +263,10 @@ This project is written with modern browser technologies in mind. It is required
 
 - [unfetch](https://www.npmjs.com/package/unfetch), for fetch requests.
 
+## Working with AI and Agentic development
+
+If you are working with AI or agentic development you may find our [opencage-geosearch markdown SKILL file](https://github.com/OpenCageData/opencage-skills/blob/master/opencage-geosearch/SKILL.md) helpful.
+
 ## Contributing
 
 We welcome your contributions. Please refer to the following developer's [notes](BUILD.md)
