@@ -15,14 +15,14 @@
     "@algolia/autocomplete-js": "^1.19.8",
     "@algolia/autocomplete-theme-classic": "^1.19.8",
     "@opencage/geosearch-core": "workspace:*",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.2.0",
-    "eslint-plugin-jest": "^29.15.1",
+    "eslint-plugin-jest": "^29.15.2",
     "vite": "7.3.2"
   }
 }

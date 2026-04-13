@@ -33,11 +33,11 @@
     "globals": "^16.5.0",
     "isomorphic-unfetch": "^4.0.2",
     "lerna": "^9.0.7",
-    "postcss": "^8.5.8",
+    "postcss": "^8.5.9",
     "postcss-cli": "^11.0.1",
-    "prettier": "^3.8.1",
+    "prettier": "^3.8.2",
     "sass": "^1.99.0",
-    "sinon": "^21.0.3",
+    "sinon": "^21.1.2",
     "vite": "7.3.2",
     "vitest": "4.0.15"
   }
