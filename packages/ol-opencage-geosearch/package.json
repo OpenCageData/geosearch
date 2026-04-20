@@ -50,7 +50,7 @@
   "dependencies": {
     "@algolia/autocomplete-js": "^1.19.8",
     "@opencage/geosearch-core": "workspace:*",
-    "ol": "^10.8.0"
+    "ol": "^10.9.0"
   },
   "peerDependencies": {
     "@algolia/autocomplete-js": "^1.*",
