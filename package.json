@@ -19,7 +19,7 @@
     "@eslint/eslintrc": "^3.3.5",
     "@eslint/js": "9.39.1",
     "@vitest/coverage-v8": "4.0.15",
-    "cssnano": "^7.1.5",
+    "cssnano": "^7.1.7",
     "eslint": "9.39.1",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^10.1.8",
