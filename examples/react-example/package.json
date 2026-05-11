@@ -15,8 +15,8 @@
     "@algolia/autocomplete-js": "^1.19.8",
     "@algolia/autocomplete-theme-classic": "^1.19.8",
     "@opencage/geosearch-core": "workspace:*",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   },
   "devDependencies": {
     "@types/react": "^19.2.14",
