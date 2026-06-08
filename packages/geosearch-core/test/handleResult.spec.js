@@ -100,7 +100,17 @@ describe('geosearch-core:handleResult', () => {
     expect(templates.item).to.be.a('function');
     expect(templates.noResults).to.be.a('function');
     expect(templates.footer).to.be.a('function');
-    expect(templates.item({ item: aarhus })).to.equal(aarhus.formatted);
+    const createElement = (tag, attrs, ...children) => ({
+      tag,
+      attrs,
+      children,
+    });
+    const itemEl = templates.item({ item: aarhus, createElement });
+    expect(itemEl).to.deep.equal({
+      tag: 'span',
+      attrs: null,
+      children: [aarhus.formatted],
+    });
     expect(templates.noResults()).to.equal(noResultsFR);
   });
 });
