@@ -40,8 +40,8 @@ export const handleResult = (
       onActive,
       // ----
       templates: {
-        item({ item }) {
-          return `${item.formatted}`;
+        item({ item, createElement }) {
+          return createElement('span', null, item.formatted);
         },
         noResults() {
           return noResults;

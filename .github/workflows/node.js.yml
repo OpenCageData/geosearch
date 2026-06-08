@@ -1,4 +1,4 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# This workflow builds on Node LTS and tests the built artifact across multiple Node versions.
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
 name: Node.js CI
@@ -11,6 +11,40 @@ on:
 
 jobs:
   build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v6
+      - name: Setup pnpm package manager
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.33
+      - name: Use Node.js LTS
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24.x
+          cache: "pnpm"
+      - name: Install dependencies
+        run: pnpm install
+      - name: Lint
+        run: pnpm lint
+      - name: Test
+        run: pnpm test:coverage
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Build
+        run: pnpm build
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: geosearch-core-dist
+          path: packages/geosearch-core/dist/js/
+
+  test:
+    needs: build
     runs-on: ubuntu-latest
 
     strategy:
@@ -32,13 +66,10 @@ jobs:
           cache: "pnpm"
       - name: Install dependencies
         run: pnpm install
-      - name: Lint
-        run: pnpm lint
-      - name: Test
-        run: pnpm test:coverage
-      - name: Build
-        run: pnpm build
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          name: geosearch-core-dist
+          path: packages/geosearch-core/dist/js/
+      - name: Test dist
+        run: pnpm --filter @opencage/geosearch-core test:dist
