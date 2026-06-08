@@ -52,6 +52,7 @@
     "lint:fix": "eslint --fix .",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
+    "test:dist": "vitest run --config vitest.dist.config.js",
     "watch": "vite build --watch"
   },
   "devDependencies": {
