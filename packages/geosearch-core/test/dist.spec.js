@@ -7,6 +7,7 @@ import 'isomorphic-unfetch';
 // The Build Step should have generated this file, so we can test the actual dist output
 // But the first time the linter runs, it won't exist yet, so we ignore the error
 
+// eslint-disable-next-line import/extensions
 import { OpenCageGeoSearchPlugin } from '../dist/js/opencage-geosearch-core.esm.js';
 import { payload } from './fixtures/greno-payload';
 
