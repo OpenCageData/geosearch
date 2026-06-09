@@ -169,8 +169,10 @@ pnpm clean
 ```bash
 # LOGIN on npmjs
 npm login
-# DO NOT FORGET TO BUILD FIRST
+# DO NOT FORGET TO LINT/TEST AND BUILD FIRST
 pnpm build
+pnpm lint:fix
+pnpm test
 # Let's publish
 npx lerna publish --no-private
 
