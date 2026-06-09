@@ -48,17 +48,23 @@ export const handleResult = (
         },
         footer({ createElement }) {
           // type: (params: { state: AutocompleteState<TItem>, source: AutocompleteSource<TItem>, items: TItem[], createElement: Pragma, Fragment: PragmaFrag }) => VNode | string
-          const linkStyle = 'text-decoration:none;color:#009966;';
+          const linkStyle = { textDecoration: 'none', color: '#009966' };
           return createElement(
             'div',
             {
-              style: 'display:flex;flex-direction:column;align-items:flex-end;',
+              style: { display: 'flex', flexDirection: 'column', alignItems: 'flex-end' },
             },
             createElement(
               'div',
               {
-                style:
-                  'display:flex;align-items:center;justify-content:center;font-family:sans-serif;font-size:0.7em;color:#009966;',
+                style: {
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontFamily: 'sans-serif',
+                  fontSize: '0.7em',
+                  color: '#009966',
+                },
               },
               createElement(
                 'span',
@@ -76,7 +82,7 @@ export const handleResult = (
                     width: '20',
                     border: '0',
                     alt: 'OpenCage',
-                    style: 'display:inline;',
+                    style: { display: 'inline' },
                   })
                 )
               ),
