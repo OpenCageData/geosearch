@@ -52,7 +52,11 @@ export const handleResult = (
           return createElement(
             'div',
             {
-              style: { display: 'flex', flexDirection: 'column', alignItems: 'flex-end' },
+              style: {
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'flex-end',
+              },
             },
             createElement(
               'div',
