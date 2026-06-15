@@ -72,11 +72,11 @@ importers:
         specifier: ^1.101.0
         version: 1.101.0
       vite:
-        specifier: 7.3.2
-        version: 7.3.2(sass@1.101.0)(yaml@2.8.2)
+        specifier: 7.3.5
+        version: 7.3.5(sass@1.101.0)(yaml@2.8.2)
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@vitest/coverage-v8@4.0.15)(vite@7.3.2(sass@1.101.0)(yaml@2.8.2))
+        version: 4.1.8(@vitest/coverage-v8@4.0.15)(vite@7.3.5(sass@1.101.0)(yaml@2.8.2))
 
   examples/nodejs-example:
     dependencies:
@@ -110,13 +110,13 @@ importers:
         version: 19.2.3(@types/react@19.2.17)
       '@vitejs/plugin-react':
         specifier: ^5.2.0
-        version: 5.2.0(vite@7.3.2(sass@1.101.0)(yaml@2.8.2))
+        version: 5.2.0(vite@7.3.5(sass@1.101.0)(yaml@2.8.2))
       eslint-plugin-jest:
         specifier: ^29.15.2
         version: 29.15.2(eslint@9.39.1)(typescript@5.9.3)
       vite:
-        specifier: 7.3.2
-        version: 7.3.2(sass@1.101.0)(yaml@2.8.2)
+        specifier: 7.3.5
+        version: 7.3.5(sass@1.101.0)(yaml@2.8.2)
 
   packages/geosearch-bundle:
     dependencies:
@@ -4303,8 +4303,8 @@ packages:
     resolution: {integrity: sha512-IUoow1YUtvoBBC06dXs8bR8B9vuA3aJfmQNKMoaPG/OFsPmoQvw8xh+6Ye25Gx9DQhoEom3Pcu9MKHerm/NpUQ==}
     engines: {node: ^18.17.0 || >=20.5.0}
 
-  vite@7.3.2:
-    resolution: {integrity: sha512-Bby3NOsna2jsjfLVOHKes8sGwgl4TT0E6vvpYgnAYDIF/tie7MRaFthmKuHx1NSXjiTueXH3do80FMQgvEktRg==}
+  vite@7.3.5:
+    resolution: {integrity: sha512-KuOaNhcnGFN2zIPGA7wRmzF+lJA1sea7rHq17aiJ++9lzY1WWG6Jpwqwe1KNbRVPIqHmr8GLYx7jbrQcN/7/ww==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -5606,7 +5606,7 @@ snapshots:
       '@typescript-eslint/types': 8.48.1
       eslint-visitor-keys: 4.2.1
 
-  '@vitejs/plugin-react@5.2.0(vite@7.3.2(sass@1.101.0)(yaml@2.8.2))':
+  '@vitejs/plugin-react@5.2.0(vite@7.3.5(sass@1.101.0)(yaml@2.8.2))':
     dependencies:
       '@babel/core': 7.29.0
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.29.0)
@@ -5614,7 +5614,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-rc.3
       '@types/babel__core': 7.20.5
       react-refresh: 0.18.0
-      vite: 7.3.2(sass@1.101.0)(yaml@2.8.2)
+      vite: 7.3.5(sass@1.101.0)(yaml@2.8.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -5631,7 +5631,7 @@ snapshots:
       obug: 2.1.1
       std-env: 3.10.0
       tinyrainbow: 3.0.3
-      vitest: 4.1.8(@vitest/coverage-v8@4.0.15)(vite@7.3.2(sass@1.101.0)(yaml@2.8.2))
+      vitest: 4.1.8(@vitest/coverage-v8@4.0.15)(vite@7.3.5(sass@1.101.0)(yaml@2.8.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -5644,13 +5644,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.0
 
-  '@vitest/mocker@4.1.8(vite@7.3.2(sass@1.101.0)(yaml@2.8.2))':
+  '@vitest/mocker@4.1.8(vite@7.3.5(sass@1.101.0)(yaml@2.8.2))':
     dependencies:
       '@vitest/spy': 4.1.8
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.3.2(sass@1.101.0)(yaml@2.8.2)
+      vite: 7.3.5(sass@1.101.0)(yaml@2.8.2)
 
   '@vitest/pretty-format@4.0.15':
     dependencies:
@@ -9102,7 +9102,7 @@ snapshots:
 
   validate-npm-package-name@6.0.2: {}
 
-  vite@7.3.2(sass@1.101.0)(yaml@2.8.2):
+  vite@7.3.5(sass@1.101.0)(yaml@2.8.2):
     dependencies:
       esbuild: 0.27.7
       fdir: 6.5.0(picomatch@4.0.3)
@@ -9115,10 +9115,10 @@ snapshots:
       sass: 1.101.0
       yaml: 2.8.2
 
-  vitest@4.1.8(@vitest/coverage-v8@4.0.15)(vite@7.3.2(sass@1.101.0)(yaml@2.8.2)):
+  vitest@4.1.8(@vitest/coverage-v8@4.0.15)(vite@7.3.5(sass@1.101.0)(yaml@2.8.2)):
     dependencies:
       '@vitest/expect': 4.1.8
-      '@vitest/mocker': 4.1.8(vite@7.3.2(sass@1.101.0)(yaml@2.8.2))
+      '@vitest/mocker': 4.1.8(vite@7.3.5(sass@1.101.0)(yaml@2.8.2))
       '@vitest/pretty-format': 4.1.8
       '@vitest/runner': 4.1.8
       '@vitest/snapshot': 4.1.8
@@ -9135,7 +9135,7 @@ snapshots:
       tinyexec: 1.0.2
       tinyglobby: 0.2.15
       tinyrainbow: 3.1.0
-      vite: 7.3.2(sass@1.101.0)(yaml@2.8.2)
+      vite: 7.3.5(sass@1.101.0)(yaml@2.8.2)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@vitest/coverage-v8': 4.0.15(vitest@4.1.8)
