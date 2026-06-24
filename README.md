@@ -114,7 +114,10 @@ In addition to the mandatory `key` parameter, the following optional parameters 
 - `countrycode` - restricts results to the specified country/territory.
 
   The country code is a two letter code as defined by the ISO 3166-1 Alpha 2 standard. E.g. `gb` for the United Kingdom, `fr` for France, `us` for United States.
+  
   Non-two letter country codes are ignored.
+
+  Multiple country codes by supplying a comma separated list. For example `ca,us` would limit results to places in either the United States or Canada. 
 
   Example usage: `countrycode: 'de'`
 
