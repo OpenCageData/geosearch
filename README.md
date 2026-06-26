@@ -160,7 +160,7 @@ In addition to the mandatory `key` parameter, the following optional parameters 
 
   Can be a comma separated list. 
 
-  Example usage: `_type: 'city'` or `_type: 'city,state'` or `_type: 'city,!village'`
+  Example usage: `_type: 'city'` or `_type: 'city,state,postcode'` or `_type: '!postcode'`
 
 ### 2. Events
 
