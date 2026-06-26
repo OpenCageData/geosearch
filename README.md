@@ -156,9 +156,11 @@ In addition to the mandatory `key` parameter, the following optional parameters 
 
   Example usage: `proximity: '52.5432379,13.4142133'`
 
-- `_type` - restrict results to only a certain `_type` value. Can be a comma separated list
+- `_type` - restrict results to only a certain `_type` value or exclude certain _type values (when proceeded with `!`).
 
-  Example usage: `_type: 'city'` or `_type: 'city,state'`
+  Can be a comma separated list. 
+
+  Example usage: `_type: 'city'` or `_type: 'city,state'` or `_type: 'city,!village'`
 
 ### 2. Events
 
