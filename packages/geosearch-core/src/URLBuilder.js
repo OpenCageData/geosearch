@@ -16,6 +16,11 @@ export const buildURL = (url, options) => {
   if (options.proximity) {
     result = `${result}&proximity=${encodeURIComponent(options.proximity)}`;
   }
+  // eslint-disable-next-line no-underscore-dangle
+  if (options._type) {
+    // eslint-disable-next-line no-underscore-dangle
+    result = `${result}&_type=${encodeURIComponent(options._type)}`;
+  }
 
   return result;
 };
