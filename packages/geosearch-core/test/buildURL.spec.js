@@ -42,6 +42,14 @@ describe('geosearch-core:buildURL', () => {
     const expected = `${DEFAULT_URL}&language=${language}`;
     expect(buildURL(url, { language })).to.equal(expected);
   });
+  it(`should return url with _type when the options has a _type`, () => {
+    const url = DEFAULT_URL;
+    const type = 'city';
+    // eslint-disable-next-line no-underscore-dangle
+    const expected = `${DEFAULT_URL}&_type=${type}`;
+    // eslint-disable-next-line no-underscore-dangle
+    expect(buildURL(url, { _type: type })).to.equal(expected);
+  });
   it(`should return url with bounds when the options has a bounds`, () => {
     const url = DEFAULT_URL;
     const bounds = `-11.47934,35.70526,3.68042,59.17839`;
