@@ -56,6 +56,12 @@ describe('geosearch-core:buildURL', () => {
     const expected = `${DEFAULT_URL}&bounds=${encodeURIComponent(bounds)}`;
     expect(buildURL(url, { bounds })).to.equal(expected);
   });
+  it(`should return url with proximity when the options has a proximity`, () => {
+    const url = DEFAULT_URL;
+    const proximity = `-11.47934,35.70526`;
+    const expected = `${DEFAULT_URL}&proximity=${encodeURIComponent(proximity)}`;
+    expect(buildURL(url, { proximity })).to.equal(expected);
+  });
   it(`should return url with parameters in the order`, () => {
     const url = DEFAULT_URL;
     const key = `MY-API-KY`;
@@ -63,9 +69,11 @@ describe('geosearch-core:buildURL', () => {
     const countrycode = 'de';
     const language = 'fr';
     const bounds = `-11.47934,35.70526,3.68042,59.17839`;
-    const expected = `${DEFAULT_URL}&limit=${limit}&countrycode=${countrycode}&language=${language}&bounds=${encodeURIComponent(bounds)}`;
+    const proximity = `-11.47934,35.70526`;
+    const type = 'city';
+    const expected = `${DEFAULT_URL}&limit=${limit}&countrycode=${countrycode}&language=${language}&bounds=${encodeURIComponent(bounds)}&proximity=${encodeURIComponent(proximity)}&_type=${type}`;
     expect(
-      buildURL(url, { key, limit, countrycode, language, bounds })
+      buildURL(url, { key, limit, countrycode, language, bounds, proximity, _type: type })
     ).to.equal(expected);
   });
 });
