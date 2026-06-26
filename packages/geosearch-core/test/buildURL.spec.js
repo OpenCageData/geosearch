@@ -45,9 +45,9 @@ describe('geosearch-core:buildURL', () => {
   it(`should return url with _type when the options has a _type`, () => {
     const url = DEFAULT_URL;
     const type = 'city';
-    // eslint-disable-next-line no-underscore-dangle
+
     const expected = `${DEFAULT_URL}&_type=${type}`;
-    // eslint-disable-next-line no-underscore-dangle
+
     expect(buildURL(url, { _type: type })).to.equal(expected);
   });
   it(`should return url with bounds when the options has a bounds`, () => {
@@ -73,7 +73,15 @@ describe('geosearch-core:buildURL', () => {
     const type = 'city';
     const expected = `${DEFAULT_URL}&limit=${limit}&countrycode=${countrycode}&language=${language}&bounds=${encodeURIComponent(bounds)}&proximity=${encodeURIComponent(proximity)}&_type=${type}`;
     expect(
-      buildURL(url, { key, limit, countrycode, language, bounds, proximity, _type: type })
+      buildURL(url, {
+        key,
+        limit,
+        countrycode,
+        language,
+        bounds,
+        proximity,
+        _type: type,
+      })
     ).to.equal(expected);
   });
 });
