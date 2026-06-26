@@ -16,6 +16,9 @@ export const buildURL = (url, options) => {
   if (options.proximity) {
     result = `${result}&proximity=${encodeURIComponent(options.proximity)}`;
   }
+  if (options._type) {
+    result = `${result}&_type=${encodeURIComponent(options._type)}`;
+  }
 
   return result;
 };
