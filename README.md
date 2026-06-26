@@ -154,11 +154,11 @@ In addition to the mandatory `key` parameter, the following optional parameters 
   The value should be specified as a coordinate point in decimal format (latitude, longitude)
   Values that are not valid coordinates are ignored.
 
-  Examples: `proximity: '52.5432379,13.4142133'`
+  Example usage: `proximity: '52.5432379,13.4142133'`
 
-- `_type` - filter results by OSM key value. Example: city,country,village
+- `_type` - restrict results to only a certain `_type` value. Can be a comma separated list
 
-  Examples: `_type: 'city'`
+  Example usage: `_type: 'city'` or `_type: 'city,state'`
 
 ### 2. Events
 
