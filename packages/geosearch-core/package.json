@@ -56,8 +56,8 @@
     "watch": "vite build --watch"
   },
   "devDependencies": {
-    "@algolia/autocomplete-js": "^1.19.8",
-    "@algolia/autocomplete-theme-classic": "^1.19.8"
+    "@algolia/autocomplete-js": "^1.19.9",
+    "@algolia/autocomplete-theme-classic": "^1.19.9"
   },
   "peerDependencies": {
     "@algolia/autocomplete-js": "^1.*",
