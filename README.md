@@ -158,7 +158,7 @@ In addition to the mandatory `key` parameter, the following optional parameters 
 
 - `_type` - restrict results to only a certain `_type` value or exclude certain _type values (when proceeded with `!`).
 
-  Can be a comma separated list. 
+  Can be a comma separated list. See the [full list of possible values](geosearch_type-values.md).
 
   Example usage: `_type: 'city'` or `_type: 'city,state,postcode'` or `_type: '!postcode'`
 
