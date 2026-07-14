@@ -8,6 +8,7 @@ borough
 city
 civil_parish
 county
+country
 district
 hamlet
 harbour
