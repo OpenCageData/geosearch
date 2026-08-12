@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import/no-extraneous-dependencies, import/no-unresolved */
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 

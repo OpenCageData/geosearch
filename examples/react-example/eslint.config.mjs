@@ -14,7 +14,7 @@ const compat = new FlatCompat({
 
 export default [
   {
-    ignores: ['**/node_modules/', '**/build/'],
+    ignores: ['**/node_modules/', '**/build/', '**/dist/'],
   },
   ...compat.extends(
     'airbnb-base',

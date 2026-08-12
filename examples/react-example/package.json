@@ -22,7 +22,9 @@
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.4",
     "@vitejs/plugin-react": "^5.2.0",
-    "eslint-plugin-jest": "^29.16.0",
+    "eslint": "^9.39.5",
+    "eslint-plugin-jest": "^29.16.1",
+    "eslint-plugin-react": "^7.37.5",
     "vite": "7.3.5"
   }
 }
