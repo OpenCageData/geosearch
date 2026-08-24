@@ -1,6 +1,7 @@
 {
   "name": "@opencage/geosearch-monorepo",
   "private": true,
+  "packageManager": "pnpm@11.21.0",
   "scripts": {
     "build": "lerna run build --no-private",
     "build:clean": "lerna run build:clean --no-private",
@@ -29,19 +30,12 @@
     "fetch-mock": "^12.6.0",
     "globals": "^17.11.0",
     "isomorphic-unfetch": "^4.0.2",
-    "lerna": "^10.0.0",
+    "lerna": "^10.0.1",
     "postcss": "^8.5.26",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.9.6",
-    "sass": "^1.102.0",
+    "sass": "^1.103.1",
     "vite": "7.3.5",
     "vitest": "4.1.10"
-  },
-  "pnpm": {
-    "overrides": {
-      "brace-expansion@>=4.0.0 <5.0.9": ">=5.0.9",
-      "js-yaml@<4.3.1": ">=4.3.1",
-      "tar@<7.5.21": ">=7.5.21"
-    }
   }
 }

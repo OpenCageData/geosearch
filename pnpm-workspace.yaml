@@ -5,3 +5,7 @@ allowBuilds:
   '@parcel/watcher': true
   esbuild: true
   nx: true
+overrides:
+  'brace-expansion@>=4.0.0 <5.0.9': '>=5.0.9'
+  'js-yaml@<4.3.1': '>=4.3.1'
+  'tar@<7.5.21': '>=7.5.21'
