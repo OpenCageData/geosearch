@@ -29,11 +29,11 @@
     "fetch-mock": "^12.6.0",
     "globals": "^17.11.0",
     "isomorphic-unfetch": "^4.0.2",
-    "lerna": "^10.0.0",
+    "lerna": "^10.0.1",
     "postcss": "^8.5.26",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.9.6",
-    "sass": "^1.102.0",
+    "sass": "^1.103.1",
     "vite": "7.3.5",
     "vitest": "4.1.10"
   },
