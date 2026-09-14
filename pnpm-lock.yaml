@@ -65,14 +65,14 @@ importers:
         specifier: ^3.9.6
         version: 3.9.6
       sass:
-        specifier: ^1.104.0
-        version: 1.104.0
+        specifier: ^1.104.1
+        version: 1.104.1
       vite:
         specifier: 7.3.5
-        version: 7.3.5(sass@1.104.0)(yaml@2.9.0)
+        version: 7.3.5(sass@1.104.1)(yaml@2.9.0)
       vitest:
         specifier: 4.1.11
-        version: 4.1.11(@vitest/coverage-v8@4.1.10)(vite@7.3.5(sass@1.104.0)(yaml@2.9.0))
+        version: 4.1.11(@vitest/coverage-v8@4.1.10)(vite@7.3.5(sass@1.104.1)(yaml@2.9.0))
 
   examples/nodejs-example:
     dependencies:
@@ -83,30 +83,30 @@ importers:
   examples/react-example:
     dependencies:
       '@algolia/autocomplete-js':
-        specifier: ^1.19.9
-        version: 1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
+        specifier: ^1.19.10
+        version: 1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
       '@algolia/autocomplete-theme-classic':
-        specifier: ^1.19.9
-        version: 1.19.9
+        specifier: ^1.19.10
+        version: 1.19.10
       '@opencage/geosearch-core':
         specifier: workspace:*
         version: link:../../packages/geosearch-core
       react:
-        specifier: ^19.2.8
-        version: 19.2.8
+        specifier: ^19.3.0
+        version: 19.3.0
       react-dom:
-        specifier: ^19.2.8
-        version: 19.2.8(react@19.2.8)
+        specifier: ^19.3.0
+        version: 19.3.0(react@19.3.0)
     devDependencies:
       '@types/react':
-        specifier: ^19.2.18
-        version: 19.2.18
+        specifier: ^19.3.0
+        version: 19.3.0
       '@types/react-dom':
-        specifier: ^19.2.7
-        version: 19.2.7(@types/react@19.2.18)
+        specifier: ^19.3.0
+        version: 19.3.0(@types/react@19.3.0)
       '@vitejs/plugin-react':
         specifier: ^5.2.0
-        version: 5.2.0(supports-color@7.2.0)(vite@7.3.5(sass@1.104.0)(yaml@2.9.0))
+        version: 5.2.0(supports-color@7.2.0)(vite@7.3.5(sass@1.104.1)(yaml@2.9.0))
       eslint:
         specifier: ^9.39.5
         version: 9.39.5(supports-color@7.2.0)
@@ -118,16 +118,16 @@ importers:
         version: 7.37.5(eslint@9.39.5(supports-color@7.2.0))
       vite:
         specifier: 7.3.5
-        version: 7.3.5(sass@1.104.0)(yaml@2.9.0)
+        version: 7.3.5(sass@1.104.1)(yaml@2.9.0)
 
   packages/geosearch-bundle:
     dependencies:
       '@algolia/autocomplete-js':
-        specifier: ^1.19.9
-        version: 1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
+        specifier: ^1.19.10
+        version: 1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
       '@algolia/autocomplete-theme-classic':
-        specifier: ^1.19.9
-        version: 1.19.9
+        specifier: ^1.19.10
+        version: 1.19.10
       '@opencage/geosearch-core':
         specifier: workspace:*
         version: link:../geosearch-core
@@ -135,17 +135,17 @@ importers:
   packages/geosearch-core:
     devDependencies:
       '@algolia/autocomplete-js':
-        specifier: ^1.19.9
-        version: 1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
+        specifier: ^1.19.10
+        version: 1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
       '@algolia/autocomplete-theme-classic':
-        specifier: ^1.19.9
-        version: 1.19.9
+        specifier: ^1.19.10
+        version: 1.19.10
 
   packages/leaflet-opencage-geosearch:
     dependencies:
       '@algolia/autocomplete-js':
-        specifier: ^1.19.9
-        version: 1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
+        specifier: ^1.19.10
+        version: 1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
       '@opencage/geosearch-core':
         specifier: workspace:*
         version: link:../geosearch-core
@@ -157,8 +157,8 @@ importers:
   packages/ol-opencage-geosearch:
     dependencies:
       '@algolia/autocomplete-js':
-        specifier: ^1.19.9
-        version: 1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
+        specifier: ^1.19.10
+        version: 1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
       '@opencage/geosearch-core':
         specifier: workspace:*
         version: link:../geosearch-core
@@ -172,34 +172,34 @@ packages:
     resolution: {integrity: sha512-a7oQ8dwiyoyVmzLY0FcuBqyqcNSq78qlcOtHmNBumRlHCSnXDcuoYGBGPN1F6n8JoGhviDDsIaF/oQrzTzs6Lg==}
     engines: {node: '>= 14.0.0'}
 
-  '@algolia/autocomplete-core@1.19.9':
-    resolution: {integrity: sha512-4U2JKLMWlDu0CotYyUkWakDxr8AIav3QtIUXXRpfavYN29aVWfzlwJp9T0rPKEf/dO2QCPAUc0Kq1Tj1GJxo2A==}
+  '@algolia/autocomplete-core@1.19.10':
+    resolution: {integrity: sha512-K8uQ5iZCCMeqqE0JxjvcxJzDFuqZC1LTGJvR2P76ofDoOdKTs6jqoNxG5MnhzlTkNfE98VOQjcrg7qLxXPpT7g==}
 
-  '@algolia/autocomplete-js@1.19.9':
-    resolution: {integrity: sha512-AXtqH+BBjDrTeoqCqOom082umhMtL/RF3+DVQSkoukh/1aaFdevNAtCqxwQSUCKQFLo0YLcDsB0cBItnl1X+bg==}
+  '@algolia/autocomplete-js@1.19.10':
+    resolution: {integrity: sha512-TEKlyRo6XNoLsRrlPYxe6EAlVFavENj+9tm4Z3SVfv/7eR9vNh9Cv9j8qrxGfd2Ll6cVEQZGOMf/wcoDC6b/Lw==}
     peerDependencies:
       '@algolia/client-search': '>= 4.5.1 < 6'
       algoliasearch: '>= 4.9.1 < 6'
 
-  '@algolia/autocomplete-plugin-algolia-insights@1.19.9':
-    resolution: {integrity: sha512-6mExC6X7762s2SV3eJy3QOkB8bdMmnUhQ2agvGVDuzwoGyr3PquGSY/0vPQXCfiAiCaXUz1rXn+lwghgSi0l0w==}
+  '@algolia/autocomplete-plugin-algolia-insights@1.19.10':
+    resolution: {integrity: sha512-zy/cYkMKEDdT4ns/SZC6by99qaIzLCTtckPw7cTe8BMPepwXjjQdhRyBCk2CJodMQc4Ktb0zJrt2YxTtMYa4Gg==}
     peerDependencies:
       search-insights: '>= 1 < 3'
 
-  '@algolia/autocomplete-preset-algolia@1.19.9':
-    resolution: {integrity: sha512-x/vKrHNy2Swp83AJ+PX0hhxhkgUqWVNV6bk440LkqQOwT8CfK4EN3M/gHIt8L9YAwbJvOgviE/Vr3g3AOyDwsA==}
+  '@algolia/autocomplete-preset-algolia@1.19.10':
+    resolution: {integrity: sha512-1zTiJNhtY7mqRpVWVVXntzdedtyc6tzXcLn0j3G7aUuCFrY5Ty9VlZ9sDTTBH9DBROk9HiAAGjwIQmgMvvjdsQ==}
     peerDependencies:
       '@algolia/client-search': '>= 4.9.1 < 6'
       algoliasearch: '>= 4.9.1 < 6'
 
-  '@algolia/autocomplete-shared@1.19.9':
-    resolution: {integrity: sha512-YosP9Uoek6y/Ur1r1qeogk4biMe/hzkyNcgMCciw0//3XpCM7VlYLSHnyt/vOnEOGhCCc0+3v+unEiH6zz+Z1A==}
+  '@algolia/autocomplete-shared@1.19.10':
+    resolution: {integrity: sha512-vGJ2MDLgDOK3k256ks6t8u07bX4jdRQ0B/8MuRjjcvGTveVWwOU5lNd564uyuuqPMXQITl03HJx/juMtIFcQRw==}
     peerDependencies:
       '@algolia/client-search': '>= 4.9.1 < 6'
       algoliasearch: '>= 4.9.1 < 6'
 
-  '@algolia/autocomplete-theme-classic@1.19.9':
-    resolution: {integrity: sha512-MWCQXWC1qbDDXE1W0fPPGRLNNRLy8zupd6pRCabBuI6gyjR0aJaah5m3S1MucJcmXRqV9/ErkMBjnw7iKGCrvA==}
+  '@algolia/autocomplete-theme-classic@1.19.10':
+    resolution: {integrity: sha512-6mOPI6Im6gooM0yRlfonXQ68FY0gsC8yBg8rPjsRyNNmGd8wEHWCwVypsezGDwkHXQi8yKUYrsmXlWk7z3Rgyg==}
 
   '@algolia/client-abtesting@5.45.0':
     resolution: {integrity: sha512-WTW0VZA8xHMbzuQD5b3f41ovKZ0MNTIXkWfm0F2PU+XGcLxmxX15UqODzF2sWab0vSbi3URM1xLhJx+bXbd1eQ==}
@@ -1314,13 +1314,13 @@ packages:
   '@types/rbush@4.0.0':
     resolution: {integrity: sha512-+N+2H39P8X+Hy1I5mC6awlTX54k3FhiUmvt7HWzGJZvF+syUAAxP/stwppS8JE84YHqFgRMv6fCy31202CMFxQ==}
 
-  '@types/react-dom@19.2.7':
-    resolution: {integrity: sha512-I8bPpDLcHBv1qiIiXDCy71Rt8eQDKJP0sMSWJphDdAcdqiJ1sGpZamavoEIRZmYzjia9LuEb2HlYdDpmoENpvQ==}
+  '@types/react-dom@19.3.0':
+    resolution: {integrity: sha512-ZI7bU42mZXXKHn/qNLEw2IrbiINU7X5+vfgdixBHkCNpYWXjKgfQ/P+uyGb5CjOLB9UcnTeg3rylQtV2hym44Q==}
     peerDependencies:
-      '@types/react': ^19.2.0
+      '@types/react': ^19.3.0
 
-  '@types/react@19.2.18':
-    resolution: {integrity: sha512-AnzbBERsrLKtk2XSfTbYRLjQPdy116Sty4q+T+Bp3IC4l6jNBvreVPAHmpq9qhXQM7CXZPjLVmGMw9sy+hxQ3w==}
+  '@types/react@19.3.0':
+    resolution: {integrity: sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==}
 
   '@typescript-eslint/project-service@8.67.0':
     resolution: {integrity: sha512-cvE8c7ulYeXN9fYuszhCeCsbzyVEXuhrRCybnBre7TUmqb5nRmBfQAwCj0O3WJFDeyAZt4VYv51vMCC9LHSdYw==}
@@ -3555,10 +3555,10 @@ packages:
   rbush@4.0.1:
     resolution: {integrity: sha512-IP0UpfeWQujYC8Jg162rMNc01Rf0gWMMAb2Uxus/Q0qOFw4lCcq6ZnQEZwUoJqWyUGJ9th7JjwI4yIWo+uvoAQ==}
 
-  react-dom@19.2.8:
-    resolution: {integrity: sha512-rVprimfGBG3DR+Tq0IQG2DT5PxKth1WIGDmj5yPmlzr4YBe7uyE+Du4oVqTDXZSHGGGXRtTJEGSSePyQCMBglQ==}
+  react-dom@19.3.0:
+    resolution: {integrity: sha512-JDk8dgif51OjFoDE70+OT9ICyYr+69HlmihNwp1+Nsfbna3t5sIiCa9ZJktDmQ4/1b/rn26hIAR2uYXDMr5r0Q==}
     peerDependencies:
-      react: ^19.2.8
+      react: ^19.3.0
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -3567,8 +3567,8 @@ packages:
     resolution: {integrity: sha512-QgT5//D3jfjJb6Gsjxv0Slpj23ip+HtOpnNgnb2S5zU3CB26G/IDPGoy4RJB42wzFE46DRsstbW6tKHoKbhAxw==}
     engines: {node: '>=0.10.0'}
 
-  react@19.2.8:
-    resolution: {integrity: sha512-PWaYA1L/q9u2u7xYQi+Y3L3Yfnie7XyLeaJICV1MGD6LprsBxcAqGjYyr0eY3p+QdsA+x/Irkt4Qif8D63+Sbw==}
+  react@19.3.0:
+    resolution: {integrity: sha512-E8LUcbtBWt20bbl2YoHfx4ZDBdxVTfOKtCZn9cDSJ4l6/nuoApcpIBcj47t2wZoVX8g2ZHuMHbiShgCR1T5Sog==}
     engines: {node: '>=0.10.0'}
 
   read-cache@1.0.0:
@@ -3690,8 +3690,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sass@1.104.0:
-    resolution: {integrity: sha512-btHMApW2bgolvClhRW8AlQJzgI9lUB3pPSofBQQT+E46GWvf9o0TVQ13SYv5riWZVFyPN+JNz3TKW9XhBlc10w==}
+  sass@1.104.1:
+    resolution: {integrity: sha512-yDA+1aIG3EHgN4V/BvuhCvu61FF6hEd4e+9DxikUm9U0CAGuvdIZ/UYy7qbOxjhbbWQraoyLlMuzdRGOSV5Bmw==}
     engines: {node: '>=20.19.0'}
     hasBin: true
 
@@ -3699,8 +3699,8 @@ packages:
     resolution: {integrity: sha512-42tBVwLWnaQvW5zc4HbZrTuWccECCZfBi92FDuwtqxasH+JbPB3/FOKb1m222K42R4WxuxzzMsTswfzgtSu64Q==}
     engines: {node: '>=11.0.0'}
 
-  scheduler@0.27.0:
-    resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
+  scheduler@0.28.0:
+    resolution: {integrity: sha512-juorfCmIkIw8tT+p5BXSm6PJjQF/ycEYmKyzURCIt/RaZIhL+PulbQ9Yu2z1HdOJDdqDTlxA1+xKBmHXJsczAw==}
 
   search-insights@2.17.3:
     resolution: {integrity: sha512-RQPdCYTa8A68uM2jwxoY842xDhvx3E5LFL1LxvxCNMev4o5mLuokczhzjAgGwUZBAmOKZknArSxLKmXtIi2AxQ==}
@@ -4257,20 +4257,20 @@ snapshots:
       '@algolia/requester-fetch': 5.45.0
       '@algolia/requester-node-http': 5.45.0
 
-  '@algolia/autocomplete-core@1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)':
+  '@algolia/autocomplete-core@1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)':
     dependencies:
-      '@algolia/autocomplete-plugin-algolia-insights': 1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
-      '@algolia/autocomplete-shared': 1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
+      '@algolia/autocomplete-plugin-algolia-insights': 1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
+      '@algolia/autocomplete-shared': 1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
     transitivePeerDependencies:
       - '@algolia/client-search'
       - algoliasearch
       - search-insights
 
-  '@algolia/autocomplete-js@1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)':
+  '@algolia/autocomplete-js@1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)':
     dependencies:
-      '@algolia/autocomplete-core': 1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
-      '@algolia/autocomplete-preset-algolia': 1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
-      '@algolia/autocomplete-shared': 1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
+      '@algolia/autocomplete-core': 1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)
+      '@algolia/autocomplete-preset-algolia': 1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
+      '@algolia/autocomplete-shared': 1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
       '@algolia/client-search': 5.45.0
       algoliasearch: 5.45.0
       htm: 3.1.1
@@ -4279,26 +4279,26 @@ snapshots:
       - preact-render-to-string
       - search-insights
 
-  '@algolia/autocomplete-plugin-algolia-insights@1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)':
+  '@algolia/autocomplete-plugin-algolia-insights@1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)(search-insights@2.17.3)':
     dependencies:
-      '@algolia/autocomplete-shared': 1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
+      '@algolia/autocomplete-shared': 1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
       search-insights: 2.17.3
     transitivePeerDependencies:
       - '@algolia/client-search'
       - algoliasearch
 
-  '@algolia/autocomplete-preset-algolia@1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)':
+  '@algolia/autocomplete-preset-algolia@1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)':
     dependencies:
-      '@algolia/autocomplete-shared': 1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
+      '@algolia/autocomplete-shared': 1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)
       '@algolia/client-search': 5.45.0
       algoliasearch: 5.45.0
 
-  '@algolia/autocomplete-shared@1.19.9(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)':
+  '@algolia/autocomplete-shared@1.19.10(@algolia/client-search@5.45.0)(algoliasearch@5.45.0)':
     dependencies:
       '@algolia/client-search': 5.45.0
       algoliasearch: 5.45.0
 
-  '@algolia/autocomplete-theme-classic@1.19.9': {}
+  '@algolia/autocomplete-theme-classic@1.19.10': {}
 
   '@algolia/client-abtesting@5.45.0':
     dependencies:
@@ -5317,11 +5317,11 @@ snapshots:
 
   '@types/rbush@4.0.0': {}
 
-  '@types/react-dom@19.2.7(@types/react@19.2.18)':
+  '@types/react-dom@19.3.0(@types/react@19.3.0)':
     dependencies:
-      '@types/react': 19.2.18
+      '@types/react': 19.3.0
 
-  '@types/react@19.2.18':
+  '@types/react@19.3.0':
     dependencies:
       csstype: 3.2.3
 
@@ -5376,7 +5376,7 @@ snapshots:
       '@typescript-eslint/types': 8.67.0
       eslint-visitor-keys: 5.0.1
 
-  '@vitejs/plugin-react@5.2.0(supports-color@7.2.0)(vite@7.3.5(sass@1.104.0)(yaml@2.9.0))':
+  '@vitejs/plugin-react@5.2.0(supports-color@7.2.0)(vite@7.3.5(sass@1.104.1)(yaml@2.9.0))':
     dependencies:
       '@babel/core': 7.29.7(supports-color@7.2.0)
       '@babel/plugin-transform-react-jsx-self': 7.29.7(@babel/core@7.29.7(supports-color@7.2.0))
@@ -5384,7 +5384,7 @@ snapshots:
       '@rolldown/pluginutils': 1.0.0-rc.3
       '@types/babel__core': 7.20.5
       react-refresh: 0.18.0
-      vite: 7.3.5(sass@1.104.0)(yaml@2.9.0)
+      vite: 7.3.5(sass@1.104.1)(yaml@2.9.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -5400,7 +5400,7 @@ snapshots:
       obug: 2.1.4
       std-env: 4.2.0
       tinyrainbow: 3.1.1
-      vitest: 4.1.11(@vitest/coverage-v8@4.1.10)(vite@7.3.5(sass@1.104.0)(yaml@2.9.0))
+      vitest: 4.1.11(@vitest/coverage-v8@4.1.10)(vite@7.3.5(sass@1.104.1)(yaml@2.9.0))
 
   '@vitest/expect@4.1.11':
     dependencies:
@@ -5411,13 +5411,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.1
 
-  '@vitest/mocker@4.1.11(vite@7.3.5(sass@1.104.0)(yaml@2.9.0))':
+  '@vitest/mocker@4.1.11(vite@7.3.5(sass@1.104.1)(yaml@2.9.0))':
     dependencies:
       '@vitest/spy': 4.1.11
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 7.3.5(sass@1.104.0)(yaml@2.9.0)
+      vite: 7.3.5(sass@1.104.1)(yaml@2.9.0)
 
   '@vitest/pretty-format@4.1.10':
     dependencies:
@@ -8061,16 +8061,16 @@ snapshots:
     dependencies:
       quickselect: 3.0.0
 
-  react-dom@19.2.8(react@19.2.8):
+  react-dom@19.3.0(react@19.3.0):
     dependencies:
-      react: 19.2.8
-      scheduler: 0.27.0
+      react: 19.3.0
+      scheduler: 0.28.0
 
   react-is@16.13.1: {}
 
   react-refresh@0.18.0: {}
 
-  react@19.2.8: {}
+  react@19.3.0: {}
 
   read-cache@1.0.0:
     dependencies:
@@ -8221,7 +8221,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass@1.104.0:
+  sass@1.104.1:
     dependencies:
       chokidar: 5.0.0
       immutable: 5.1.9
@@ -8231,7 +8231,7 @@ snapshots:
 
   sax@1.6.1: {}
 
-  scheduler@0.27.0: {}
+  scheduler@0.28.0: {}
 
   search-insights@2.17.3: {}
 
@@ -8612,7 +8612,7 @@ snapshots:
 
   validate-npm-package-name@6.0.2: {}
 
-  vite@7.3.5(sass@1.104.0)(yaml@2.9.0):
+  vite@7.3.5(sass@1.104.1)(yaml@2.9.0):
     dependencies:
       esbuild: 0.27.7
       fdir: 6.5.0(picomatch@4.0.5)
@@ -8622,13 +8622,13 @@ snapshots:
       tinyglobby: 0.2.17
     optionalDependencies:
       fsevents: 2.3.3
-      sass: 1.104.0
+      sass: 1.104.1
       yaml: 2.9.0
 
-  vitest@4.1.11(@vitest/coverage-v8@4.1.10)(vite@7.3.5(sass@1.104.0)(yaml@2.9.0)):
+  vitest@4.1.11(@vitest/coverage-v8@4.1.10)(vite@7.3.5(sass@1.104.1)(yaml@2.9.0)):
     dependencies:
       '@vitest/expect': 4.1.11
-      '@vitest/mocker': 4.1.11(vite@7.3.5(sass@1.104.0)(yaml@2.9.0))
+      '@vitest/mocker': 4.1.11(vite@7.3.5(sass@1.104.1)(yaml@2.9.0))
       '@vitest/pretty-format': 4.1.11
       '@vitest/runner': 4.1.11
       '@vitest/snapshot': 4.1.11
@@ -8645,7 +8645,7 @@ snapshots:
       tinyexec: 1.3.0
       tinyglobby: 0.2.17
       tinyrainbow: 3.1.1
-      vite: 7.3.5(sass@1.104.0)(yaml@2.9.0)
+      vite: 7.3.5(sass@1.104.1)(yaml@2.9.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@vitest/coverage-v8': 4.1.10(vitest@4.1.11)
