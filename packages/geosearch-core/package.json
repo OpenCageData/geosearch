@@ -36,8 +36,8 @@
   "types": "index.d.ts",
   "exports": {
     ".": {
-      "import": "dist/js/opencage-geosearch-core.esm.js",
-      "require": "dist/js/opencage-geosearch-core.cjs.js"
+      "import": "./dist/js/opencage-geosearch-core.esm.js",
+      "require": "./dist/js/opencage-geosearch-core.cjs.js"
     }
   },
   "files": [
