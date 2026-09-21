@@ -20,6 +20,7 @@ export const OpenCageGeoSearchPlugin = (
 
   const onActive = events.onActive || fn;
   const onSubmit = events.onSubmit || fn;
+  const onError = events.onError || fn;
 
   const debouncedFetch = debouncePromise(fetch, options.debounce);
 
@@ -76,6 +77,7 @@ export const OpenCageGeoSearchPlugin = (
           console.error(`[Opencage GeoSearch error]: ${err.message}`);
           console.error(`[error] status: ${err.status}`);
           console.error(`[error] statusText: ${err.statusText}`);
+          onError(err);
           return [];
         });
     },
