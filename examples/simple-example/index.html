@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <div id="api-error" class="error-banner hidden" role="alert"></div>
     <div id="autocomplete"></div>
     <script src="./dist/js/opencage-geosearch-bundle.js"></script>
     <script src="config.js"></script>
@@ -23,10 +24,24 @@
             key: window.OPENCAGE_GEOSEARCH_KEY,
         };
 
+        const errorBanner = document.getElementById('api-error');
+
+        const events = {
+            onError: function handleError(err) {
+                console.error('GeoSearch error', err);
+                if (err.status === 401 || err.status === 403) {
+                    errorBanner.textContent = 'Invalid API key. Please check the key you entered.';
+                } else {
+                    errorBanner.textContent = 'GeoSearch request failed. Please try again.';
+                }
+                errorBanner.classList.remove('hidden');
+            },
+        };
+
         opencage.algoliaAutocomplete({
             container: '#autocomplete',
             placeholder: 'Search for places',
-            plugins: [opencage.OpenCageGeoSearchPlugin(options)],
+            plugins: [opencage.OpenCageGeoSearchPlugin(options, events)],
         });
 
     </script>

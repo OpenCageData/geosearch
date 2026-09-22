@@ -220,6 +220,30 @@ In addition to the mandatory `key` parameter, the following optional parameters 
     ) => void
   ```
 
+- `onError` - callback function called whenever a search request fails, for example because of an invalid API key or a network error. The error is always logged to the console; use this callback to also surface a message to the end user.
+
+  By default, this is an empty function.
+
+  Function parameter type:
+
+  ```js
+  (error: Error & { status: number, statusText: string }) => void
+  ```
+
+  Example usage:
+
+  ```js
+  events: {
+    onError: function handleError(err) {
+      if (err.status === 401 || err.status === 403) {
+        showMessage('Invalid API key. Please check the key you entered.');
+      } else {
+        showMessage('GeoSearch request failed. Please try again.');
+      }
+    },
+  }
+  ```
+
 ## Tweaking the look and feel
 
 Check Algolia's Autocomplete [CSS styles](https://www.algolia.com/doc/ui-libraries/autocomplete/api-reference/autocomplete-theme-classic/#css-variables)

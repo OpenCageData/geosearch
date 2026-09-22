@@ -12,3 +12,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding: 1rem;
 }
+
+.error-banner {
+  background-color: rgb(253, 226, 226);
+  border: 1px solid rgb(245, 198, 198);
+  color: rgb(155, 28, 28);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.error-banner.hidden {
+  display: none;
+}

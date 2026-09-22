@@ -23,6 +23,15 @@
   color: #e3f5ed;
 }
 
+.error-banner {
+  background-color: rgb(253, 226, 226);
+  border: 1px solid rgb(245, 198, 198);
+  color: rgb(155, 28, 28);
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

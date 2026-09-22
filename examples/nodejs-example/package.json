@@ -4,6 +4,7 @@
   "private": true,
   "description": "> TODO: description",
   "main": "nodejs-example.js",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OpenCageData/geosearch.git"

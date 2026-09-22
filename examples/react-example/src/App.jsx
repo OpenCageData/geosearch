@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { OpenCageGeoSearchPlugin } from '@opencage/geosearch-core';
 import { GeoSearch } from './components/GeoSearch';
 import './App.css';
@@ -16,15 +16,25 @@ const options = {
   // countrycode: 'de'
 };
 
-const events = {
-  onSubmit: (params) => {
-    console.log('--plugin.OnSubmit()');
-    console.log(`params: ${JSON.stringify(params)}`);
-    // console.log(`event: ${JSON.stringify(params.event)}`);
-  },
-};
-
 function App() {
+  const [error, setError] = useState(null);
+
+  const events = {
+    onSubmit: (params) => {
+      console.log('--plugin.OnSubmit()');
+      console.log(`params: ${JSON.stringify(params)}`);
+      // console.log(`event: ${JSON.stringify(params.event)}`);
+    },
+    onError: (err) => {
+      console.error('GeoSearch error', err);
+      if (err.status === 401 || err.status === 403) {
+        setError('Invalid API key. Please check the key you entered.');
+      } else {
+        setError('GeoSearch request failed. Please try again.');
+      }
+    },
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -41,6 +51,7 @@ function App() {
       </header>
       <div>
         <br />
+        {error && <div className="error-banner">{error}</div>}
         <GeoSearch
           openOnFocus={true}
           plugins={[OpenCageGeoSearchPlugin(options, events)]}
