@@ -12,8 +12,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@algolia/autocomplete-js": "^1.19.10",
-    "@algolia/autocomplete-theme-classic": "^1.19.10",
+    "@algolia/autocomplete-js": "^1.19.11",
+    "@algolia/autocomplete-theme-classic": "^1.19.11",
     "@opencage/geosearch-core": "workspace:*",
     "react": "^19.3.0",
     "react-dom": "^19.3.0"
