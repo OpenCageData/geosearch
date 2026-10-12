@@ -30,10 +30,10 @@
     "fetch-mock": "^12.6.0",
     "globals": "^17.13.0",
     "isomorphic-unfetch": "^4.0.2",
-    "lerna": "^10.0.1",
-    "postcss": "^8.5.28",
+    "lerna": "^10.1.0",
+    "postcss": "^8.5.29",
     "postcss-cli": "^11.0.1",
-    "prettier": "^3.9.9",
+    "prettier": "^3.9.10",
     "sass": "^1.105.1",
     "vite": "7.3.5",
     "vitest": "4.1.11"
