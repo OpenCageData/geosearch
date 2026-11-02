@@ -31,10 +31,10 @@
     "globals": "^17.13.0",
     "isomorphic-unfetch": "^4.0.2",
     "lerna": "^10.1.1",
-    "postcss": "^8.5.31",
+    "postcss": "^8.5.32",
     "postcss-cli": "^11.0.1",
     "prettier": "^3.9.10",
-    "sass": "^1.106.1",
+    "sass": "^1.107.1",
     "vite": "7.3.7",
     "vitest": "4.1.11"
   }
