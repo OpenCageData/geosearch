@@ -1,4 +1,3 @@
-/* eslint-disable import/no-named-as-default-member */
 import { expect, describe, it, beforeEach, afterEach } from 'vitest';
 import fetchMock from 'fetch-mock';
 

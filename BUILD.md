@@ -130,7 +130,7 @@ npx serve -S examples/openlayers-library-example
 
 ## linter
 
-We use the `airbnb` config with `eslint`
+We use the `eslint:recommended` config with `eslint`
 
 ```bash
 pnpm lint
