@@ -1,3 +1,4 @@
+import eslintReact from '@eslint-react/eslint-plugin';
 import globals from 'globals';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -18,11 +19,13 @@ export default [
   },
   ...compat.extends(
     'airbnb-base',
-    'plugin:react/recommended', // Uses the recommended rules from @eslint-plugin-react
     'plugin:jest/recommended',
     'plugin:prettier/recommended' // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ),
+  eslintReact.configs.recommended,
   {
+    files: ['**/*.{js,jsx,mjs}'], // ESLint only lints *.js, *.mjs and *.cjs by default
+
     languageOptions: {
       globals: {
         ...globals.browser,
@@ -40,9 +43,6 @@ export default [
     },
 
     settings: {
-      react: {
-        version: 'detect', // Tells eslint-plugin-react to automatically detect the version of React to use
-      },
       jest: {
         version: 'detect',
       },
@@ -50,6 +50,7 @@ export default [
       'import/resolver': {
         node: {
           paths: ['src'],
+          extensions: ['.mjs', '.js', '.jsx', '.json'],
         },
       },
     },

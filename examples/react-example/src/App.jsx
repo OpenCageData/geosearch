@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { OpenCageGeoSearchPlugin } from '@opencage/geosearch-core';
 import { GeoSearch } from './components/GeoSearch';
 import './App.css';
