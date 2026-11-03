@@ -1,7 +1,5 @@
-/* eslint-disable no-underscore-dangle */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-undef */
-/* eslint-disable global-require */
 (function (factory, window) {
   // define an AMD module that relies on 'leaflet'
   if (typeof define === 'function' && define.amd) {

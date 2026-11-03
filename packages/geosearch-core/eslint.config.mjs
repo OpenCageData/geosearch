@@ -25,7 +25,7 @@ export default [
       'rollup.config.mjs',
     ],
   },
-  ...compat.extends('airbnb-base', 'plugin:prettier/recommended'),
+  ...compat.extends('eslint:recommended', 'plugin:prettier/recommended'),
   security.configs.recommended,
   {
     languageOptions: {
@@ -40,6 +40,20 @@ export default [
     },
 
     rules: {
+      // kept from airbnb-base
+      eqeqeq: ['error', 'always', { null: 'ignore' }],
+      'no-var': 'error',
+      'prefer-const': ['error', { ignoreReadBeforeAssign: true }],
+      'no-shadow': 'error',
+      'no-throw-literal': 'error',
+      'no-param-reassign': ['error', { props: true }],
+      'consistent-return': 'error',
+      radix: 'error',
+      'no-promise-executor-return': 'error',
+      'no-eval': 'error',
+      'no-implied-eval': 'error',
+      'no-new-func': 'error',
+
       camelcase: 'off',
       'no-multiple-empty-lines': 'off',
       'no-console': 'off',
@@ -62,7 +76,6 @@ export default [
     ],
 
     rules: {
-      'import/no-extraneous-dependencies': 'off',
       'no-underscore-dangle': 'off',
       'no-unused-expressions': 'off',
     },

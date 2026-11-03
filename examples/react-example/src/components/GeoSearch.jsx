@@ -2,7 +2,6 @@ import { autocomplete } from '@algolia/autocomplete-js';
 import { createElement, Fragment, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 
-// eslint-disable-next-line import/prefer-default-export
 export const GeoSearch = (props) => {
   const containerRef = useRef(null);
   const panelRootRef = useRef(null);

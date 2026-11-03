@@ -18,7 +18,7 @@ export default [
     ignores: ['**/node_modules/', '**/build/', '**/dist/'],
   },
   ...compat.extends(
-    'airbnb-base',
+    'eslint:recommended',
     'plugin:jest/recommended',
     'plugin:prettier/recommended' // Enables eslint-plugin-prettier and eslint-config-prettier. This will display prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ),
@@ -46,16 +46,23 @@ export default [
       jest: {
         version: 'detect',
       },
-
-      'import/resolver': {
-        node: {
-          paths: ['src'],
-          extensions: ['.mjs', '.js', '.jsx', '.json'],
-        },
-      },
     },
 
     rules: {
+      // kept from airbnb-base
+      eqeqeq: ['error', 'always', { null: 'ignore' }],
+      'no-var': 'error',
+      'prefer-const': ['error', { ignoreReadBeforeAssign: true }],
+      'no-shadow': 'error',
+      'no-throw-literal': 'error',
+      'no-param-reassign': ['error', { props: true }],
+      'consistent-return': 'error',
+      radix: 'error',
+      'no-promise-executor-return': 'error',
+      'no-eval': 'error',
+      'no-implied-eval': 'error',
+      'no-new-func': 'error',
+
       'no-console': 'off',
 
       'no-plusplus': [
@@ -70,7 +77,6 @@ export default [
     files: ['**/eslint.config.mjs'],
 
     rules: {
-      'import/no-extraneous-dependencies': 'off',
       'no-underscore-dangle': 'off',
     },
   },
