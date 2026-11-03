@@ -1,9 +1,6 @@
 import { expect, describe, it, beforeEach, afterEach } from 'vitest';
 import fetchMock from 'fetch-mock';
 
-// fetch polyfill
-import 'isomorphic-unfetch';
-
 import theModule from '../src/OpenCageGeoSearchPlugin';
 import { SOURCE_ID, AWAIT_LABEL } from '../src/constants';
 

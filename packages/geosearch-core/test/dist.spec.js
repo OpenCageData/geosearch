@@ -1,9 +1,6 @@
 import { expect, describe, it, beforeEach, afterEach } from 'vitest';
 import fetchMock from 'fetch-mock';
 
-// fetch polyfill
-import 'isomorphic-unfetch';
-
 // The Build Step should have generated this file, so we can test the actual dist output
 import { OpenCageGeoSearchPlugin } from '../dist/js/opencage-geosearch-core.esm.js';
 import { payload } from './fixtures/greno-payload';
