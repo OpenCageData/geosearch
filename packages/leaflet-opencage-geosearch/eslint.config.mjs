@@ -1,3 +1,4 @@
+import security from 'eslint-plugin-security';
 import globals from 'globals';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -24,6 +25,7 @@ export default [
     ],
   },
   ...compat.extends('airbnb-base', 'plugin:prettier/recommended'),
+  security.configs.recommended,
   {
     languageOptions: {
       globals: {
