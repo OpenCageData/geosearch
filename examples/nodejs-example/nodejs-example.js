@@ -1,9 +1,6 @@
 // @ts-check
 import { OpenCageGeoSearchPlugin } from '@opencage/geosearch-core';
 
-// eslint-disable-next-line import/no-extraneous-dependencies
-import 'isomorphic-unfetch';
-
 console.log(typeof OpenCageGeoSearchPlugin);
 
 const options = {
