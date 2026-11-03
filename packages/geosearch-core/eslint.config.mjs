@@ -26,11 +26,8 @@ export default [
     ],
   },
   ...compat.extends('airbnb-base', 'plugin:prettier/recommended'),
+  security.configs.recommended,
   {
-    plugins: {
-      security,
-    },
-
     languageOptions: {
       globals: {
         ...globals.browser,
